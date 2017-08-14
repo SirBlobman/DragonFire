@@ -1,0 +1,3 @@
+1. Potion Cookies (Crafted w/ 1 potion of that type and a cookie)
+2. Bat wings, brewable into levitation potions.
+3. Ender bow (Teleporting bow) Available as loot in end cities.
