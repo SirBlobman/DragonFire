@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod(modid = DragonFire.MODID, name = DragonFire.NAME, version = DragonFire.VERSION)
 public class DragonFire {
     public static final String MODID = "dragonfire";
-    public static final String NAME = "DragonFire: Improved OreSpawn";
+    public static final String NAME = "Dragon Fire";
     public static final String VERSION = "0.0.1";
     
     public static final String PACKAGE = "com.DragonFire";
