@@ -1,5 +1,8 @@
 package com.DragonFire.utility;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
@@ -29,5 +32,12 @@ public class Util {
                 eb.register(o);
             }
         }
+    }
+    
+    @SafeVarargs
+    public static <L> List<L> newList(L... ll) {
+        List<L> list = new ArrayList<L>();
+        for(L l : ll) list.add(l);
+        return list;
     }
 }

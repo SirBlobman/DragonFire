@@ -17,6 +17,7 @@ public class Common {
     
     public void init(FMLInitializationEvent e) {
         DFRecipes.furnaceRecipes();
+        DFRecipes.brewingRecipes();
     }
     
     public void post(FMLPostInitializationEvent e) {

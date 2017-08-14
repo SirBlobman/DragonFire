@@ -36,7 +36,7 @@ public class RabbitBoots extends ItemArmor {
     
     @Override
     public void addInformation(ItemStack is, World w, List<String> lore, ITooltipFlag flag) {
-        String jump = Util.color("  &a+ Jump Boost III");
+        String jump = Util.color("&aJump Boost III");
         lore.add(jump);
     }
 }
