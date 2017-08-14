@@ -1,4 +1,4 @@
-package com.DragonFire.items;
+package com.DragonFire.item;
 
 import net.minecraft.item.ItemFood;
 

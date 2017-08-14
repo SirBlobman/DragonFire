@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -34,10 +36,20 @@ public class DragonFire {
     
     @EventHandler
     public void pre(FMLPreInitializationEvent e) {
-        proxy.pre(e);
         Util.regEvents(this, 
             new ListenCustomDrops()
         );
+        proxy.pre(e);
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent e) {
+        proxy.init(e);
+    }
+    
+    @EventHandler
+    public void post(FMLPostInitializationEvent e) {
+        proxy.post(e);
     }
     
     @SubscribeEvent

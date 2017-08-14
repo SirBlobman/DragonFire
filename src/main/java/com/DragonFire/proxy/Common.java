@@ -1,6 +1,7 @@
 package com.DragonFire.proxy;
 
-import com.DragonFire.items.DFItems;
+import com.DragonFire.item.DFItems;
+import com.DragonFire.recipe.DFRecipes;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ public class Common {
     }
     
     public void init(FMLInitializationEvent e) {
-        
+        DFRecipes.furnaceRecipes();
     }
     
     public void post(FMLPostInitializationEvent e) {

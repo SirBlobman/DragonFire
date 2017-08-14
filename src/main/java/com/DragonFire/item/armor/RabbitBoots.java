@@ -1,4 +1,4 @@
-package com.DragonFire.items.armor;
+package com.DragonFire.item.armor;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;

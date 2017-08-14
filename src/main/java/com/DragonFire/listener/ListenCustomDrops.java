@@ -1,6 +1,6 @@
 package com.DragonFire.listener;
 
-import com.DragonFire.items.DFItems;
+import com.DragonFire.item.DFItems;
 
 import java.util.Random;
 
