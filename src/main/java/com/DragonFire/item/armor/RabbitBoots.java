@@ -1,5 +1,10 @@
 package com.DragonFire.item.armor;
 
+import com.DragonFire.utility.Util;
+
+import java.util.List;
+
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -27,5 +32,11 @@ public class RabbitBoots extends ItemArmor {
                 ep.addPotionEffect(pe);
             }
         }
+    }
+    
+    @Override
+    public void addInformation(ItemStack is, World w, List<String> lore, ITooltipFlag flag) {
+        String jump = Util.color("  &a+ Jump Boost III");
+        lore.add(jump);
     }
 }
