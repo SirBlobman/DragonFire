@@ -11,7 +11,18 @@
 *.rar
 *.launch
 hs_err_pid*
+.classpath
+.project
+*.classpath
+*.project
+*.gradle
 
 # Folders
 /bin/
 /run/
+/.gradle/
+/.settings/
+/build/
+
+#Allowed
+!build.gradle
