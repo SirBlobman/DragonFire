@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-public class Client extends Common {
+public class Server extends Common {
     @Override
     public void pre(FMLPreInitializationEvent e) {
         super.pre(e);
