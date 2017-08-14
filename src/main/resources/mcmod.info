@@ -4,6 +4,6 @@
   "description": "OreSpawn replacement mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "authorList": ["SirBlobman", "Soul", "Swooty", "Winterr", "Mitchdog27"]
+  "authorList": ["SirBlobman", "Soul", "Swooty", "Winterr", "Mitchdog27"],
   "credits": "TheyCallMeDanger for the original OreSpawn mod"
 }]
