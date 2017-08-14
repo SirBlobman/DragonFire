@@ -1,5 +1,11 @@
+<Language Information>
 language.name=English
 language.region=United States
 language.code=en_us
 
+<Armor>
 item.rabbit_boots.name=Rabbit Boots
+
+<Food>
+item.raw_calamari.name=Raw Calamari
+item.cooked_calamari.name=Cooked Calamari
