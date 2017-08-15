@@ -1,5 +1,6 @@
 package com.DragonFire.item.tool;
 
+import com.DragonFire.creative.DFTabs;
 import com.DragonFire.entity.EntityEnderArrow;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -13,6 +14,7 @@ public class EnderArrow extends ItemArrow {
         super();
         setUnlocalizedName("ender_arrow");
         setRegistryName("ender_arrow");
+        setCreativeTab(DFTabs.DRAGONFIRE);
     }
 
     @Override

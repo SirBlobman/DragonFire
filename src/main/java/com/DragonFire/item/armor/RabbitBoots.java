@@ -1,5 +1,6 @@
 package com.DragonFire.item.armor;
 
+import com.DragonFire.creative.DFTabs;
 import com.DragonFire.utility.Util;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class RabbitBoots extends ItemArmor {
         super(RABBIT, 1, EntityEquipmentSlot.FEET);
         String name = "rabbit_boots";
         setUnlocalizedName(name); setRegistryName(name);
+        setCreativeTab(DFTabs.DRAGONFIRE);
     }
     
     @Override

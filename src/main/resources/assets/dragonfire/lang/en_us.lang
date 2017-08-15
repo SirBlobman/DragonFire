@@ -20,3 +20,6 @@ item.bat_wings.name=Bat Wings
 
 <Potions>
 potion.potency.10=X
+
+<Creative Tabs>
+itemGroup.DragonFire=§6§lDragon Fire§r

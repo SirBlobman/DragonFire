@@ -1,5 +1,6 @@
 package com.DragonFire.item.tool;
 
+import com.DragonFire.creative.DFTabs;
 import com.DragonFire.item.DFItems;
 
 import javax.annotation.Nullable;
@@ -25,6 +26,7 @@ public class EnderBow extends ItemBow {
         super();
         setUnlocalizedName("ender_bow");
         setRegistryName("ender_bow");
+        setCreativeTab(DFTabs.DRAGONFIRE);
         addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter() {
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {

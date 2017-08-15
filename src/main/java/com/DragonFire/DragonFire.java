@@ -1,6 +1,7 @@
 package com.DragonFire;
 
 import com.DragonFire.listener.ListenCustomDrops;
+import com.DragonFire.listener.ListenCustomLoot;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
 
@@ -37,7 +38,8 @@ public class DragonFire {
     @EventHandler
     public void pre(FMLPreInitializationEvent e) {
         Util.regEvents(this, 
-            new ListenCustomDrops()
+            new ListenCustomDrops(),
+            new ListenCustomLoot()
         );
         proxy.pre(e);
     }

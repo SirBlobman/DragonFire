@@ -1,5 +1,7 @@
 package com.DragonFire.item;
 
+import com.DragonFire.creative.DFTabs;
+
 import net.minecraft.item.Item;
 
 public class QuickItem extends Item {
@@ -7,5 +9,6 @@ public class QuickItem extends Item {
         super();
         setUnlocalizedName(name);
         setRegistryName(name);
+        setCreativeTab(DFTabs.DRAGONFIRE);
     }
 }
