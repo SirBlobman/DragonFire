@@ -29,13 +29,7 @@ public final class DFRendering {
     }
     
     public static void entities() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, new IRenderFactory<EntityEnderArrow>() {
-            @Override
-            public Render<EntityEnderArrow> createRenderFor(RenderManager rm) {
-                RenderEnderArrow rea = new RenderEnderArrow(rm);
-                return rea;
-            }
-        });
+        RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, RenderEnderArrow::new);
     }
     
     /*private static void reg(Block... bb) {
