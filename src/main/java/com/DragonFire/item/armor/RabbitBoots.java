@@ -7,16 +7,19 @@ import java.util.List;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class RabbitBoots extends ItemArmor {
+    public static final ArmorMaterial RABBIT = EnumHelper.addArmorMaterial("RABBIT", "dragonfire:rabbit", 33, new int[] {3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
     public RabbitBoots() {
-        super(ArmorMaterial.DIAMOND, ArmorMaterial.DIAMOND.getDamageReductionAmount(EntityEquipmentSlot.FEET), EntityEquipmentSlot.FEET);
+        super(RABBIT, 1, EntityEquipmentSlot.FEET);
         String name = "rabbit_boots";
         setUnlocalizedName(name); setRegistryName(name);
     }

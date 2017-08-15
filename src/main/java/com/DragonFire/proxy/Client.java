@@ -1,5 +1,7 @@
 package com.DragonFire.proxy;
 
+import com.DragonFire.render.DFRendering;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,6 +28,7 @@ public class Client extends Common {
     @Override
     public void items(IForgeRegistry<Item> ifr) {
         super.items(ifr);
+        DFRendering.items();
     }
     
     @Override

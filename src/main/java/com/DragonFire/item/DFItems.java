@@ -10,7 +10,7 @@ public final class DFItems {
     public static final RabbitBoots RABBIT_BOOTS = new RabbitBoots();
     
     //Food
-    public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 2, 0.4F, true);
+    public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 1, 0.4F, true);
     public static final FoodItem COOKED_CALAMARI = new FoodItem("cooked_calamari", 5, 6.0F, false);
     public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
     
