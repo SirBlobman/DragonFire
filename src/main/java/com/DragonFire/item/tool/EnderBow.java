@@ -86,8 +86,7 @@ public class EnderBow extends ItemBow {
 
                 if (f >= 0.1D) {
                     boolean flag1 = entityplayer.capabilities.isCreativeMode
-                            || (itemstack.getItem() instanceof EnderArrow
-                                    && ((EnderArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
+                            || (itemstack.getItem() instanceof EnderArrow);
 
                     if (!worldIn.isRemote) {
                         EnderArrow itemarrow = (EnderArrow) (itemstack.getItem() instanceof EnderArrow
