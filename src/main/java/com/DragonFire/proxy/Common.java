@@ -1,5 +1,6 @@
 package com.DragonFire.proxy;
 
+import com.DragonFire.entity.DFEntities;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.recipe.DFRecipes;
 
@@ -12,7 +13,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class Common {
     public void pre(FMLPreInitializationEvent e) {
-        
+        DFEntities.entities();
     }
     
     public void init(FMLInitializationEvent e) {

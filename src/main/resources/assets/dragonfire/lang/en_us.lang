@@ -6,6 +6,10 @@ language.code=en_us
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
 
+<Tools and Weapons>
+item.ender_bow.name=Ender Bow
+item.ender_arrow.name=Ender Arrow
+
 <Food>
 item.raw_calamari.name=Raw Calamari
 item.cooked_calamari.name=Cooked Calamari

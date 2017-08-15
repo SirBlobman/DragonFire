@@ -13,6 +13,7 @@ public class Client extends Common {
     @Override
     public void pre(FMLPreInitializationEvent e) {
         super.pre(e);
+        DFRendering.entities();
     }
     
     @Override
