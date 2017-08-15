@@ -22,7 +22,7 @@ public final class DFRendering {
         reg(DFItems.ENDER_BOW, DFItems.ENDER_ARROW);
         
         //Food
-        reg(DFItems.FRIED_EGG, DFItems.RAW_CALAMARI, DFItems.COOKED_CALAMARI);
+        reg(DFItems.FRIED_EGG, DFItems.RAW_CALAMARI, DFItems.COOKED_CALAMARI, DFItems.POTION_COOKIE);
         
         //Other Items
         reg(DFItems.BAT_WINGS);

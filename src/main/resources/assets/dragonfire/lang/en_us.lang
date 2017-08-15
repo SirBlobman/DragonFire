@@ -23,3 +23,26 @@ potion.potency.10=X
 
 <Creative Tabs>
 itemGroup.DragonFire=§6§lDragon Fire§r
+
+<Potion Cookies>
+potion_cookie.effect.empty=Uncraftable Potion Cookie
+potion_cookie.effect.water=Potion Cookie
+potion_cookie.effect.mundane=Potion Cookie
+potion_cookie.effect.thick=Potion Cookie
+potion_cookie.effect.awkward=Potion Cookie
+potion_cookie.effect.night_vision=Cookie of Night Vision
+potion_cookie.effect.invisibility=Cookie of Invisibility
+potion_cookie.effect.leaping=Cookie of Leaping
+potion_cookie.effect.fire_resistance=Cookie of Fire Resistance
+potion_cookie.effect.swiftness=Cookie of Swiftness
+potion_cookie.effect.slowness=Cookie of Slowness
+potion_cookie.effect.water=Cookie of Splashing
+potion_cookie.effect.water_breathing=Cookie of Water Breathing
+potion_cookie.effect.healing=Cookie of Healing
+potion_cookie.effect.harming=Cookie of Harming
+potion_cookie.effect.poison=Cookie of Poison
+potion_cookie.effect.regeneration=Cookie of Regeneration
+potion_cookie.effect.strength=Cookie of Strength
+potion_cookie.effect.weakness=Cookie of Weakness
+potion_cookie.effect.levitation=Cookie of Levitation
+potion_cookie.effect.luck=Cookie of Luck

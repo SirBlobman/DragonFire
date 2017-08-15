@@ -19,6 +19,7 @@ public final class DFItems {
     public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 1, 0.4F, true);
     public static final FoodItem COOKED_CALAMARI = new FoodItem("cooked_calamari", 5, 6.0F, false);
     public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
+    public static final FoodItem POTION_COOKIE = new PotionCookie();
     
     //Other Items
     public static final Item BAT_WINGS = new QuickItem("bat_wings");
@@ -31,7 +32,7 @@ public final class DFItems {
         ifr.registerAll(ENDER_BOW, ENDER_ARROW);
         
         //Food
-        ifr.registerAll(RAW_CALAMARI, COOKED_CALAMARI, FRIED_EGG);
+        ifr.registerAll(RAW_CALAMARI, COOKED_CALAMARI, FRIED_EGG, POTION_COOKIE);
         
         //Other Items
         ifr.registerAll(BAT_WINGS);
