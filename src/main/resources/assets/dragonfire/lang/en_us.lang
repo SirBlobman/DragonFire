@@ -14,9 +14,12 @@ item.ender_arrow.name=Ender Arrow
 item.raw_calamari.name=Raw Calamari
 item.cooked_calamari.name=Cooked Calamari
 item.fried_egg.name=Fried Egg
+item.pineapple_slice.name=Pineapple Slice
 
-<Other Items>
+<Mob Drops>
 item.bat_wings.name=Bat Wings
+item.mummy_rags.name=Mummy Rags
+item.mummy_head.name=Mummy Head
 
 <Potions>
 potion.potency.10=X

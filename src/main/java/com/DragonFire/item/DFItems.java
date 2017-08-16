@@ -19,10 +19,13 @@ public final class DFItems {
     public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 1, 0.4F, true);
     public static final FoodItem COOKED_CALAMARI = new FoodItem("cooked_calamari", 5, 6.0F, false);
     public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
+    public static final FoodItem PINEAPPLE_SLICE = new FoodItem("pineapple_slice", 4, 2.4F, false);
     public static final FoodItem POTION_COOKIE = new PotionCookie();
     
-    //Other Items
+    //Mob Drops
     public static final Item BAT_WINGS = new QuickItem("bat_wings");
+    public static final MummyHead MUMMY_HEAD = new MummyHead();
+    public static final Item MUMMY_RAGS = new QuickItem("mummy_rags");
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -32,9 +35,9 @@ public final class DFItems {
         ifr.registerAll(ENDER_BOW, ENDER_ARROW);
         
         //Food
-        ifr.registerAll(RAW_CALAMARI, COOKED_CALAMARI, FRIED_EGG, POTION_COOKIE);
+        ifr.registerAll(RAW_CALAMARI, COOKED_CALAMARI, FRIED_EGG, PINEAPPLE_SLICE, POTION_COOKIE);
         
-        //Other Items
-        ifr.registerAll(BAT_WINGS);
+        //Mob Drops
+        ifr.registerAll(BAT_WINGS, MUMMY_HEAD, MUMMY_RAGS);
     }
 }

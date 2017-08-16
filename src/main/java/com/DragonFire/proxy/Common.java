@@ -1,5 +1,6 @@
 package com.DragonFire.proxy;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.entity.DFEntities;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.recipe.DFRecipes;
@@ -30,6 +31,6 @@ public class Common {
     }
 
     public void blocks(IForgeRegistry<Block> ifr) {
-        
+        DFBlocks.register(ifr);
     }
 }

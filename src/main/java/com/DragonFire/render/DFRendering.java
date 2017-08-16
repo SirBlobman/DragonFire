@@ -1,9 +1,13 @@
 package com.DragonFire.render;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.entity.EntityEnderArrow;
+import com.DragonFire.entity.EntityMummy;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.render.entity.RenderEnderArrow;
+import com.DragonFire.render.entity.RenderMummy;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -19,17 +23,23 @@ public final class DFRendering {
         reg(DFItems.ENDER_BOW, DFItems.ENDER_ARROW);
         
         //Food
-        reg(DFItems.FRIED_EGG, DFItems.RAW_CALAMARI, DFItems.COOKED_CALAMARI, DFItems.POTION_COOKIE);
+        reg(DFItems.FRIED_EGG, DFItems.RAW_CALAMARI, DFItems.COOKED_CALAMARI, 
+            DFItems.PINEAPPLE_SLICE, DFItems.POTION_COOKIE);
         
-        //Other Items
-        reg(DFItems.BAT_WINGS);
+        //Mob Drops
+        reg(DFItems.BAT_WINGS, DFItems.MUMMY_HEAD, DFItems.MUMMY_RAGS);
+    }
+    
+    public static void blocks() {
+        reg(DFBlocks.MUMMY_HEAD);
     }
     
     public static void entities() {
         RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, RenderEnderArrow::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
     }
     
-    /*private static void reg(Block... bb) {
+    private static void reg(Block... bb) {
         Item[] ii = new Item[bb.length];
         for(int j = 0; j < bb.length; j++) {
             Block b = bb[j];
@@ -37,7 +47,7 @@ public final class DFRendering {
             ii[j] = i;
         }
         reg(ii);
-    }*/
+    }
     
     private static void reg(Item... ii) {
         for(Item i : ii) {

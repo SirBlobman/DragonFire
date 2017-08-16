@@ -53,5 +53,6 @@ public class Client extends Common {
     @Override
     public void blocks(IForgeRegistry<Block> ifr) {
         super.blocks(ifr);
+        DFRendering.blocks();
     }
 }
