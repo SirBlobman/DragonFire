@@ -12,7 +12,10 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.*;
+import net.minecraft.item.IItemPropertyGetter;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBow;
+import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
@@ -85,8 +88,7 @@ public class EnderBow extends ItemBow {
                 float f = getArrowVelocity(i);
 
                 if (f >= 0.1D) {
-                    boolean flag1 = entityplayer.capabilities.isCreativeMode
-                            || (itemstack.getItem() instanceof EnderArrow);
+                    boolean flag1 = entityplayer.capabilities.isCreativeMode;
 
                     if (!worldIn.isRemote) {
                         EnderArrow itemarrow = (EnderArrow) (itemstack.getItem() instanceof EnderArrow
@@ -131,7 +133,7 @@ public class EnderBow extends ItemBow {
                             SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F,
                             1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
-                    if (!flag1 && !entityplayer.capabilities.isCreativeMode) {
+                    if (!entityplayer.capabilities.isCreativeMode) {
                         itemstack.shrink(1);
 
                         if (itemstack.isEmpty()) {

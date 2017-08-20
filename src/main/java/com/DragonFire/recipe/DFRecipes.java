@@ -19,6 +19,9 @@ public final class DFRecipes {
         
         /* Raw Calamari -> Cooked Calamari */
         GameRegistry.addSmelting(DFItems.RAW_CALAMARI, new ItemStack(DFItems.COOKED_CALAMARI, 1), 0.0F);
+        
+        /* Raw Bacon -> Cooked Bacon */
+        GameRegistry.addSmelting(DFItems.RAW_BACON, new ItemStack(DFItems.COOKED_BACON, 1), 0.0F);
     }
     
     public static void brewingRecipes() {
@@ -27,6 +30,6 @@ public final class DFRecipes {
         ItemStack levitationPotion = PotionUtils.appendEffects(potion, Util.newList(new PotionEffect(MobEffects.LEVITATION, 100, 10)));
         
         /* Bat Wings -> Levitation Potion */
-        BrewingRecipeRegistry.addRecipe(awkPotion, new ItemStack(DFItems.BAT_WINGS), levitationPotion);
+        BrewingRecipeRegistry.addRecipe(awkPotion, new ItemStack(DFItems.BAT_WING), levitationPotion);
     }
 }

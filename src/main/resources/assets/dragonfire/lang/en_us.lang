@@ -12,20 +12,26 @@ item.ender_arrow.name=Ender Arrow
 
 <Food>
 item.raw_calamari.name=Raw Calamari
+item.raw_bacon.name=Raw Bacon
 item.cooked_calamari.name=Cooked Calamari
+item.cooked_bacon.name=Cooked Bacon
 item.fried_egg.name=Fried Egg
 item.pineapple_slice.name=Pineapple Slice
 
 <Mob Drops>
-item.bat_wings.name=Bat Wings
-item.mummy_rags.name=Mummy Rags
-item.mummy_head.name=Mummy Head
+item.bat_wing.name=Bat Wing
+item.mummy_rag.name=Mummy Rag
+tile.mummy_head.name=Mummy Head
 
 <Potions>
 potion.potency.10=X
 
 <Creative Tabs>
-itemGroup.DragonFire=§6§lDragon Fire§r
+itemGroup.DragonFire=§5§lDragon Fire§r
+itemGroup.DragonFire_Spawn_Eggs=§5§lDragon Fire§r ⎹ §eSpawn Eggs
+
+<Entities>
+entity.mummy.name=Mummy
 
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Cookie

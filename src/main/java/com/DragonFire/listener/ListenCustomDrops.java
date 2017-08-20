@@ -30,7 +30,7 @@ public class ListenCustomDrops {
                 ItemStack is = new ItemStack(item, amount);
                 dropItem(en, is);
             } else if(en instanceof EntityBat) {
-                Item item = DFItems.BAT_WINGS;
+                Item item = DFItems.BAT_WING;
                 int amount = ((loot > 0) ? loot : 1);
                 ItemStack is = new ItemStack(item, amount);
                 dropItem(en, is);

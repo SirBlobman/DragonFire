@@ -1,0 +1,48 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "dragonfire:entity/mummy",
+    "0": "dragonfire:entity/mummy"
+  },
+  "display": {
+    "head": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 8, 0],
+      "scale": [2, 2, 2]
+    },
+    "gui": {
+      "rotation": [ 30, 225, 0 ],
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 4, 0],
+      "scale":[ 1, 1, 1 ]
+    },
+    "ground": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 0.5, 0.5, 0.5 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 45, 45, 0 ],
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 0.5, 0.5, 0.5 ]
+    }
+  },
+  "elements": [
+    {
+      "from": [ 4.0, 0.0, 4.0 ], 
+      "to": [ 12.0, 8.0, 12.0 ], 
+      "faces": {
+        "north": { "texture": "#0", "uv": [ 2.0, 2.0, 4.0, 4.0 ] },
+        "east": { "texture": "#0", "uv": [ 2.0, 0.0, 4.0, 2.0 ] },
+        "south": { "texture": "#0", "uv": [ 2.0, 0.0, 4.0, 2.0 ] },
+        "west": { "texture": "#0", "uv": [ 2.0, 0.0, 4.0, 2.0 ] },
+        "up": { "texture": "#0", "uv": [ 2.0, 0.0, 4.0, 2.0 ] },
+        "down": { "texture": "#0", "uv": [ 2.0, 0.0, 4.0, 2.0 ] }
+      }
+    }
+  ]
+}

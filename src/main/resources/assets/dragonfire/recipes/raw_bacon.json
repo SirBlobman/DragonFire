@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:porkchop"
+    }
+  },
+  "result": {
+    "item": "dragonfire:raw_bacon",
+    "count": 4
+  }
+}

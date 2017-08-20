@@ -2,6 +2,7 @@ package com.DragonFire;
 
 import com.DragonFire.listener.ListenCustomDrops;
 import com.DragonFire.listener.ListenCustomLoot;
+import com.DragonFire.listener.ListenCustomTarget;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.recipe.RecipePotionCookie;
 import com.DragonFire.utility.Util;
@@ -41,7 +42,8 @@ public class DragonFire {
     public void pre(FMLPreInitializationEvent e) {
         Util.regEvents(this, 
             new ListenCustomDrops(),
-            new ListenCustomLoot()
+            new ListenCustomLoot(),
+            new ListenCustomTarget()
         );
         proxy.pre(e);
     }

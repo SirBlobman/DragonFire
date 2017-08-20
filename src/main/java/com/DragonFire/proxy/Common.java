@@ -28,9 +28,10 @@ public class Common {
     
     public void items(IForgeRegistry<Item> ifr) {
         DFItems.register(ifr);
+        DFBlocks.register2(ifr);
     }
 
     public void blocks(IForgeRegistry<Block> ifr) {
-        DFBlocks.register(ifr);
+        DFBlocks.register1(ifr);
     }
 }

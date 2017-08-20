@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 public final class DFEntities {
     public static void entities() {
         reg("ender_arrow", EntityEnderArrow.class);
-        reg("mummy", EntityMummy.class, rgb(195, 171, 135), rgb(221, 204, 182));
+        reg("mummy", EntityMummy.class, rgb(243, 226, 175), rgb(204, 189, 146));
     }
     
     private static int id = 0;

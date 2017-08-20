@@ -1,8 +1,1 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "dragonfire:items/mummy_head_top",
-    "front": "dragonfire:items/mummy_head_face",
-    "side": "dragonfire:items/mummy_head_side"
-  }
-}
+{"parent": "dragonfire:block/mummy_head"}

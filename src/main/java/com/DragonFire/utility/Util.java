@@ -3,6 +3,11 @@ package com.DragonFire.utility;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.JsonToNBT;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
@@ -39,5 +44,20 @@ public class Util {
         List<L> list = new ArrayList<L>();
         for(L l : ll) list.add(l);
         return list;
+    }
+    
+    public static ItemStack getSpawnEgg(String entityID) {
+        try {
+            String p1 = "{id:\"minecraft:spawn_egg\", Count:1b, tag:{EntityTag:{id:\"";
+            String p2 = "\"}}}";
+            String json = p1 + entityID + p2;
+            NBTTagCompound nbt = JsonToNBT.getTagFromJson(json);
+            ItemStack is = new ItemStack(nbt);
+            return is;
+        } catch(Throwable ex) {
+            Item egg = Items.EGG;
+            ItemStack is = new ItemStack(egg);
+            return is;
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/bat_wings"
+    "layer0": "dragonfire:items/mummy_rag"
   }
 }
