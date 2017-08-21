@@ -3,9 +3,11 @@ package com.DragonFire.render;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.entity.EntityEnderArrow;
 import com.DragonFire.entity.EntityMummy;
+import com.DragonFire.entity.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.render.entity.RenderEnderArrow;
 import com.DragonFire.render.entity.RenderMummy;
+import com.DragonFire.render.entity.RenderTikiSpear;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -38,6 +40,7 @@ public final class DFRendering {
     
     public static void entities() {
         RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, RenderEnderArrow::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTikiSpear.class, RenderTikiSpear::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
     }
     

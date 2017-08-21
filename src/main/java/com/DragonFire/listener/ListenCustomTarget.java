@@ -23,7 +23,7 @@ public class ListenCustomTarget {
                 Item i = helm.getItem();
                 if(i == DFBlocks.MUMMY_HEAD_ITEM) {
                     ee.setAttackTarget(null);
-                } else ee.setAttackTarget(target);
+                }
             }
         }
     }
