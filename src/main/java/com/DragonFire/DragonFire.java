@@ -4,12 +4,12 @@ import com.DragonFire.listener.ListenCustomDrops;
 import com.DragonFire.listener.ListenCustomLoot;
 import com.DragonFire.listener.ListenCustomTarget;
 import com.DragonFire.proxy.Common;
-import com.DragonFire.recipe.RecipePotionCookie;
 import com.DragonFire.utility.Util;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.PotionType;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -73,6 +73,12 @@ public class DragonFire {
     @SubscribeEvent
     public void recipes(Register<IRecipe> e) {
         IForgeRegistry<IRecipe> ifr = e.getRegistry();
-        ifr.register(new RecipePotionCookie());
+        proxy.recipes(ifr);
+    }
+    
+    @SubscribeEvent
+    public void potionTypes(Register<PotionType> e) {
+        IForgeRegistry<PotionType> ifr = e.getRegistry();
+        proxy.potionTypes(ifr);
     }
 }

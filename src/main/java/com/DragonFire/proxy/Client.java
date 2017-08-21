@@ -9,6 +9,8 @@ import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -54,5 +56,15 @@ public class Client extends Common {
     public void blocks(IForgeRegistry<Block> ifr) {
         super.blocks(ifr);
         DFRendering.blocks();
+    }
+    
+    @Override
+    public void recipes(IForgeRegistry<IRecipe> ifr) {
+        super.recipes(ifr);
+    }
+    
+    @Override
+    public void potionTypes(IForgeRegistry<PotionType> ifr) {
+        super.potionTypes(ifr);
     }
 }

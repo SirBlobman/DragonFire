@@ -2,6 +2,8 @@ package com.DragonFire.proxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -31,5 +33,15 @@ public class Server extends Common {
     @Override
     public void blocks(IForgeRegistry<Block> ifr) {
         super.blocks(ifr);
+    }
+    
+    @Override
+    public void recipes(IForgeRegistry<IRecipe> ifr) {
+        super.recipes(ifr);
+    }
+    
+    @Override
+    public void potionTypes(IForgeRegistry<PotionType> ifr) {
+        super.potionTypes(ifr);
     }
 }

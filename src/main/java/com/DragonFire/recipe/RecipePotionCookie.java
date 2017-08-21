@@ -16,6 +16,7 @@ public class RecipePotionCookie extends net.minecraftforge.registries.IForgeRegi
         setRegistryName("potion_cookie");
     }
     
+    @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
         if (inv.getWidth() == 3 && inv.getHeight() == 3) {
             for (int i = 0; i < inv.getWidth(); ++i) {
@@ -35,6 +36,7 @@ public class RecipePotionCookie extends net.minecraftforge.registries.IForgeRegi
         } else return false;
     }
     
+    @Override
     public ItemStack getCraftingResult(InventoryCrafting inv) {
         ItemStack itemstack = inv.getStackInRowAndColumn(1, 1);
 

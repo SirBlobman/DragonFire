@@ -1,18 +1,21 @@
 package com.DragonFire.recipe;
 
 import com.DragonFire.item.DFItems;
-import com.DragonFire.utility.Util;
+import com.DragonFire.potion.type.DFPotionTypes;
 
 import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionUtils;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.PotionHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
 
 public final class DFRecipes {
+    public static void craftingRecipes(IForgeRegistry<IRecipe> ifr) {
+        ifr.register(new RecipePotionCookie());
+    }
+    
     public static void furnaceRecipes() {
         /* Normal Egg -> Fried Egg */ 
         GameRegistry.addSmelting(Items.EGG, new ItemStack(DFItems.FRIED_EGG, 1), 0.0F);
@@ -25,11 +28,6 @@ public final class DFRecipes {
     }
     
     public static void brewingRecipes() {
-        ItemStack potion = new ItemStack(Items.POTIONITEM);
-        ItemStack awkPotion = PotionUtils.addPotionToItemStack(potion, PotionTypes.AWKWARD);
-        ItemStack levitationPotion = PotionUtils.appendEffects(potion, Util.newList(new PotionEffect(MobEffects.LEVITATION, 100, 10)));
-        
-        /* Bat Wings -> Levitation Potion */
-        BrewingRecipeRegistry.addRecipe(awkPotion, new ItemStack(DFItems.BAT_WING), levitationPotion);
+        PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.BAT_WING, DFPotionTypes.LEVITATION);
     }
 }
