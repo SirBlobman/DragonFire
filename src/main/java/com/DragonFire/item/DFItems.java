@@ -40,7 +40,8 @@ public final class DFItems {
         ifr.registerAll(
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
-            PINEAPPLE_SLICE, POTION_COOKIE
+            PINEAPPLE_SLICE, CHOCOLATE_BAR,
+            POTION_COOKIE
        );
         
         //Mob Drops

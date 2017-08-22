@@ -51,12 +51,12 @@ public class Client extends Common {
     public void items(IForgeRegistry<Item> ifr) {
         super.items(ifr);
         DFRendering.items();
+        DFRendering.blocks();
     }
     
     @Override
     public void blocks(IForgeRegistry<Block> ifr) {
         super.blocks(ifr);
-        DFRendering.blocks();
     }
     
     @Override

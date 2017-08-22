@@ -9,6 +9,7 @@ import com.DragonFire.render.entity.RenderEnderArrow;
 import com.DragonFire.render.entity.RenderMummy;
 import com.DragonFire.render.entity.RenderTikiSpear;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -36,15 +37,22 @@ public final class DFRendering {
     }
     
     public static void blocks() {
-        reg(
-            DFBlocks.MUMMY_HEAD_ITEM, DFBlocks.CHOCOLATE_CAKE_ITEM, DFBlocks.ENDERPEARL_BLOCK_ITEM
-        );
+        reg(DFBlocks.MUMMY_HEAD, DFBlocks.CHOCOLATE_CAKE, DFBlocks.ENDERPEARL_BLOCK);
     }
     
     public static void entities() {
         RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, RenderEnderArrow::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTikiSpear.class, RenderTikiSpear::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
+    }
+    
+    private static void reg(Block... bb) {
+        Item[] ii = new Item[bb.length];
+        for(int i = 0; i < bb.length; i++) {
+            Block b = bb[i];
+            Item ib = Item.getItemFromBlock(b);
+            ii[i] = ib;
+        } reg(ii);
     }
     
     private static void reg(Item... ii) {

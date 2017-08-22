@@ -11,7 +11,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public final class DFBlocks {
     //Mob Stuff
     public static final MummyHead MUMMY_HEAD = new MummyHead();
-    public static final ItemBlock MUMMY_HEAD_ITEM = new ItemMummyHead(MUMMY_HEAD);
+    public static final ItemBlock MUMMY_HEAD_ITEM = new ItemMummyHead();
     
     //Food
     public static final BlockChocolateCake CHOCOLATE_CAKE = new BlockChocolateCake();
