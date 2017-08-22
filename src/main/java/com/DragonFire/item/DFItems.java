@@ -22,6 +22,7 @@ public final class DFItems {
     public static final FoodItem COOKED_BACON = new FoodItem("cooked_bacon", 2, 3.2F, true);
     public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
     public static final FoodItem PINEAPPLE_SLICE = new FoodItem("pineapple_slice", 4, 2.4F, false);
+    public static final FoodItem CHOCOLATE_BAR = new FoodItem("chocolate_bar", 2, 0.4F, false); //Why would you feed a dog chocolate?
     public static final FoodItem POTION_COOKIE = new PotionCookie();
     
     //Mob Drops

@@ -17,14 +17,15 @@ item.cooked_calamari.name=Cooked Calamari
 item.cooked_bacon.name=Cooked Bacon
 item.fried_egg.name=Fried Egg
 item.pineapple_slice.name=Pineapple Slice
+item.chocolate_bar.name=Chocolate Bar
 
 <Mob Drops>
 item.bat_wing.name=Bat Wing
 item.mummy_rag.name=Mummy Rag
 tile.mummy_head.name=Mummy Head
 
-<Potions>
-potion.potency.10=X
+<Enchantments>
+enchantment.auto_smelt=Auto Smelt
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragon Fire§r

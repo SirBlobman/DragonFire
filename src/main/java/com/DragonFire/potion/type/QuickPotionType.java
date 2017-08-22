@@ -4,8 +4,8 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
 
 public class QuickPotionType extends PotionType {
-    public QuickPotionType(String name, PotionEffect pe) {
+    public QuickPotionType(String registry, String name, PotionEffect pe) {
         super(name, pe);
-        setRegistryName(name);
+        setRegistryName(registry);
     }
 }

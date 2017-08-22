@@ -27,7 +27,8 @@ public final class DFRendering {
         reg(
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
-            DFItems.PINEAPPLE_SLICE, DFItems.POTION_COOKIE
+            DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR,
+            DFItems.POTION_COOKIE
         );
         
         //Mob Drops
@@ -35,7 +36,9 @@ public final class DFRendering {
     }
     
     public static void blocks() {
-        reg(DFBlocks.MUMMY_HEAD_ITEM);
+        reg(
+            DFBlocks.MUMMY_HEAD_ITEM, DFBlocks.CHOCOLATE_CAKE_ITEM, DFBlocks.ENDERPEARL_BLOCK_ITEM
+        );
     }
     
     public static void entities() {

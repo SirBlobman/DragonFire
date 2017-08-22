@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -66,5 +67,10 @@ public class Client extends Common {
     @Override
     public void potionTypes(IForgeRegistry<PotionType> ifr) {
         super.potionTypes(ifr);
+    }
+    
+    @Override
+    public void enchants(IForgeRegistry<Enchantment> ifr) {
+        super.enchants(ifr);
     }
 }

@@ -29,5 +29,7 @@ public final class DFRecipes {
     
     public static void brewingRecipes() {
         PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.BAT_WING, DFPotionTypes.LEVITATION);
+        PotionHelper.addMix(DFPotionTypes.LEVITATION, Items.REDSTONE, DFPotionTypes.LONG_LEVITATION);
+        PotionHelper.addMix(DFPotionTypes.LEVITATION, Items.GLOWSTONE_DUST, DFPotionTypes.STRONG_LEVITATION);
     }
 }

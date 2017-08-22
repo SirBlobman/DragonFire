@@ -1,6 +1,7 @@
 package com.DragonFire.utility;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.init.Items;
@@ -41,6 +42,12 @@ public class Util {
     
     @SafeVarargs
     public static <L> List<L> newList(L... ll) {
+        List<L> list = new ArrayList<L>();
+        for(L l : ll) list.add(l);
+        return list;
+    }
+    
+    public static <L> List<L> newList(Collection<L> ll) {
         List<L> list = new ArrayList<L>();
         for(L l : ll) list.add(l);
         return list;

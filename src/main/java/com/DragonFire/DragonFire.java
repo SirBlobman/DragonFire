@@ -1,12 +1,14 @@
 package com.DragonFire;
 
 import com.DragonFire.listener.ListenCustomDrops;
+import com.DragonFire.listener.ListenCustomEnchants;
 import com.DragonFire.listener.ListenCustomLoot;
 import com.DragonFire.listener.ListenCustomTarget;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionType;
@@ -42,6 +44,7 @@ public class DragonFire {
     public void pre(FMLPreInitializationEvent e) {
         Util.regEvents(this, 
             new ListenCustomDrops(),
+            new ListenCustomEnchants(),
             new ListenCustomLoot(),
             new ListenCustomTarget()
         );
@@ -80,5 +83,11 @@ public class DragonFire {
     public void potionTypes(Register<PotionType> e) {
         IForgeRegistry<PotionType> ifr = e.getRegistry();
         proxy.potionTypes(ifr);
+    }
+    
+    @SubscribeEvent
+    public void enchantments(Register<Enchantment> e) {
+        IForgeRegistry<Enchantment> ifr = e.getRegistry();
+        proxy.enchants(ifr);
     }
 }

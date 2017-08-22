@@ -1,6 +1,7 @@
 package com.DragonFire.proxy;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionType;
@@ -43,5 +44,10 @@ public class Server extends Common {
     @Override
     public void potionTypes(IForgeRegistry<PotionType> ifr) {
         super.potionTypes(ifr);
+    }
+    
+    @Override
+    public void enchants(IForgeRegistry<Enchantment> ifr) {
+        super.enchants(ifr);
     }
 }

@@ -1,12 +1,14 @@
 package com.DragonFire.proxy;
 
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.entity.DFEntities;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.potion.type.DFPotionTypes;
 import com.DragonFire.recipe.DFRecipes;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionType;
@@ -44,5 +46,9 @@ public class Common {
     
     public void potionTypes(IForgeRegistry<PotionType> ifr) {
         DFPotionTypes.register(ifr);
+    }
+
+    public void enchants(IForgeRegistry<Enchantment> ifr) {
+        DFEnchants.register(ifr);
     }
 }
