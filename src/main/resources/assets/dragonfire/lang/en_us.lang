@@ -22,7 +22,6 @@ item.chocolate_bar.name=Chocolate Bar
 <Mob Drops>
 item.bat_wing.name=Bat Wing
 item.mummy_rag.name=Mummy Rag
-tile.mummy_head.name=Mummy Head
 
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
@@ -33,6 +32,11 @@ itemGroup.DragonFire_Spawn_Eggs=§5§lDragon Fire§r ⎹ §eSpawn Eggs
 
 <Entities>
 entity.mummy.name=Mummy
+
+<Blocks>
+tile.mummy_head.name=Mummy Head
+tile.enderpearl_block.name=Enderpearl Block
+tile.chocolate_cake.name=Chocolate Cake
 
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Cookie
