@@ -7,7 +7,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 
 public class EnchantmentAutoSmelt extends Enchantment {
     public EnchantmentAutoSmelt() {
-        super(Rarity.RARE, EnumEnchantmentType.DIGGER, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
+        super(Rarity.UNCOMMON, EnumEnchantmentType.DIGGER, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
         setRegistryName("auto_smelt");
         setName("auto_smelt");
     }
