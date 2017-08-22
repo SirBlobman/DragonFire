@@ -14,6 +14,10 @@ public class EnchantmentAutoSmelt extends Enchantment {
     
     @Override
     public boolean canApplyTogether(Enchantment e) {
-        return super.canApplyTogether(e) && (e != Enchantments.SILK_TOUCH);
+        return ((e != Enchantments.SILK_TOUCH) && (e != this));
     }
+    
+    @Override
+    public int getMinEnchantability(int level) {return 15;}
+    public int getMaxEnchantability(int level) {return 65;}
 }

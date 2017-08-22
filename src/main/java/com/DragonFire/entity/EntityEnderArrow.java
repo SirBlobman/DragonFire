@@ -8,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.NetHandlerPlayServer;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
@@ -38,5 +39,13 @@ public class EntityEnderArrow extends EntityArrow {
             } else shooter.setLocationAndAngles(x, y, z, yaw, pit);
             setDead();
         }
+    }
+
+    @Override
+    public void onUpdate() {
+        for (int k = 0; k < 4; ++k) {
+            world.spawnParticle(EnumParticleTypes.PORTAL, this.posX + this.motionX * k / 4.0D, this.posY + this.motionY * k / 4.0D, this.posZ + this.motionZ * k / 4.0D, -this.motionX, -this.motionY + 0.2D, -this.motionZ);
+        }
+        super.onUpdate();
     }
 }
