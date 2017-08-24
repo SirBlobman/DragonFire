@@ -19,7 +19,7 @@ public final class DFTabs {
         }
     };
     
-    public static final CreativeTabs DF_SPAWN_EGGS = new CreativeTabs("DragonFire_Spawn_Eggs") {
+    public static final CreativeTabs SPAWN_EGGS = new CreativeTabs("DragonFire_Spawn_Eggs") {
         @Override
         public ItemStack getTabIconItem() {
             Item i = Items.SPAWN_EGG;
@@ -32,6 +32,15 @@ public final class DFTabs {
             super.displayAllRelevantItems(list);
             ItemStack is = Util.getSpawnEgg("dragonfire:mummy");
             list.add(is);
+        }
+    };
+    
+    public static final CreativeTabs ARMOR = new CreativeTabs("DragonFire_Armor") {
+        @Override
+        public ItemStack getTabIconItem() {
+            Item i = DFItems.EMERALD_HELMET;
+            ItemStack is = new ItemStack(i);
+            return is;
         }
     };
 }

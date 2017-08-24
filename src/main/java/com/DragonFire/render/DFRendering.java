@@ -19,7 +19,10 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 public final class DFRendering {
     public static void items() {
         //Armor
-        reg(DFItems.RABBIT_BOOTS);
+        reg(
+            DFItems.RABBIT_BOOTS,
+            DFItems.EMERALD_HELMET, DFItems.EMERALD_CHESTPLATE, DFItems.EMERALD_LEGGINGS, DFItems.EMERALD_BOOTS
+        );
         
         //Tools and Weapons
         reg(DFItems.ENDER_BOW, DFItems.ENDER_ARROW);
