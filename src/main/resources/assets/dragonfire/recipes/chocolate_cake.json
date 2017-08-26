@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "CCC"
+  ],
+  "key": {
+    "C": {"item": "dragonfire:chocolate_bar"},
+    "E": {"item": "minecraft:egg"},
+    "M": {"item": "minecraft:milk_bucket"},
+    "S": {"item": "minecraft:sugar"}
+  },
+  "result": {
+    "item": "dragonfire:chocolate_cake",
+    "count": 1
+  }
+}

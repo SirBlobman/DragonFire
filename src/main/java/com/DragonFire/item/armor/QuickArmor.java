@@ -6,9 +6,9 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 
 public class QuickArmor extends ItemArmor {
-    public QuickArmor(String type, ArmorMaterial am, EntityEquipmentSlot slot) {
+    public QuickArmor(ArmorMaterial am, EntityEquipmentSlot slot) {
         super(am, ((slot == EntityEquipmentSlot.LEGS) ? 2 : 1), slot);
-        String name = type + "_";
+        String name = am.name().toLowerCase() + "_";
         switch(slot) {
             case HEAD: 
                 name = name + "helmet";

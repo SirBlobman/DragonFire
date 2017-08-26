@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/ender_arrow"
+    "layer0": "dragonfire:items/ender_bow/ender_arrow"
   }
 }

@@ -1,5 +1,8 @@
 package com.DragonFire.utility;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -29,6 +32,15 @@ public class Util {
 
         String s = new String(cc);
         return s;
+    }
+    
+    public static void print(Object... oo) {
+        for(Object o : oo) {
+            String s = o.toString();
+            String c = color(s);
+            Logger log = LogManager.getLogger("Dragon Fire");
+            log.info(c);
+        }
     }
 
     public static void regEvents(Object... oo) {

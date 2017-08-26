@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 public class RabbitBoots extends QuickArmor {
     public RabbitBoots() {
-        super("rabbit", DFItems.ARMOR_RABBIT, EntityEquipmentSlot.FEET);
+        super(DFItems.ARMOR_RABBIT, EntityEquipmentSlot.FEET);
     }
     
     @Override
