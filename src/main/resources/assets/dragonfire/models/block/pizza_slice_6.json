@@ -1,0 +1,10 @@
+{
+  "parent": "block/cake_slice6",
+  "textures": {
+    "particle": "dragonfire:blocks/pizza/side",
+    "bottom": "dragonfire:blocks/pizza/bottom",
+    "top": "dragonfire:blocks/pizza/top",
+    "side": "dragonfire:blocks/pizza/side",
+    "inside": "dragonfire:blocks/pizza/inner"
+  }
+}

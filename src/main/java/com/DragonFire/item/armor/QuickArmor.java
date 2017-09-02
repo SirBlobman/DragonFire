@@ -34,6 +34,6 @@ public class QuickArmor extends ItemArmor {
         }
         setRegistryName(name);
         setUnlocalizedName(name);
-        setCreativeTab(DFTabs.ARMOR);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

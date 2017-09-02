@@ -19,6 +19,23 @@ public final class DFTabs {
         }
     };
     
+    public static final CreativeTabs COOKIES = new CreativeTabs("DragonFire_Cookies") {
+        @Override
+        public ItemStack getTabIconItem() {
+            Item i = Items.COOKIE;
+            ItemStack is = new ItemStack(i);
+            return is;
+        }
+        
+        @Override
+        public void displayAllRelevantItems(NonNullList<ItemStack> list) {
+            Item i = Items.COOKIE;
+            ItemStack is = new ItemStack(i);
+            list.add(is);
+            super.displayAllRelevantItems(list);
+        }
+    };
+    
     public static final CreativeTabs SPAWN_EGGS = new CreativeTabs("DragonFire_Spawn_Eggs") {
         @Override
         public ItemStack getTabIconItem() {
@@ -35,7 +52,7 @@ public final class DFTabs {
         }
     };
     
-    public static final CreativeTabs ARMOR = new CreativeTabs("DragonFire_Armor") {
+    public static final CreativeTabs ARMOR_AND_TOOLS = new CreativeTabs("DragonFire_Armor_and_Tools") {
         @Override
         public ItemStack getTabIconItem() {
             Item i = DFItems.EMERALD_HELMET;

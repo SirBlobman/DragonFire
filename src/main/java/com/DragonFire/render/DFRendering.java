@@ -34,7 +34,7 @@ public final class DFRendering {
         reg(
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
-            DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR,
+            DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE,
             DFItems.POTION_COOKIE
         );
         
@@ -43,7 +43,7 @@ public final class DFRendering {
     }
     
     public static void blocks() {
-        reg(DFBlocks.MUMMY_HEAD, DFBlocks.CHOCOLATE_CAKE, DFBlocks.ENDERPEARL_BLOCK);
+        reg(DFBlocks.MUMMY_HEAD, DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, DFBlocks.ENDERPEARL_BLOCK);
     }
     
     public static void entities() {

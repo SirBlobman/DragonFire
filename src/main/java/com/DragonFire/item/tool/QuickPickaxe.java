@@ -10,6 +10,6 @@ public class QuickPickaxe extends ItemPickaxe {
         String name = tm.name().toLowerCase();
         setRegistryName(name + "_pickaxe");
         setUnlocalizedName(name + "_pickaxe");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

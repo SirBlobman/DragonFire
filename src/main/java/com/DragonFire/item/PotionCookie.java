@@ -1,5 +1,7 @@
 package com.DragonFire.item;
 
+import com.DragonFire.creative.DFTabs;
+
 import java.util.List;
 
 import net.minecraft.client.resources.I18n;
@@ -17,6 +19,7 @@ public class PotionCookie extends FoodItem {
     public PotionCookie() {
         super("potion_cookie", 2, 0.4F, false);
         setAlwaysEdible();
+        setCreativeTab(DFTabs.COOKIES);
     }
     
     @Override

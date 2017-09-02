@@ -14,7 +14,7 @@ public class EnderArrow extends Item {
         super();
         setUnlocalizedName("ender_arrow");
         setRegistryName("ender_arrow");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 
     public EntityArrow createArrow(World w, ItemStack is, EntityLivingBase elb) {

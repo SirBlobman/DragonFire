@@ -10,6 +10,6 @@ public class QuickAxe extends ItemAxe {
         String name = tm.name().toLowerCase();
         setRegistryName(name + "_axe");
         setUnlocalizedName(name + "_axe");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

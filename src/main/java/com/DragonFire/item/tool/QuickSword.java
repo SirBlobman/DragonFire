@@ -10,6 +10,6 @@ public class QuickSword extends ItemSword {
         String name = tm.name().toLowerCase();
         setRegistryName(name + "_sword");
         setUnlocalizedName(name + "_sword");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

@@ -30,6 +30,7 @@ public final class DFItems {
     //Tools and Weapons
     public static final EnderBow ENDER_BOW = new EnderBow();
     public static final EnderArrow ENDER_ARROW = new EnderArrow();
+    public static final NetherRod NETHER_ROD = new NetherRod();
     public static final QuickSword EMERALD_SWORD = new QuickSword(TOOL_EMERALD);
     public static final QuickAxe EMERALD_AXE = new QuickAxe(TOOL_EMERALD);
     public static final QuickPickaxe EMERALD_PICKAXE = new QuickPickaxe(TOOL_EMERALD);
@@ -44,6 +45,7 @@ public final class DFItems {
     public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
     public static final FoodItem PINEAPPLE_SLICE = new FoodItem("pineapple_slice", 4, 2.4F, false);
     public static final FoodItem CHOCOLATE_BAR = new FoodItem("chocolate_bar", 2, 0.4F, false); //Why would you feed a dog chocolate?
+    public static final FoodItem CHEESE = new FoodItem("cheese", 6, 0.0F, false);
     public static final FoodItem POTION_COOKIE = new PotionCookie();
     
     //Mob Drops
@@ -60,6 +62,7 @@ public final class DFItems {
         //Tools and Weapons
         ifr.registerAll(
             ENDER_BOW, ENDER_ARROW,
+            NETHER_ROD,
             EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE
         );
         
@@ -67,7 +70,7 @@ public final class DFItems {
         ifr.registerAll(
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
-            PINEAPPLE_SLICE, CHOCOLATE_BAR,
+            PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE,
             POTION_COOKIE
        );
         

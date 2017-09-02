@@ -29,7 +29,7 @@ public class EnderBow extends ItemBow {
         super();
         setUnlocalizedName("ender_bow");
         setRegistryName("ender_bow");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
         addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter() {
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {

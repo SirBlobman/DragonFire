@@ -10,6 +10,6 @@ public class QuickShovel extends ItemSpade {
         String name = tm.name().toLowerCase();
         setRegistryName(name + "_shovel");
         setUnlocalizedName(name + "_shovel");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

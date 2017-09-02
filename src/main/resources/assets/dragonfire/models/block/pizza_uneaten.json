@@ -1,0 +1,9 @@
+{
+  "parent": "block/cake_uneaten",
+  "textures": {
+    "particle": "dragonfire:blocks/pizza/side",
+    "bottom": "dragonfire:blocks/pizza/bottom",
+    "top": "dragonfire:blocks/pizza/top",
+    "side": "dragonfire:blocks/pizza/side"
+  }
+}

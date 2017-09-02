@@ -10,6 +10,6 @@ public class QuickHoe extends ItemHoe {
         String name = tm.name().toLowerCase();
         setRegistryName(name + "_hoe");
         setUnlocalizedName(name + "_hoe");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
 }

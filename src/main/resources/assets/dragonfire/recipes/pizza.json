@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "CCC",
+    "WMW"
+  ],
+  "key": {
+    "B": {"item": "dragonfire:cooked_bacon"},
+    "C": {"item": "dragonfire:cheese"},
+    "M": {"item": "minecraft:milk_bucket"},
+    "W": {"item": "minecraft:wheat"}
+  },
+  "result": {
+    "item": "dragonfire:pizza",
+    "count": 1
+  }
+}

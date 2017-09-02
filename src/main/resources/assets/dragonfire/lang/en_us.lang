@@ -18,6 +18,7 @@ item.emerald_axe.name=Emerald Axe
 item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_shovel.name=Emerald Shovel
 item.emerald_hoe.name=Emerald Hoe
+item.nether_fishing_rod.name=Nether Rod
 
 <Food>
 item.raw_calamari.name=Raw Calamari
@@ -27,6 +28,7 @@ item.cooked_bacon.name=Cooked Bacon
 item.fried_egg.name=Fried Egg
 item.pineapple_slice.name=Pineapple Slice
 item.chocolate_bar.name=Chocolate Bar
+item.cheese.name=Cheese
 
 <Mob Drops>
 item.bat_wing.name=Bat Wing
@@ -37,8 +39,9 @@ enchantment.auto_smelt=Auto Smelt
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragon Fire§r
+itemGroup.DragonFire_Cookies=§5§lDragon Fire§r ⎹ §eCookies
 itemGroup.DragonFire_Spawn_Eggs=§5§lDragon Fire§r ⎹ §eSpawn Eggs
-itemGroup.DragonFire_Armor=§5§lDragon Fire§r ⎹ §eArmor
+itemGroup.DragonFire_Armor_and_Tools=§5§lDragon Fire§r ⎹ §eArmor and Tools
 
 <Entities>
 entity.mummy.name=Mummy
@@ -47,6 +50,7 @@ entity.mummy.name=Mummy
 tile.mummy_head.name=Mummy Head
 tile.ender_pearl_block.name=Ender Pearl Block
 tile.chocolate_cake.name=Chocolate Cake
+tile.pizza.name=Pizza
 
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Cookie
