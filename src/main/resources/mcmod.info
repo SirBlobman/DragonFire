@@ -1,9 +1,9 @@
 [{
   "modid": "dragonfire",
   "name": "Dragon Fire",
-  "description": "OreSpawn replacement mod",
+  "description": "Vanilla enhancement and game changing mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "authorList": ["SirBlobman", "Soul", "Swooty", "Winterr", "Mitchdog27"],
-  "credits": "TheyCallMeDanger for the original OreSpawn mod"
+  "authorList": ["SirBlobman", "DrainedPupper", "Hoopa", "Winterr", "Soul", "Swooty"],
+  "logoFile": "assets/dragonfire/logo/logo2.png"
 }]

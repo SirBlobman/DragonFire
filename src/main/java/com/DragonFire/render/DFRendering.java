@@ -27,6 +27,7 @@ public final class DFRendering {
         //Tools and Weapons
         reg(
             DFItems.ENDER_BOW, DFItems.ENDER_ARROW,
+            DFItems.NETHER_ROD,
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE
         );
         
