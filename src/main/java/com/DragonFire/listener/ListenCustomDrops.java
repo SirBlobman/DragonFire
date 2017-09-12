@@ -37,7 +37,7 @@ public class ListenCustomDrops {
                 dropItem(en, is);
             } else if(en instanceof EntityWitherSkeleton) {
                 double chance = (Math.random() * 100);
-                if(chance <= (10 + loot)) {
+                if(chance <= (5 + loot)) {
                     Item item = DFItems.WITHERED_BONE;
                     ItemStack is = new ItemStack(item, 1);
                     dropItem(en, is);
