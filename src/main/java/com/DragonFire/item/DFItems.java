@@ -19,6 +19,7 @@ public final class DFItems {
     
     //Tool Material
     public static final ToolMaterial TOOL_EMERALD = EnumHelper.addToolMaterial("EMERALD", 3, 1561, 8.0F, 3.0F, 100);
+    public static final ToolMaterial TOOL_VILLAGER = EnumHelper.addToolMaterial("VILLAGER", 500, 64, Integer.MAX_VALUE, 0, 0);
     
     //Armor
     public static final RabbitBoots RABBIT_BOOTS = new RabbitBoots();
@@ -36,6 +37,7 @@ public final class DFItems {
     public static final QuickPickaxe EMERALD_PICKAXE = new QuickPickaxe(TOOL_EMERALD);
     public static final QuickShovel EMERALD_SHOVEL = new QuickShovel(TOOL_EMERALD);
     public static final QuickHoe EMERALD_HOE = new QuickHoe(TOOL_EMERALD);
+    public static final QuickHoe VILLAGER_HOE = new QuickHoe(TOOL_VILLAGER);
     
     //Food
     public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 1, 0.4F, true);
@@ -51,6 +53,7 @@ public final class DFItems {
     //Mob Drops
     public static final Item BAT_WING = new QuickItem("bat_wing");
     public static final Item MUMMY_RAG = new QuickItem("mummy_rag");
+    public static final Item WITHERED_BONE = new QuickItem("withered_bone");
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -62,7 +65,7 @@ public final class DFItems {
         //Tools and Weapons
         ifr.registerAll(
             ENDER_BOW, ENDER_ARROW,
-            NETHER_ROD,
+            NETHER_ROD, VILLAGER_HOE,
             EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE
         );
         
@@ -75,6 +78,6 @@ public final class DFItems {
        );
         
         //Mob Drops
-        ifr.registerAll(BAT_WING, MUMMY_RAG);
+        ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);
     }
 }

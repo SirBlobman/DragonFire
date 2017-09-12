@@ -31,5 +31,9 @@ public final class DFRecipes {
         PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.BAT_WING, DFPotionTypes.LEVITATION);
         PotionHelper.addMix(DFPotionTypes.LEVITATION, Items.REDSTONE, DFPotionTypes.LONG_LEVITATION);
         PotionHelper.addMix(DFPotionTypes.LEVITATION, Items.GLOWSTONE_DUST, DFPotionTypes.STRONG_LEVITATION);
+        PotionHelper.addMix(PotionTypes.POISON, Items.GOLDEN_CARROT, DFPotionTypes.BLINDING);
+        PotionHelper.addMix(DFPotionTypes.BLINDING, Items.REDSTONE, DFPotionTypes.LONG_BLINDING);
+        PotionHelper.addMix(DFPotionTypes.BLINDING, Items.GLOWSTONE_DUST, DFPotionTypes.STRONG_BLINDING);
+        PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.WITHERED_BONE, DFPotionTypes.DECAY);
     }
 }

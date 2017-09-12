@@ -27,7 +27,7 @@ public final class DFRendering {
         //Tools and Weapons
         reg(
             DFItems.ENDER_BOW, DFItems.ENDER_ARROW,
-            DFItems.NETHER_ROD,
+            DFItems.NETHER_ROD, DFItems.VILLAGER_HOE,
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE
         );
         
@@ -40,7 +40,7 @@ public final class DFRendering {
         );
         
         //Mob Drops
-        reg(DFItems.BAT_WING, DFItems.MUMMY_RAG);
+        reg(DFItems.BAT_WING, DFItems.MUMMY_RAG, DFItems.WITHERED_BONE);
     }
     
     public static void blocks() {

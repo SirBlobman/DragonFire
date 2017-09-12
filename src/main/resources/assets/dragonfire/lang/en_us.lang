@@ -19,6 +19,7 @@ item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_shovel.name=Emerald Shovel
 item.emerald_hoe.name=Emerald Hoe
 item.nether_fishing_rod.name=Nether Rod
+item.villager_hoe.name=Villager Hoe
 
 <Food>
 item.raw_calamari.name=Raw Calamari
@@ -33,6 +34,7 @@ item.cheese.name=Cheese
 <Mob Drops>
 item.bat_wing.name=Bat Wing
 item.mummy_rag.name=Mummy Rag
+item.withered_bone.name=Withered Bone
 
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
@@ -59,6 +61,16 @@ potion.effect.levitation=Potion of Floating
 splash_potion.effect.levitation=Splash Potion of Floating
 lingering_potion.effect.levitation=Lingering Potion of Floating
 
+<Special Potion Types>
+potion.effect.blindness=Potion of Blindness
+splash_potion.effect.blindness=Splash Potion of Blindness
+lingering_potion.effect.blindness=Lingering Potion of Blindness
+tipped_arrow.effect.blindness=Arrow of Blindness
+potion.effect.wither=Potion of Decay
+splash_potion.effect.wither=Splash Potion of Decay
+lingering_potion.effect.wither=Lingering Potion of Decay
+tipped_arrow.effect.wither=Arrow of Decay
+
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Cookie
 potion_cookie.effect.water=Potion Cookie
@@ -80,3 +92,5 @@ potion_cookie.effect.regeneration=Cookie of Regeneration
 potion_cookie.effect.strength=Cookie of Strength
 potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
+potion_cookie.effect.blindness=Cookie of Blindness
+potion_cookie.effect.wither=Cookie of Decay

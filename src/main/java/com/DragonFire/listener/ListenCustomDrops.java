@@ -5,6 +5,7 @@ import com.DragonFire.item.DFItems;
 import java.util.Random;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntitySquid;
 import net.minecraft.item.Item;
@@ -34,6 +35,13 @@ public class ListenCustomDrops {
                 int amount = ((loot > 0) ? loot : 1);
                 ItemStack is = new ItemStack(item, amount);
                 dropItem(en, is);
+            } else if(en instanceof EntityWitherSkeleton) {
+                double chance = (Math.random() * 100);
+                if(chance <= (10 + loot)) {
+                    Item item = DFItems.WITHERED_BONE;
+                    ItemStack is = new ItemStack(item, 1);
+                    dropItem(en, is);
+                }
             }
         }
     }
