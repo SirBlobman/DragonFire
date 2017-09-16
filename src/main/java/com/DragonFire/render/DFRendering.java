@@ -36,7 +36,12 @@ public final class DFRendering {
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
             DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE,
-            DFItems.POTION_COOKIE
+            DFItems.POTION_COOKIE, DFItems.DIAMOND_APPLE
+        );
+        
+        //Drinks
+        reg(
+            DFItems.BEER
         );
         
         //Mob Drops

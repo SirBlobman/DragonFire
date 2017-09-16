@@ -3,6 +3,9 @@ language.name=English
 language.region=United States
 language.code=en_us
 
+<Damage Sources>
+death.attack.drunk=%s drank too much beer
+
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
 item.emerald_helmet.name=Emerald Helmet
@@ -30,6 +33,11 @@ item.fried_egg.name=Fried Egg
 item.pineapple_slice.name=Pineapple Slice
 item.chocolate_bar.name=Chocolate Bar
 item.cheese.name=Cheese
+item.diamond_apple.name=Diamond Apple
+
+<Drinks>
+item.beer.name=Beer
+
 
 <Mob Drops>
 item.bat_wing.name=Bat Wing

@@ -1,4 +1,4 @@
-package com.DragonFire.item;
+package com.DragonFire.item.food;
 
 import com.DragonFire.creative.DFTabs;
 
@@ -15,7 +15,7 @@ import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 
-public class PotionCookie extends FoodItem {
+public class PotionCookie extends QuickFood {
     public PotionCookie() {
         super("potion_cookie", 2, 0.4F, false);
         setAlwaysEdible();

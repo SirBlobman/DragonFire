@@ -1,10 +1,10 @@
-package com.DragonFire.item;
+package com.DragonFire.item.food;
 
 import com.DragonFire.creative.DFTabs;
 
 import net.minecraft.item.ItemFood;
 
-public class FoodItem extends ItemFood {
+public class QuickFood extends ItemFood {
     /**
      * Create an instance of a food item
      * @param name Unlocalized name for the food item
@@ -12,7 +12,7 @@ public class FoodItem extends ItemFood {
      * @param saturation Amount of saturation that this item restores
      * @param wolfFood Can this be fed to wolves?
      */
-    public FoodItem(String name, int foodPoints, float saturation, boolean wolfFood) {
+    public QuickFood(String name, int foodPoints, float saturation, boolean wolfFood) {
         super(foodPoints, saturation, wolfFood);
         setUnlocalizedName(name); setRegistryName(name);
         setCreativeTab(DFTabs.DRAGONFIRE);

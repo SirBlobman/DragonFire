@@ -2,6 +2,10 @@ package com.DragonFire.item;
 
 import com.DragonFire.item.armor.QuickArmor;
 import com.DragonFire.item.armor.RabbitBoots;
+import com.DragonFire.item.drink.Beer;
+import com.DragonFire.item.food.DiamondApple;
+import com.DragonFire.item.food.PotionCookie;
+import com.DragonFire.item.food.QuickFood;
 import com.DragonFire.item.tool.*;
 
 import net.minecraft.init.SoundEvents;
@@ -40,15 +44,19 @@ public final class DFItems {
     public static final QuickHoe VILLAGER_HOE = new QuickHoe(TOOL_VILLAGER);
     
     //Food
-    public static final FoodItem RAW_CALAMARI = new FoodItem("raw_calamari", 1, 0.4F, true);
-    public static final FoodItem COOKED_CALAMARI = new FoodItem("cooked_calamari", 5, 6.0F, false);
-    public static final FoodItem RAW_BACON = new FoodItem("raw_bacon", 1, 1.6F, true);
-    public static final FoodItem COOKED_BACON = new FoodItem("cooked_bacon", 2, 3.2F, true);
-    public static final FoodItem FRIED_EGG = new FoodItem("fried_egg", 5, 6.0F, true);
-    public static final FoodItem PINEAPPLE_SLICE = new FoodItem("pineapple_slice", 4, 2.4F, false);
-    public static final FoodItem CHOCOLATE_BAR = new FoodItem("chocolate_bar", 2, 0.4F, false); //Why would you feed a dog chocolate?
-    public static final FoodItem CHEESE = new FoodItem("cheese", 6, 0.0F, false);
-    public static final FoodItem POTION_COOKIE = new PotionCookie();
+    public static final QuickFood RAW_CALAMARI = new QuickFood("raw_calamari", 1, 0.4F, true);
+    public static final QuickFood COOKED_CALAMARI = new QuickFood("cooked_calamari", 5, 6.0F, false);
+    public static final QuickFood RAW_BACON = new QuickFood("raw_bacon", 1, 1.6F, true);
+    public static final QuickFood COOKED_BACON = new QuickFood("cooked_bacon", 2, 3.2F, true);
+    public static final QuickFood FRIED_EGG = new QuickFood("fried_egg", 5, 6.0F, true);
+    public static final QuickFood PINEAPPLE_SLICE = new QuickFood("pineapple_slice", 4, 2.4F, false);
+    public static final QuickFood CHOCOLATE_BAR = new QuickFood("chocolate_bar", 2, 0.4F, false); //Why would you feed a dog chocolate?
+    public static final QuickFood CHEESE = new QuickFood("cheese", 6, 0.0F, false);
+    public static final QuickFood POTION_COOKIE = new PotionCookie();
+    public static final DiamondApple DIAMOND_APPLE = new DiamondApple();
+    
+    //Drink
+    public static final Beer BEER = new Beer();
     
     //Mob Drops
     public static final Item BAT_WING = new QuickItem("bat_wing");
@@ -74,8 +82,11 @@ public final class DFItems {
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
             PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE,
-            POTION_COOKIE
-       );
+            POTION_COOKIE, DIAMOND_APPLE
+        );
+        
+        //Drinks
+        ifr.registerAll(BEER);
         
         //Mob Drops
         ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);
