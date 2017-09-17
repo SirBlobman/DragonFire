@@ -59,5 +59,21 @@ public final class DFTabs {
             ItemStack is = new ItemStack(i);
             return is;
         }
+        
+        @Override
+        public void displayAllRelevantItems(NonNullList<ItemStack> list) {
+            super.displayAllRelevantItems(list);
+            ItemStack is = Util.getEnchantBook("dragonfire:auto_smelt", 1);
+            list.add(is);
+        }
+    };
+    
+    public static final CreativeTabs FOOD_AND_DRINK = new CreativeTabs("DragonFire_Food_and_Drink") {
+        @Override
+        public ItemStack getTabIconItem() {
+            Item i = DFItems.COOKED_BACON;
+            ItemStack is = new ItemStack(i);
+            return is;
+        }
     };
 }

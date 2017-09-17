@@ -61,6 +61,7 @@ tile.mummy_head.name=Mummy Head
 tile.ender_pearl_block.name=Ender Pearl Block
 tile.chocolate_cake.name=Chocolate Cake
 tile.pizza.name=Pizza
+tile.obsidian_glass.name=Obsidian Glass
 
 <Levitation to Floating>
 potion_cookie.effect.levitation=Cookie of Floating

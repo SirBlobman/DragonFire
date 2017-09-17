@@ -49,7 +49,11 @@ public final class DFRendering {
     }
     
     public static void blocks() {
-        reg(DFBlocks.MUMMY_HEAD, DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, DFBlocks.ENDERPEARL_BLOCK);
+        reg(
+            DFBlocks.MUMMY_HEAD, 
+            DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
+            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
+        );
     }
     
     public static void entities() {

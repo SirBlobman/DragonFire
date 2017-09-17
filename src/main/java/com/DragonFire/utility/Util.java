@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -33,7 +34,7 @@ public class Util {
         String s = new String(cc);
         return s;
     }
-    
+
     public static void print(Object... oo) {
         for(Object o : oo) {
             String s = o.toString();
@@ -51,20 +52,20 @@ public class Util {
             }
         }
     }
-    
+
     @SafeVarargs
     public static <L> List<L> newList(L... ll) {
         List<L> list = new ArrayList<L>();
         for(L l : ll) list.add(l);
         return list;
     }
-    
+
     public static <L> List<L> newList(Collection<L> ll) {
         List<L> list = new ArrayList<L>();
         for(L l : ll) list.add(l);
         return list;
     }
-    
+
     public static ItemStack getSpawnEgg(String entityID) {
         try {
             String p1 = "{id:\"minecraft:spawn_egg\", Count:1b, tag:{EntityTag:{id:\"";
@@ -78,5 +79,14 @@ public class Util {
             ItemStack is = new ItemStack(egg);
             return is;
         }
+    }
+
+    public static ItemStack getEnchantBook(String enchantID, int level) {
+        Item i = Items.ENCHANTED_BOOK;
+        ItemStack is = new ItemStack(i);
+        
+        Enchantment ench = Enchantment.getEnchantmentByLocation(enchantID);
+        if(ench != null) is.addEnchantment(ench, level);
+        return is;
     }
 }
