@@ -7,7 +7,10 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 public class DiamondApple extends QuickFood {
-    public DiamondApple() {super("diamond_apple", 4, 9.6F, false);}
+    public DiamondApple() {
+        super("diamond_apple", 4, 9.6F, false);
+        setAlwaysEdible();
+    }
     
     @Override
     public void onFoodEaten(ItemStack is, World w, EntityPlayer ep) {
