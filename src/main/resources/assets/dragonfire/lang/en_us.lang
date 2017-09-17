@@ -38,7 +38,6 @@ item.diamond_apple.name=Diamond Apple
 <Drinks>
 item.beer.name=Beer
 
-
 <Mob Drops>
 item.bat_wing.name=Bat Wing
 item.mummy_rag.name=Mummy Rag
@@ -70,6 +69,9 @@ tipped_arrow.effect.levitation=Arrow of Floating
 potion.effect.levitation=Potion of Floating
 splash_potion.effect.levitation=Splash Potion of Floating
 lingering_potion.effect.levitation=Lingering Potion of Floating
+
+<Potion Effects>
+dragonfire.effect.confusion=Confusion
 
 <Special Potion Types>
 potion.effect.blindness=Potion of Blindness

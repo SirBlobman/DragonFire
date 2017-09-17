@@ -11,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
@@ -77,6 +78,12 @@ public class DragonFire {
     public void recipes(Register<IRecipe> e) {
         IForgeRegistry<IRecipe> ifr = e.getRegistry();
         proxy.recipes(ifr);
+    }
+    
+    @SubscribeEvent
+    public void potions(Register<Potion> e) {
+        IForgeRegistry<Potion> ifr = e.getRegistry();
+        proxy.potions(ifr);
     }
     
     @SubscribeEvent

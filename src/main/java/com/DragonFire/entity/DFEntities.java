@@ -1,6 +1,7 @@
 package com.DragonFire.entity;
 
 import com.DragonFire.DragonFire;
+import com.DragonFire.utility.Util;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -10,7 +11,7 @@ public final class DFEntities {
     public static void entities() {
         reg("ender_arrow", EntityEnderArrow.class);
         reg("tiki_spear", EntityTikiSpear.class);
-        reg("mummy", EntityMummy.class, rgb(243, 226, 175), rgb(204, 189, 146));
+        reg("mummy", EntityMummy.class, Util.getRGB(243, 226, 175), Util.getRGB(204, 189, 146));
     }
     
     private static int id = 0;
@@ -25,13 +26,5 @@ public final class DFEntities {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
         reg(name, clazz);
         EntityRegistry.registerEgg(rl, egg1, egg2);
-    }
-    
-    public static int rgb(int red, int green, int blue) {
-        int r = (red << 16) & 0x00FF0000;
-        int g = (green << 8) & 0x0000FF00;
-        int b = (blue) & 0x000000FF;
-        int color = (0xFF000000 | r | g | b);
-        return color;
     }
 }

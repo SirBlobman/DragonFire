@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -39,6 +40,11 @@ public class Server extends Common {
     @Override
     public void recipes(IForgeRegistry<IRecipe> ifr) {
         super.recipes(ifr);
+    }
+
+    @Override
+    public void potions(IForgeRegistry<Potion> ifr) {
+        super.potions(ifr);
     }
     
     @Override

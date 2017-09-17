@@ -1,12 +1,15 @@
 package com.DragonFire.utility;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.JsonToNBT;
+import net.minecraft.nbt.NBTTagCompound;
 
 public class ItemUtil extends Util {
     public static boolean isAir(ItemStack is) {
@@ -34,5 +37,29 @@ public class ItemUtil extends Util {
         FurnaceRecipes furnace = FurnaceRecipes.instance();
         ItemStack cook = furnace.getSmeltingResult(is);
         return cook;
+    }
+
+    public static ItemStack getSpawnEgg(String entityID) {
+        try {
+            String p1 = "{id:\"minecraft:spawn_egg\", Count:1b, tag:{EntityTag:{id:\"";
+            String p2 = "\"}}}";
+            String json = p1 + entityID + p2;
+            NBTTagCompound nbt = JsonToNBT.getTagFromJson(json);
+            ItemStack is = new ItemStack(nbt);
+            return is;
+        } catch(Throwable ex) {
+            Item egg = Items.EGG;
+            ItemStack is = new ItemStack(egg);
+            return is;
+        }
+    }
+
+    public static ItemStack getEnchantBook(String enchantID, int level) {
+        Item i = Items.ENCHANTED_BOOK;
+        ItemStack is = new ItemStack(i);
+        
+        Enchantment ench = Enchantment.getEnchantmentByLocation(enchantID);
+        if(ench != null) is.addEnchantment(ench, level);
+        return is;
     }
 }

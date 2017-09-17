@@ -7,12 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.JsonToNBT;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
@@ -65,28 +59,12 @@ public class Util {
         for(L l : ll) list.add(l);
         return list;
     }
-
-    public static ItemStack getSpawnEgg(String entityID) {
-        try {
-            String p1 = "{id:\"minecraft:spawn_egg\", Count:1b, tag:{EntityTag:{id:\"";
-            String p2 = "\"}}}";
-            String json = p1 + entityID + p2;
-            NBTTagCompound nbt = JsonToNBT.getTagFromJson(json);
-            ItemStack is = new ItemStack(nbt);
-            return is;
-        } catch(Throwable ex) {
-            Item egg = Items.EGG;
-            ItemStack is = new ItemStack(egg);
-            return is;
-        }
-    }
-
-    public static ItemStack getEnchantBook(String enchantID, int level) {
-        Item i = Items.ENCHANTED_BOOK;
-        ItemStack is = new ItemStack(i);
-        
-        Enchantment ench = Enchantment.getEnchantmentByLocation(enchantID);
-        if(ench != null) is.addEnchantment(ench, level);
-        return is;
+    
+    public static int getRGB(int red, int green, int blue) {
+        int r = (red << 16) & 0x00FF0000;
+        int g = (green << 8) & 0x0000FF00;
+        int b = (blue) & 0x000000FF;
+        int color = (0xFF000000 | r | g | b);
+        return color;
     }
 }

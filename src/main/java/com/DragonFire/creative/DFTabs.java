@@ -1,7 +1,7 @@
 package com.DragonFire.creative;
 
 import com.DragonFire.item.DFItems;
-import com.DragonFire.utility.Util;
+import com.DragonFire.utility.ItemUtil;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -47,7 +47,7 @@ public final class DFTabs {
         @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             super.displayAllRelevantItems(list);
-            ItemStack is = Util.getSpawnEgg("dragonfire:mummy");
+            ItemStack is = ItemUtil.getSpawnEgg("dragonfire:mummy");
             list.add(is);
         }
     };
@@ -63,7 +63,7 @@ public final class DFTabs {
         @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             super.displayAllRelevantItems(list);
-            ItemStack is = Util.getEnchantBook("dragonfire:auto_smelt", 1);
+            ItemStack is = ItemUtil.getEnchantBook("dragonfire:auto_smelt", 1);
             list.add(is);
         }
     };

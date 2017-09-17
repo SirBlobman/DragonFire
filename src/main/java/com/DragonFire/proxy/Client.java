@@ -11,6 +11,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -62,6 +63,11 @@ public class Client extends Common {
     @Override
     public void recipes(IForgeRegistry<IRecipe> ifr) {
         super.recipes(ifr);
+    }
+
+    @Override
+    public void potions(IForgeRegistry<Potion> ifr) {
+        super.potions(ifr);
     }
     
     @Override
