@@ -14,7 +14,7 @@ public class BlockChocolateCake extends BlockCake {
         super();
         setRegistryName("chocolate_cake");
         setUnlocalizedName("chocolate_cake");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.FOOD_AND_DRINK);
     }
     
     @Override

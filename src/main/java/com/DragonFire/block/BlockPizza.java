@@ -14,7 +14,7 @@ public class BlockPizza extends BlockCake {
         super();
         setRegistryName("pizza");
         setUnlocalizedName("pizza");
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.FOOD_AND_DRINK);
     }
     
     @Override

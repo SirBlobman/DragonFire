@@ -22,7 +22,7 @@ public class QuickDrink extends Item {
         setUnlocalizedName(name);
         setRegistryName(name);
         setMaxStackSize(1);
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.FOOD_AND_DRINK);
         this.useDuration = useDuration;
     }
     

@@ -15,6 +15,6 @@ public class QuickFood extends ItemFood {
     public QuickFood(String name, int foodPoints, float saturation, boolean wolfFood) {
         super(foodPoints, saturation, wolfFood);
         setUnlocalizedName(name); setRegistryName(name);
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.FOOD_AND_DRINK);
     }
 }

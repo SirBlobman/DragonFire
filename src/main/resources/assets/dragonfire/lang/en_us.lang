@@ -50,6 +50,7 @@ enchantment.auto_smelt=Auto Smelt
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragon Fire§r
 itemGroup.DragonFire_Cookies=§5§lDragon Fire§r ⎹ §eCookies
+itemGroup.DragonFire_Food_and_Drink=§5§lDragon Fire§r ⎹ §eFood and Drink
 itemGroup.DragonFire_Spawn_Eggs=§5§lDragon Fire§r ⎹ §eSpawn Eggs
 itemGroup.DragonFire_Armor_and_Tools=§5§lDragon Fire§r ⎹ §eArmor and Tools
 
