@@ -1,5 +1,7 @@
 package com.DragonFire.item.drink;
 
+import com.DragonFire.compat.ToughAsNails.TANUtil;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -34,6 +36,9 @@ public class Beer extends QuickDrink {
                 nbt.setInteger("BeersDrunk", 0);
                 ep.attackEntityFrom(BEER, Float.MAX_VALUE);
             }
+            
+            try {TANUtil.addThirst(ep, 1);}
+            catch(Throwable ex) {}
         }
         return super.onItemUseFinish(is, w, elb);
     }
