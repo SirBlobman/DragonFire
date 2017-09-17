@@ -17,5 +17,6 @@ public class BlockObsidianGlass extends QuickBlock {
     
     public BlockRenderLayer getBlockLayer() {return BlockRenderLayer.CUTOUT;}
     public boolean isFullCube(IBlockState ibs) {return false;}
+    public boolean isOpaqueCube(IBlockState ibs) {return false;}
     public boolean canEntityDestroy(IBlockState ibs, IBlockAccess iba, BlockPos bp, Entity en) {return false;}
 }
