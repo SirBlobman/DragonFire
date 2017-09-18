@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "dragonfire:blocks/barley/barley_stage_3"
+    }
+}

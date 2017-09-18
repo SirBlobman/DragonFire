@@ -63,6 +63,11 @@ tile.chocolate_cake.name=Chocolate Cake
 tile.pizza.name=Pizza
 tile.obsidian_glass.name=Obsidian Glass
 
+<Crops>
+item.barley.name=Barley
+item.barley_seeds.name=Barley Seeds
+tile.barley_crop.name=Barley Crop
+
 <Levitation to Floating>
 potion_cookie.effect.levitation=Cookie of Floating
 tipped_arrow.effect.levitation=Arrow of Floating

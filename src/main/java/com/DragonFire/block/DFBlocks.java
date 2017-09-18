@@ -24,6 +24,7 @@ public final class DFBlocks {
     public static final ItemBlock ENDER_PEARL_BLOCK_ITEM = new QuickItemBlock(ENDER_PEARL_BLOCK);
     public static final BlockObsidianGlass OBSIDIAN_GLASS = new BlockObsidianGlass();
     public static final ItemBlock OBSIDIAN_GLASS_ITEM = new QuickItemBlock(OBSIDIAN_GLASS);
+    public static final BlockBarley BARLEY_CROP = new BlockBarley();
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
@@ -33,7 +34,7 @@ public final class DFBlocks {
         ifr.registerAll(CHOCOLATE_CAKE, PIZZA);
         
         //Other
-        ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS);
+        ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS, BARLEY_CROP);
     }
 
     public static void register2(IForgeRegistry<Item> ifr) {

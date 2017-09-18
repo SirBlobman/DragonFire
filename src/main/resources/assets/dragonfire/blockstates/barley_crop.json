@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "dragonfire:barley_stage0" },
+    "age=1": { "model": "dragonfire:barley_stage1" },
+    "age=2": { "model": "dragonfire:barley_stage2" },
+    "age=3": { "model": "dragonfire:barley_stage3" },
+    "age=4": { "model": "dragonfire:barley_stage4" },
+    "age=5": { "model": "dragonfire:barley_stage5" },
+    "age=6": { "model": "dragonfire:barley_stage6" },
+    "age=7": { "model": "dragonfire:barley_stage7" }
+  }
+}

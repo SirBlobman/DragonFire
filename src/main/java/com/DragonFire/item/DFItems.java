@@ -63,6 +63,10 @@ public final class DFItems {
     public static final Item MUMMY_RAG = new QuickItem("mummy_rag");
     public static final Item WITHERED_BONE = new QuickItem("withered_bone");
     
+    //Other
+    public static final Item BARLEY = new QuickItem("barley");
+    public static final BarleySeeds BARLEY_SEEDS = new BarleySeeds();
+    
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
         ifr.registerAll(
@@ -90,5 +94,8 @@ public final class DFItems {
         
         //Mob Drops
         ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);
+        
+        //Other
+        ifr.registerAll(BARLEY, BARLEY_SEEDS);
     }
 }

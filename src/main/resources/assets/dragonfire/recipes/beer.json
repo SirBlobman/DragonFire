@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WBW",
+    "WWW"
+  ],
+  "key": {
+    "B": {"item": "minecraft:potion"},
+    "W": {"item": "minecraft:wheat"}
+  },
+  "result": {
+    "item": "dragonfire:beer",
+    "count": 1
+  }
+}

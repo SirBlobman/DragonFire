@@ -1,6 +1,7 @@
 package com.DragonFire.item.drink;
 
 import com.DragonFire.compat.ToughAsNails.TANUtil;
+import com.DragonFire.potion.effect.DFPotions;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -29,6 +30,11 @@ public class Beer extends QuickDrink {
             
             if(beersDrunk > 5) {
                 PotionEffect pe = new PotionEffect(MobEffects.BLINDNESS, 600, 1, false, true);
+                ep.addPotionEffect(pe);
+            }
+            
+            if(beersDrunk > 8) {
+                PotionEffect pe = new PotionEffect(DFPotions.CONFUSION, 600, 1, false, true);
                 ep.addPotionEffect(pe);
             }
             

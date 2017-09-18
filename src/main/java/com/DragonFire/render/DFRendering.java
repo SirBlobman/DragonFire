@@ -46,6 +46,9 @@ public final class DFRendering {
         
         //Mob Drops
         reg(DFItems.BAT_WING, DFItems.MUMMY_RAG, DFItems.WITHERED_BONE);
+        
+        //Other
+        reg(DFItems.BARLEY, DFItems.BARLEY_SEEDS);
     }
     
     public static void blocks() {
