@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WWW",
-    "WBW",
-    "WWW"
+    "BBB",
+    "BWB",
+    "BBB"
   ],
   "key": {
-    "B": {"item": "minecraft:potion"},
-    "W": {"item": "minecraft:wheat"}
+    "B": {"item": "dragonfire:barley"},
+    "W": {"item": "minecraft:potion"}
   },
   "result": {
     "item": "dragonfire:beer",
