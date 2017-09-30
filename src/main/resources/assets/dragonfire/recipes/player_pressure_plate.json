@@ -7,7 +7,7 @@
   ],
   "key": {
     "O": {"item": "minecraft:observer"},
-    "S": {"item": "minecraft:stone_pressure_plate"}
+    "S": {"item": "minecraft:stone_pressure_plate"},
     "R": {"item": "minecraft:redstone"}
   },
   "result": {

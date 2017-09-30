@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_up",
   "textures": {
-    "texture": "blocks/observer_front"
+    "texture": "dragonfire:blocks/player_plate"
   }
 }
