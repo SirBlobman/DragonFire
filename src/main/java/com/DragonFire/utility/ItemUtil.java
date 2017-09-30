@@ -2,6 +2,7 @@ package com.DragonFire.utility;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -10,6 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class ItemUtil extends Util {
     public static boolean isAir(ItemStack is) {
@@ -52,6 +56,13 @@ public class ItemUtil extends Util {
             ItemStack is = new ItemStack(egg);
             return is;
         }
+    }
+    
+    public static ItemStack getSpawnEgg(Class<? extends Entity> clazz) {
+        EntityEntry ee = EntityRegistry.getEntry(clazz);
+        ResourceLocation rl = ee.getRegistryName();
+        ItemStack is = getSpawnEgg(rl.toString());
+        return is;
     }
 
     public static ItemStack getEnchantBook(String enchantID, int level) {

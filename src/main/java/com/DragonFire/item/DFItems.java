@@ -44,6 +44,8 @@ public final class DFItems {
     public static final QuickHoe VILLAGER_HOE = new QuickHoe(TOOL_VILLAGER);
     
     //Food
+    public static final QuickFood POTION_COOKIE = new PotionCookie();
+    public static final DiamondApple DIAMOND_APPLE = new DiamondApple();
     public static final QuickFood RAW_CALAMARI = new QuickFood("raw_calamari", 1, 0.4F, true);
     public static final QuickFood COOKED_CALAMARI = new QuickFood("cooked_calamari", 5, 6.0F, false);
     public static final QuickFood RAW_BACON = new QuickFood("raw_bacon", 1, 1.6F, true);
@@ -52,8 +54,7 @@ public final class DFItems {
     public static final QuickFood PINEAPPLE_SLICE = new QuickFood("pineapple_slice", 4, 2.4F, false);
     public static final QuickFood CHOCOLATE_BAR = new QuickFood("chocolate_bar", 2, 0.4F, false); //Why would you feed a dog chocolate?
     public static final QuickFood CHEESE = new QuickFood("cheese", 6, 0.0F, false);
-    public static final QuickFood POTION_COOKIE = new PotionCookie();
-    public static final DiamondApple DIAMOND_APPLE = new DiamondApple();
+    public static final QuickFood SLIME_JELLY = new QuickFood("slime_jelly", 3, 1.5F, false);
     
     //Drink
     public static final Beer BEER = new Beer();
@@ -62,10 +63,6 @@ public final class DFItems {
     public static final Item BAT_WING = new QuickItem("bat_wing");
     public static final Item MUMMY_RAG = new QuickItem("mummy_rag");
     public static final Item WITHERED_BONE = new QuickItem("withered_bone");
-    
-    //Other
-    public static final Item BARLEY = new QuickItem("barley");
-    public static final BarleySeeds BARLEY_SEEDS = new BarleySeeds();
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -83,10 +80,10 @@ public final class DFItems {
         
         //Food
         ifr.registerAll(
+            POTION_COOKIE, DIAMOND_APPLE,
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
-            PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE,
-            POTION_COOKIE, DIAMOND_APPLE
+            PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE, SLIME_JELLY
         );
         
         //Drinks
@@ -94,8 +91,5 @@ public final class DFItems {
         
         //Mob Drops
         ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);
-        
-        //Other
-        ifr.registerAll(BARLEY, BARLEY_SEEDS);
     }
 }

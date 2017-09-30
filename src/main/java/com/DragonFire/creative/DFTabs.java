@@ -1,9 +1,13 @@
 package com.DragonFire.creative;
 
+import com.DragonFire.entity.EntityMummy;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.utility.ItemUtil;
+import com.DragonFire.utility.Util;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -47,8 +51,10 @@ public final class DFTabs {
         @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             super.displayAllRelevantItems(list);
-            ItemStack is = ItemUtil.getSpawnEgg("dragonfire:mummy");
-            list.add(is);
+            ItemStack is1 = ItemUtil.getSpawnEgg(EntityMummy.class);
+            ItemStack is2 = ItemUtil.getSpawnEgg(EntityIronGolem.class);
+            ItemStack is3 = ItemUtil.getSpawnEgg(EntitySnowman.class);
+            list.addAll(Util.newList(is1, is2, is3));
         }
     };
     

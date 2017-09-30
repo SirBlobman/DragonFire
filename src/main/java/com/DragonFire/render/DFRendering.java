@@ -46,15 +46,13 @@ public final class DFRendering {
         
         //Mob Drops
         reg(DFItems.BAT_WING, DFItems.MUMMY_RAG, DFItems.WITHERED_BONE);
-        
-        //Other
-        reg(DFItems.BARLEY, DFItems.BARLEY_SEEDS);
     }
     
     public static void blocks() {
         reg(
             DFBlocks.MUMMY_HEAD, 
             DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
+            DFBlocks.PLAYER_PLATE,
             DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
         );
     }

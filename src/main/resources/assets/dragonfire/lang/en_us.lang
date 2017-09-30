@@ -34,6 +34,7 @@ item.pineapple_slice.name=Pineapple Slice
 item.chocolate_bar.name=Chocolate Bar
 item.cheese.name=Cheese
 item.diamond_apple.name=Diamond Apple
+item.slime_jelly.name=Slime Jelly
 
 <Drinks>
 item.beer.name=Beer
@@ -62,6 +63,7 @@ tile.ender_pearl_block.name=Ender Pearl Block
 tile.chocolate_cake.name=Chocolate Cake
 tile.pizza.name=Pizza
 tile.obsidian_glass.name=Obsidian Glass
+tile.player_pressure_plate.name=Player Detector
 
 <Crops>
 item.barley.name=Barley
