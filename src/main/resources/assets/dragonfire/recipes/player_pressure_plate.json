@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SSS",
+    "RRR",
     "SOS",
-    "SSS"
+    "RRR"
   ],
   "key": {
     "O": {"item": "minecraft:observer"},
     "S": {"item": "minecraft:stone_pressure_plate"}
+     "S": {"item": "minecraft:redstone"}
   },
   "result": {
     "item": "dragonfire:player_pressure_plate",
-    "count": 1
+    "count": 2
   }
 }
