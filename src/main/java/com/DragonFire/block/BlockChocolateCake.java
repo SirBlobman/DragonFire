@@ -19,7 +19,7 @@ public class BlockChocolateCake extends BlockCake {
     
     @Override
     public ItemStack getItem(World w, BlockPos bp, IBlockState ibs) {
-        Item i = DFBlocks.CHOCOLATE_CAKE_ITEM;
+        Item i = DFBlocks.ITEM_CHOCOLATE_CAKE;
         ItemStack is = new ItemStack(i);
         return is;
     }

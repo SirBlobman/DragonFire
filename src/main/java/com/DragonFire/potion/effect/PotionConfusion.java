@@ -8,12 +8,13 @@ import net.minecraft.entity.EntityLivingBase;
 
 public class PotionConfusion extends QuickPotion {
     public PotionConfusion() {super("confusion", true, Util.getRGB(244, 124, 12), 0, 0);}
-    public boolean isReady(int duration, int amplifier) {return (duration > 0);}
+    public boolean isReady(int duration, int amplifier) {return (duration % 2 == 0) && (duration > 0);}
     
     @Override
     public void performEffect(EntityLivingBase elb, int amplifier) {
         double amp = (amplifier + 1.01);
         ThreadLocalRandom random = ThreadLocalRandom.current();
-        elb.setVelocity(random.nextDouble(-amp, +amp), 0, random.nextDouble(-amp, +amp));
+        elb.motionX = (0.2 * random.nextDouble(-amp, +amp));
+        elb.motionZ = (0.2 * random.nextDouble(-amp, +amp));
     }
 }

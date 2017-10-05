@@ -21,7 +21,7 @@ public class ListenCustomTarget {
             ItemStack helm = target.getItemStackFromSlot(HELMET);
             if(helm != null) {
                 Item i = helm.getItem();
-                if(i == DFBlocks.MUMMY_HEAD_ITEM) {
+                if(i == DFBlocks.ITEM_MUMMY_HEAD) {
                     ee.setAttackTarget(null);
                 }
             }

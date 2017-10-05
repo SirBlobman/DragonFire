@@ -11,23 +11,28 @@ import net.minecraftforge.registries.IForgeRegistry;
 public final class DFBlocks {
     //Mob Stuff
     public static final MummyHead MUMMY_HEAD = new MummyHead();
-    public static final ItemBlock MUMMY_HEAD_ITEM = new ItemMummyHead();
 
     //Food
     public static final BlockChocolateCake CHOCOLATE_CAKE = new BlockChocolateCake();
-    public static final ItemBlock CHOCOLATE_CAKE_ITEM = new QuickItemBlock(CHOCOLATE_CAKE);
     public static final BlockPizza PIZZA = new BlockPizza();
-    public static final ItemBlock PIZZA_ITEM = new QuickItemBlock(PIZZA);
 
     //Redstone
     public static final BlockPlayerPressurePlate PLAYER_PLATE = new BlockPlayerPressurePlate();
-    public static final ItemBlock PLAYER_PLATE_ITEM = new QuickItemBlock(PLAYER_PLATE);
+    public static final BlockNuclearTNT NUCLEAR_TNT = new BlockNuclearTNT();
     
     //Random
     public static final BlockEnderpearl ENDER_PEARL_BLOCK = new BlockEnderpearl();
-    public static final ItemBlock ENDER_PEARL_BLOCK_ITEM = new QuickItemBlock(ENDER_PEARL_BLOCK);
     public static final BlockObsidianGlass OBSIDIAN_GLASS = new BlockObsidianGlass();
-    public static final ItemBlock OBSIDIAN_GLASS_ITEM = new QuickItemBlock(OBSIDIAN_GLASS);
+
+    //Item Blocks
+    public static final ItemBlock ITEM_MUMMY_HEAD = new ItemMummyHead();
+    public static final ItemBlock ITEM_CHOCOLATE_CAKE = new QuickItemBlock(CHOCOLATE_CAKE);
+    public static final ItemBlock ITEM_PIZZA = new QuickItemBlock(PIZZA);
+    public static final ItemBlock ITEM_PLAYER_PLATE = new QuickItemBlock(PLAYER_PLATE);
+    public static final ItemBlock ITEM_ENDER_PEARL_BLOCK = new QuickItemBlock(ENDER_PEARL_BLOCK);
+    public static final ItemBlock ITEM_OBSIDIAN_GLASS = new QuickItemBlock(OBSIDIAN_GLASS);
+    public static final ItemBlock ITEM_NUCLEAR_TNT = new QuickItemBlock(NUCLEAR_TNT);
+
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
@@ -37,7 +42,7 @@ public final class DFBlocks {
         ifr.registerAll(CHOCOLATE_CAKE, PIZZA);
         
         //Redstone
-        ifr.registerAll(PLAYER_PLATE);
+        ifr.registerAll(PLAYER_PLATE, NUCLEAR_TNT);
         
         //Other
         ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS);
@@ -45,10 +50,10 @@ public final class DFBlocks {
 
     public static void register2(IForgeRegistry<Item> ifr) {
         ifr.registerAll(
-            MUMMY_HEAD_ITEM, 
-            CHOCOLATE_CAKE_ITEM, PIZZA_ITEM,
-            PLAYER_PLATE_ITEM,
-            ENDER_PEARL_BLOCK_ITEM, OBSIDIAN_GLASS_ITEM
+            ITEM_MUMMY_HEAD,
+            ITEM_CHOCOLATE_CAKE, ITEM_PIZZA,
+            ITEM_PLAYER_PLATE, ITEM_NUCLEAR_TNT,
+            ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS
         );
     }
 }

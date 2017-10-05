@@ -65,6 +65,7 @@ tile.chocolate_cake.name=Chocolate Cake
 tile.pizza.name=Pizza
 tile.obsidian_glass.name=Obsidian Glass
 tile.player_pressure_plate.name=Player Detector
+tile.nuclear_tnt.name=Nuclear TNT
 
 <Levitation to Floating>
 potion_cookie.effect.levitation=Cookie of Floating

@@ -19,7 +19,7 @@ public class BlockPizza extends BlockCake {
     
     @Override
     public ItemStack getItem(World w, BlockPos bp, IBlockState ibs) {
-        Item i = DFBlocks.PIZZA_ITEM;
+        Item i = DFBlocks.ITEM_PIZZA;
         ItemStack is = new ItemStack(i);
         return is;
     }

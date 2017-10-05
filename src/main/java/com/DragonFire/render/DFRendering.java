@@ -52,7 +52,7 @@ public final class DFRendering {
         reg(
             DFBlocks.MUMMY_HEAD, 
             DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
-            DFBlocks.PLAYER_PLATE,
+            DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
             DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
         );
     }
