@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:bread"},
+    {"item": "minecraft:beetroot"},
+    {"item": "dragonfire:cheese"},
+    {"item": "dragonfire:cooked_bacon"}
+  ],
+  "result": {
+    "item": "dragonfire:sandwich",
+    "count": 1
+  }
+}

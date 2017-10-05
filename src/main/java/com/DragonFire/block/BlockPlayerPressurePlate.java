@@ -16,7 +16,7 @@ import net.minecraftforge.common.util.EnumHelper;
 public class BlockPlayerPressurePlate extends BlockPressurePlate {
     public static Sensitivity PLAYERS = EnumHelper.addSensitivity("PLAYERS");
     public BlockPlayerPressurePlate() {
-        super(Material.WOOD, PLAYERS);
+        super(Material.CIRCUITS, PLAYERS);
         setRegistryName("player_pressure_plate");
         setUnlocalizedName("player_pressure_plate");
         setCreativeTab(DFTabs.DRAGONFIRE);

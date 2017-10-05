@@ -5,6 +5,7 @@ import static com.DragonFire.utility.Util.getRGB;
 import com.DragonFire.DragonFire;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.util.ResourceLocation;
@@ -20,6 +21,7 @@ public final class DFEntities {
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
         regEgg(EntitySnowman.class, getRGB(255, 255, 255), getRGB(227, 144, 29));
+        regEgg(EntityWither.class, getRGB(26, 26, 26), getRGB(92, 92, 92));
     }
     
     private static int id = 0;

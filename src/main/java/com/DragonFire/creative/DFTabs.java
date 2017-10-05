@@ -5,7 +5,10 @@ import com.DragonFire.item.DFItems;
 import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
 
+import java.util.List;
+
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.init.Items;
@@ -54,7 +57,9 @@ public final class DFTabs {
             ItemStack is1 = ItemUtil.getSpawnEgg(EntityMummy.class);
             ItemStack is2 = ItemUtil.getSpawnEgg(EntityIronGolem.class);
             ItemStack is3 = ItemUtil.getSpawnEgg(EntitySnowman.class);
-            list.addAll(Util.newList(is1, is2, is3));
+            ItemStack is4 = ItemUtil.getSpawnEgg(EntityWither.class);
+            List<ItemStack> toAdd = Util.newList(is1, is2, is3, is4);
+            list.addAll(toAdd);
         }
     };
     

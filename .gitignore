@@ -17,12 +17,20 @@ hs_err_pid*
 *.project
 *.gradle
 
+# IntelliJ Ignore
+/.idea/
+/out/
+*.iml
+*.ipr
+*.iws
+
 # Folders
 /bin/
 /run/
 /.gradle/
 /.settings/
 /build/
+/src/main/resources/assets/minecraft/*
 
 #Allowed
 !build.gradle
