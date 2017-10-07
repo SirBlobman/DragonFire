@@ -21,14 +21,16 @@ public final class DFRendering {
         //Armor
         reg(
             DFItems.RABBIT_BOOTS,
-            DFItems.EMERALD_HELMET, DFItems.EMERALD_CHESTPLATE, DFItems.EMERALD_LEGGINGS, DFItems.EMERALD_BOOTS
+            DFItems.EMERALD_HELMET, DFItems.EMERALD_CHESTPLATE, DFItems.EMERALD_LEGGINGS, DFItems.EMERALD_BOOTS,
+            DFItems.COPPER_HELMET, DFItems.COPPER_CHESTPLATE, DFItems.COPPER_LEGGINGS, DFItems.COPPER_BOOTS
         );
         
         //Tools and Weapons
         reg(
             DFItems.ENDER_BOW, DFItems.ENDER_ARROW,
             DFItems.NETHER_ROD, DFItems.VILLAGER_HOE,
-            DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE
+            DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE,
+            DFItems.COPPER_SWORD, DFItems.COPPER_AXE, DFItems.COPPER_PICKAXE, DFItems.COPPER_SHOVEL, DFItems.COPPER_HOE
         );
         
         //Food
@@ -46,6 +48,9 @@ public final class DFRendering {
         
         //Mob Drops
         reg(DFItems.BAT_WING, DFItems.MUMMY_RAG, DFItems.WITHERED_BONE);
+        
+        //Nuggets, Ingots, Gems, etc...
+        reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
     }
     
     public static void blocks() {
@@ -53,6 +58,7 @@ public final class DFRendering {
             DFBlocks.MUMMY_HEAD, 
             DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
+            DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK,
             DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
         );
     }

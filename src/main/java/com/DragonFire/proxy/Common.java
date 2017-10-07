@@ -7,6 +7,7 @@ import com.DragonFire.item.DFItems;
 import com.DragonFire.potion.effect.DFPotions;
 import com.DragonFire.potion.type.DFPotionTypes;
 import com.DragonFire.recipe.DFRecipes;
+import com.DragonFire.world.DragonFireWorldGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -17,11 +18,14 @@ import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class Common {
     public void pre(FMLPreInitializationEvent e) {
         DFEntities.entities();
+        GameRegistry.registerWorldGenerator(new DragonFireWorldGen(), 3);
     }
     
     public void init(FMLInitializationEvent e) {
@@ -30,7 +34,10 @@ public class Common {
     }
     
     public void post(FMLPostInitializationEvent e) {
-        
+        OreDictionary.registerOre("ingotCopper", DFItems.COPPER_INGOT);
+        OreDictionary.registerOre("nuggetCopper", DFItems.COPPER_NUGGET);
+        OreDictionary.registerOre("oreCopper", DFBlocks.COPPER_ORE);
+        OreDictionary.registerOre("blockCopper", DFBlocks.COPPER_BLOCK);
     }
     
     public void items(IForgeRegistry<Item> ifr) {

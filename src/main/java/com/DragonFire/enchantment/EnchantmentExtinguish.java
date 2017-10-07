@@ -25,7 +25,7 @@ public class EnchantmentExtinguish extends Enchantment {
         if(elb.onGround) {
             float min = Math.min(16, 2 + level);
             MutableBlockPos mbp = new MutableBlockPos(0, 0, 0);
-            Iterable<MutableBlockPos> imbp = BlockPos.getAllInBoxMutable(bp.add(-min, 0.0D, -min), bp.add(min, 0.0D, min));
+            Iterable<MutableBlockPos> imbp = BlockPos.getAllInBoxMutable(bp.add(-min, -min, -min), bp.add(min, min, min));
             for(MutableBlockPos mbp1 : imbp) {
                 double sqrt = mbp1.distanceSqToCenter(elb.posX, elb.posY, elb.posZ);
                 if(sqrt <= (min * min)) {

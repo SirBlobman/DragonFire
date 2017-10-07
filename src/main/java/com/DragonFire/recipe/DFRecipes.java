@@ -1,5 +1,6 @@
 package com.DragonFire.recipe;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.potion.type.DFPotionTypes;
 
@@ -9,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public final class DFRecipes {
@@ -25,6 +27,20 @@ public final class DFRecipes {
         
         /* Raw Bacon -> Cooked Bacon */
         GameRegistry.addSmelting(DFItems.RAW_BACON, new ItemStack(DFItems.COOKED_BACON, 1), 0.0F);
+        
+        /* Copper Ore -> Copper Ingot */
+        GameRegistry.addSmelting(DFBlocks.ITEM_COPPER_ORE, new ItemStack(DFItems.COPPER_INGOT, 1), 0.0F);
+        
+        /* Copper Armor/Tools -> Copper Nuggets */
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_HELMET, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_CHESTPLATE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_LEGGINGS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_BOOTS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_SWORD, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_AXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_PICKAXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_SHOVEL, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_HOE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
     }
     
     public static void brewingRecipes() {

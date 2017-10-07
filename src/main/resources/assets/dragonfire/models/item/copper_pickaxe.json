@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dragonfire:items/tools/copper_pickaxe"
+  }
+}

@@ -19,10 +19,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 public final class DFItems {
     //Armor Materials
     public static final ArmorMaterial ARMOR_RABBIT = EnumHelper.addArmorMaterial("RABBIT", "dragonfire:rabbit", 33, new int[] {3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-    public static final ArmorMaterial ARMOR_EMERALD = EnumHelper.addArmorMaterial("EMERALD", "dragonfire:emerald", 33, new int[] {3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
+    public static final ArmorMaterial ARMOR_EMERALD = EnumHelper.addArmorMaterial("EMERALD", "dragonfire:emerald", 33, new int[] {3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
+    public static final ArmorMaterial ARMOR_COPPER = EnumHelper.addArmorMaterial("COPPER", "dragonfire:copper", 15, new int[] {1, 5, 6, 2}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     
     //Tool Material
     public static final ToolMaterial TOOL_EMERALD = EnumHelper.addToolMaterial("EMERALD", 3, 1561, 8.0F, 3.0F, 100);
+    public static final ToolMaterial TOOL_COPPER = EnumHelper.addToolMaterial("COPPER", 2, 150, 5.0F, 1.5F, 9);
     public static final ToolMaterial TOOL_VILLAGER = EnumHelper.addToolMaterial("VILLAGER", 500, 64, Integer.MAX_VALUE, 0, 0);
     
     //Armor
@@ -31,6 +33,10 @@ public final class DFItems {
     public static final QuickArmor EMERALD_CHESTPLATE = new QuickArmor(ARMOR_EMERALD, EntityEquipmentSlot.CHEST);
     public static final QuickArmor EMERALD_LEGGINGS = new QuickArmor(ARMOR_EMERALD, EntityEquipmentSlot.LEGS);
     public static final QuickArmor EMERALD_BOOTS = new QuickArmor(ARMOR_EMERALD, EntityEquipmentSlot.FEET);
+    public static final QuickArmor COPPER_HELMET = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.HEAD);
+    public static final QuickArmor COPPER_CHESTPLATE = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.CHEST);
+    public static final QuickArmor COPPER_LEGGINGS = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.LEGS);
+    public static final QuickArmor COPPER_BOOTS = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.FEET);
     
     //Tools and Weapons
     public static final EnderBow ENDER_BOW = new EnderBow();
@@ -42,6 +48,11 @@ public final class DFItems {
     public static final QuickShovel EMERALD_SHOVEL = new QuickShovel(TOOL_EMERALD);
     public static final QuickHoe EMERALD_HOE = new QuickHoe(TOOL_EMERALD);
     public static final QuickHoe VILLAGER_HOE = new QuickHoe(TOOL_VILLAGER);
+    public static final QuickSword COPPER_SWORD = new QuickSword(TOOL_COPPER);
+    public static final QuickAxe COPPER_AXE = new QuickAxe(TOOL_COPPER);
+    public static final QuickPickaxe COPPER_PICKAXE = new QuickPickaxe(TOOL_COPPER);
+    public static final QuickShovel COPPER_SHOVEL = new QuickShovel(TOOL_COPPER);
+    public static final QuickHoe COPPER_HOE = new QuickHoe(TOOL_COPPER);
     
     //Food
     public static final QuickFood POTION_COOKIE = new PotionCookie();
@@ -65,18 +76,24 @@ public final class DFItems {
     public static final Item MUMMY_RAG = new QuickItem("mummy_rag");
     public static final Item WITHERED_BONE = new QuickItem("withered_bone");
     
+    //Ingots and Gems
+    public static final Item COPPER_INGOT = new QuickItem("copper_ingot");
+    public static final Item COPPER_NUGGET = new QuickItem("copper_nugget");
+    
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
         ifr.registerAll(
             RABBIT_BOOTS,
-            EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS
+            EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS,
+            COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS
         );
         
         //Tools and Weapons
         ifr.registerAll(
             ENDER_BOW, ENDER_ARROW,
             NETHER_ROD, VILLAGER_HOE,
-            EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE
+            EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE,
+            COPPER_SWORD, COPPER_AXE, COPPER_PICKAXE, COPPER_SHOVEL, COPPER_HOE
         );
         
         //Food
@@ -92,5 +109,8 @@ public final class DFItems {
         
         //Mob Drops
         ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);
+        
+        //Nuggets, Ingots, Gems, etc...
+        ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
     }
 }
