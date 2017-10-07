@@ -32,6 +32,7 @@ item.copper_axe.name=Copper Axe
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_shovel.name=Copper Shovel
 item.copper_hoe.name=Copper Hoe
+item.oceanic_shovel.name=Oceanic Shovel
 
 <Food>
 item.raw_calamari.name=Raw Calamari
