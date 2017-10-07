@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
 public class Util {
@@ -45,6 +46,11 @@ public class Util {
                 eb.register(o);
             }
         }
+    }
+    
+    public static boolean call(Event e) {
+       EventBus eb = MinecraftForge.EVENT_BUS;
+       return eb.post(e);
     }
 
     @SafeVarargs

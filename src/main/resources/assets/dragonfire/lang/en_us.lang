@@ -47,6 +47,7 @@ item.withered_bone.name=Withered Bone
 
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
+enchantment.extinguish=Extinguishing
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragon Fire§r

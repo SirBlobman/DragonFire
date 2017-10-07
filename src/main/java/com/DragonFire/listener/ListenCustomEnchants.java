@@ -1,6 +1,9 @@
 package com.DragonFire.listener;
 
 import com.DragonFire.enchantment.DFEnchants;
+import com.DragonFire.enchantment.EnchantmentExtinguish;
+import com.DragonFire.event.PlayerMoveEvent;
+import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
 
 import java.util.List;
@@ -10,8 +13,11 @@ import java.util.Set;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -22,7 +28,7 @@ public class ListenCustomEnchants {
         EntityPlayer ep = e.getHarvester();
         if(ep != null) {
             ItemStack is = ep.getHeldItemMainhand();
-            if(is != null) {
+            if(!ItemUtil.isAir(is)) {
                 Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(is);
                 Set<Enchantment> enchants = map.keySet();
                 boolean smelting = enchants.contains(DFEnchants.AUTO_SMELT);
@@ -38,6 +44,22 @@ public class ListenCustomEnchants {
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    @SubscribeEvent
+    public void playerMove(PlayerMoveEvent e) {
+        EntityPlayer ep = e.getEntityPlayer();
+        ItemStack boots = ep.getItemStackFromSlot(EntityEquipmentSlot.FEET);
+        if(!ItemUtil.isAir(boots)) {
+            Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(boots);
+            boolean extinguish = map.containsKey(DFEnchants.EXTINGUISH);
+            if(extinguish) {
+                World world = ep.getEntityWorld();
+                BlockPos bp = e.getTo();
+                int level = map.get(DFEnchants.EXTINGUISH);
+                EnchantmentExtinguish.extinguishNearby(ep, world, bp, level);
             }
         }
     }

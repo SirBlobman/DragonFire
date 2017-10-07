@@ -74,8 +74,11 @@ public final class DFTabs {
         @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             super.displayAllRelevantItems(list);
-            ItemStack is = ItemUtil.getEnchantBook("dragonfire:auto_smelt", 1);
-            list.add(is);
+            ItemStack is1 = ItemUtil.getEnchantBook("dragonfire:auto_smelt", 1);
+            ItemStack is2 = ItemUtil.getEnchantBook("dragonfire:extinguish", 1);
+            ItemStack is3 = ItemUtil.getEnchantBook("dragonfire:extinguish", 2);
+            List<ItemStack> toAdd = Util.newList(is1, is2, is3);
+            list.addAll(toAdd);
         }
     };
     

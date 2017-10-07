@@ -1,9 +1,6 @@
 package com.DragonFire;
 
-import com.DragonFire.listener.ListenCustomDrops;
-import com.DragonFire.listener.ListenCustomEnchants;
-import com.DragonFire.listener.ListenCustomLoot;
-import com.DragonFire.listener.ListenCustomTarget;
+import com.DragonFire.listener.*;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
 
@@ -44,6 +41,7 @@ public class DragonFire {
     @EventHandler
     public void pre(FMLPreInitializationEvent e) {
         Util.regEvents(this, 
+            new ListenCustomEvents(),
             new ListenCustomDrops(),
             new ListenCustomEnchants(),
             new ListenCustomLoot(),
