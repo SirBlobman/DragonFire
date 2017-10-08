@@ -44,7 +44,7 @@ public final class DFRendering {
         
         //Drinks
         reg(
-            DFItems.BEER
+            DFItems.BEER, DFItems.SPOILED_MILK
         );
         
         //Mob Drops

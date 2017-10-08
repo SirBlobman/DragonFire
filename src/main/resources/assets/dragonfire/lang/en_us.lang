@@ -49,6 +49,7 @@ item.sandwich.name=Sandwich
 
 <Drinks>
 item.beer.name=Beer
+item.spoiled_milk.name=Spoiled Milk
 
 <Mob Drops>
 item.bat_wing.name=Bat Wing

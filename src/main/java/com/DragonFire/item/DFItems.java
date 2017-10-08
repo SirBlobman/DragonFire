@@ -3,6 +3,7 @@ package com.DragonFire.item;
 import com.DragonFire.item.armor.QuickArmor;
 import com.DragonFire.item.armor.RabbitBoots;
 import com.DragonFire.item.drink.Beer;
+import com.DragonFire.item.drink.SpoiledMilk;
 import com.DragonFire.item.food.DiamondApple;
 import com.DragonFire.item.food.PotionCookie;
 import com.DragonFire.item.food.QuickFood;
@@ -71,6 +72,7 @@ public final class DFItems {
     
     //Drink
     public static final Beer BEER = new Beer();
+    public static final SpoiledMilk SPOILED_MILK = new SpoiledMilk();
     
     //Mob Drops
     public static final Item BAT_WING = new QuickItem("bat_wing");
@@ -107,7 +109,7 @@ public final class DFItems {
         );
         
         //Drinks
-        ifr.registerAll(BEER);
+        ifr.registerAll(BEER, SPOILED_MILK);
         
         //Mob Drops
         ifr.registerAll(BAT_WING, MUMMY_RAG, DFItems.WITHERED_BONE);

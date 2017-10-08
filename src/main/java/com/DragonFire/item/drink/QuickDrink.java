@@ -38,8 +38,12 @@ public class QuickDrink extends Item {
             ConsumeItemTrigger cit = CriteriaTriggers.CONSUME_ITEM;
             cit.trigger(mp, is);
         }
+        
         if(ep != null) ep.addStat(StatList.getObjectUseStats(this));
-        return is;
+        if(ep == null || !ep.capabilities.isCreativeMode) {
+          ItemStack ret = is.getItem().getContainerItem(is);
+          return (ret != null) ? ret : is;
+        } return is;
     }
     
     @Override
