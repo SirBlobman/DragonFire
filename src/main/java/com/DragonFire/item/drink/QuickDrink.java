@@ -32,7 +32,6 @@ public class QuickDrink extends Item {
     @Override
     public ItemStack onItemUseFinish(ItemStack is, World w, EntityLivingBase elb) {
         EntityPlayer ep = ((elb instanceof EntityPlayer) ? (EntityPlayer) elb : null);
-        if(ep == null || !ep.capabilities.isCreativeMode) is.shrink(1);
         if(ep instanceof EntityPlayerMP) {
             EntityPlayerMP mp = (EntityPlayerMP) ep;
             ConsumeItemTrigger cit = CriteriaTriggers.CONSUME_ITEM;
@@ -41,8 +40,9 @@ public class QuickDrink extends Item {
         
         if(ep != null) ep.addStat(StatList.getObjectUseStats(this));
         if(ep == null || !ep.capabilities.isCreativeMode) {
-          ItemStack ret = is.getItem().getContainerItem(is);
-          return (ret != null) ? ret : is;
+          boolean container = is.getItem().hasContainerItem(is);
+          if(container) is = is.getItem().getContainerItem(is);
+          else is.shrink(1);
         } return is;
     }
     

@@ -5,6 +5,7 @@ import com.DragonFire.potion.effect.DFPotions;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -14,7 +15,10 @@ import net.minecraft.world.World;
 
 public class Beer extends QuickDrink {
     private static final DamageSource BEER = new DamageSource("drunk").setDamageAllowedInCreativeMode().setDamageBypassesArmor();
-    public Beer() {super("beer", 32);}
+    public Beer() {
+        super("beer", 32);
+        setContainerItem(Items.GLASS_BOTTLE);
+    }
     
     @Override
     public ItemStack onItemUseFinish(ItemStack is, World w, EntityLivingBase elb) {

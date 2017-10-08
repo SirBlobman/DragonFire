@@ -9,6 +9,7 @@ import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionHelper;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -51,5 +52,6 @@ public final class DFRecipes {
         PotionHelper.addMix(DFPotionTypes.BLINDING, Items.REDSTONE, DFPotionTypes.LONG_BLINDING);
         PotionHelper.addMix(DFPotionTypes.BLINDING, Items.GLOWSTONE_DUST, DFPotionTypes.STRONG_BLINDING);
         PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.WITHERED_BONE, DFPotionTypes.DECAY);
+        BrewingRecipeRegistry.addRecipe(new ItemStack(Items.MILK_BUCKET), new ItemStack(Items.ROTTEN_FLESH), new ItemStack(DFItems.SPOILED_MILK));
     }
 }
