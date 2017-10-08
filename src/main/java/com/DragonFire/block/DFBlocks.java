@@ -26,6 +26,8 @@ public final class DFBlocks {
     public static final BlockEnderpearl ENDER_PEARL_BLOCK = new BlockEnderpearl();
     public static final BlockObsidianGlass OBSIDIAN_GLASS = new BlockObsidianGlass();
     
+    //Machines
+    
     //Ores
     public static final BlockOre COPPER_ORE = new OreCopper();
     public static final Block COPPER_BLOCK = new QuickBlock("copper_block");
@@ -40,7 +42,6 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_NUCLEAR_TNT = new QuickItemBlock(NUCLEAR_TNT);
     public static final ItemBlock ITEM_COPPER_ORE = new QuickItemBlock(COPPER_ORE);
     public static final ItemBlock ITEM_COPPER_BLOCK = new QuickItemBlock(COPPER_BLOCK);
-
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
