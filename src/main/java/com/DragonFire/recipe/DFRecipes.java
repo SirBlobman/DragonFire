@@ -42,6 +42,9 @@ public final class DFRecipes {
         GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_PICKAXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
         GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_SHOVEL, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
         GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_HOE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        
+        /* Nether Ores -> Vanilla Ores */
+        GameRegistry.addSmelting(DFBlocks.NETHER_GOLD_ORE, new ItemStack(Items.GOLD_INGOT, 1), 10.0F);
     }
     
     public static void brewingRecipes() {

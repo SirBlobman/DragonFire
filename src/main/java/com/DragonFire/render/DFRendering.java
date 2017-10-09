@@ -59,7 +59,7 @@ public final class DFRendering {
             DFBlocks.MUMMY_HEAD, 
             DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
-            DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK,
+            DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE,
             DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
         );
     }

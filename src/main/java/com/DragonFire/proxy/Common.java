@@ -34,10 +34,11 @@ public class Common {
     }
     
     public void post(FMLPostInitializationEvent e) {
-        OreDictionary.registerOre("ingotCopper", DFItems.COPPER_INGOT);
-        OreDictionary.registerOre("nuggetCopper", DFItems.COPPER_NUGGET);
         OreDictionary.registerOre("oreCopper", DFBlocks.COPPER_ORE);
+        OreDictionary.registerOre("nuggetCopper", DFItems.COPPER_NUGGET);
+        OreDictionary.registerOre("ingotCopper", DFItems.COPPER_INGOT);
         OreDictionary.registerOre("blockCopper", DFBlocks.COPPER_BLOCK);
+        OreDictionary.registerOre("oreNetherGold", DFBlocks.NETHER_GOLD_ORE);
     }
     
     public void items(IForgeRegistry<Item> ifr) {

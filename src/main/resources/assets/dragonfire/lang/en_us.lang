@@ -80,10 +80,11 @@ tile.player_pressure_plate.name=Player Detector
 tile.nuclear_tnt.name=Nuclear TNT
 
 <Ores>
-tile.oreCopper.name=Copper Ore
+tile.copper_ore.name=Copper Ore
 tile.copper_block.name=Copper Block
 item.copper_ingot.name=Copper Ingot
 item.copper_nugget.name=Copper Nugget
+tile.nether_gold_ore.name=Nether Gold Ore
 
 <Levitation to Floating>
 potion_cookie.effect.levitation=Cookie of Floating
