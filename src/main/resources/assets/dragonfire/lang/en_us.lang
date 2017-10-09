@@ -6,6 +6,9 @@ language.code=en_us
 <Damage Sources>
 death.attack.drunk=%s drank too much beer
 
+<Containers>
+container.backpack=Backpack
+
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
 item.emerald_helmet.name=Emerald Helmet
