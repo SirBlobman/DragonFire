@@ -3,6 +3,7 @@ package com.DragonFire.proxy;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.entity.DFEntities;
+import com.DragonFire.forge.DFOreDictionary;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.potion.effect.DFPotions;
 import com.DragonFire.potion.type.DFPotionTypes;
@@ -19,7 +20,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class Common {
@@ -34,11 +34,8 @@ public class Common {
     }
     
     public void post(FMLPostInitializationEvent e) {
-        OreDictionary.registerOre("oreCopper", DFBlocks.COPPER_ORE);
-        OreDictionary.registerOre("nuggetCopper", DFItems.COPPER_NUGGET);
-        OreDictionary.registerOre("ingotCopper", DFItems.COPPER_INGOT);
-        OreDictionary.registerOre("blockCopper", DFBlocks.COPPER_BLOCK);
-        OreDictionary.registerOre("oreNetherGold", DFBlocks.NETHER_GOLD_ORE);
+        DFOreDictionary.registerItems();
+        DFOreDictionary.registerBlocks();
     }
     
     public void items(IForgeRegistry<Item> ifr) {

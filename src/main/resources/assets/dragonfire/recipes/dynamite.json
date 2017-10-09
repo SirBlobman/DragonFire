@@ -1,9 +1,9 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "  S",
-    " G ",
-    " R "
+    " S",
+    "G ",
+    "R "
   ],
   "key": {
     "G": {"item": "minecraft:gunpowder"},
@@ -14,7 +14,7 @@
     "S": {"item": "minecraft:string"}
   },
   "result": {
-    "item": "dragonfire:copper_block",
+    "item": "dragonfire:dynamite",
     "count": 1
   }
 }

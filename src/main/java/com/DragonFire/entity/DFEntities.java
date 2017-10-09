@@ -56,6 +56,6 @@ public final class DFEntities {
     }
     
     private static void regSpawn(Class<? extends EntityLiving> clazz, EnumCreatureType type, Biome... biomes) {
-        EntityRegistry.addSpawn(clazz, 20, 1, 2, type, biomes);
+        EntityRegistry.addSpawn(clazz, 70, 1, 2, type, biomes);
     }
 }

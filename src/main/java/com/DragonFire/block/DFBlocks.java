@@ -5,6 +5,7 @@ import com.DragonFire.block.item.QuickItemBlock;
 import com.DragonFire.block.ore.QuickOre;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -29,7 +30,7 @@ public final class DFBlocks {
     
     //Ores
     public static final QuickOre COPPER_ORE = new QuickOre("copper", "dragonfire:copper_ore", 2.25F, 5.0F);
-    public static final Block COPPER_BLOCK = new QuickBlock("copper_block");
+    public static final Block COPPER_BLOCK = new QuickBlock("copper_block", Material.IRON, 3.0F, 10.0F);
     public static final QuickOre NETHER_GOLD_ORE = new QuickOre("nether_gold", "dragonfire:nether_gold_ore", 3.0F, 10.0F);
 
     //Item Blocks

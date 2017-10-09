@@ -1,5 +1,6 @@
 package com.DragonFire;
 
+import com.DragonFire.command.CommandOreDictionary;
 import com.DragonFire.listener.*;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -58,6 +60,11 @@ public class DragonFire {
     @EventHandler
     public void post(FMLPostInitializationEvent e) {
         proxy.post(e);
+    }
+    
+    @EventHandler
+    public void start(FMLServerStartingEvent e) {
+        e.registerServerCommand(new CommandOreDictionary());
     }
     
     @SubscribeEvent

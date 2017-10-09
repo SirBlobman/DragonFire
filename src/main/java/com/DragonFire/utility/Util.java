@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import net.minecraft.command.ICommandSender;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.Event;
@@ -86,5 +88,10 @@ public class Util {
         }
         
         return list.toArray(new Biome[0]);
+    }
+
+    public static void sendMessage(ICommandSender cs, String error) {
+        TextComponentString text = new TextComponentString(Util.color(error));
+        cs.sendMessage(text);
     }
 }
