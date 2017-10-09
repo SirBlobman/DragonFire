@@ -1,7 +1,7 @@
 package com.DragonFire.item.tool;
 
 import com.DragonFire.creative.DFTabs;
-import com.DragonFire.entity.EntityNetherFishHook;
+import com.DragonFire.entity.projectile.EntityNetherFishHook;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;

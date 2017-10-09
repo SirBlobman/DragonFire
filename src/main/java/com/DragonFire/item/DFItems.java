@@ -55,6 +55,8 @@ public final class DFItems {
     public static final QuickShovel COPPER_SHOVEL = new QuickShovel(TOOL_COPPER);
     public static final QuickHoe COPPER_HOE = new QuickHoe(TOOL_COPPER);
     public static final OceanicShovel OCEANIC_SHOVEL = new OceanicShovel();
+    public static final Dynamite DYNAMITE = new Dynamite(false);
+    public static final Dynamite NUCLEAR_DYNAMITE = new Dynamite(true);
     
     //Food
     public static final QuickFood POTION_COOKIE = new PotionCookie();
@@ -97,7 +99,7 @@ public final class DFItems {
             NETHER_ROD, VILLAGER_HOE,
             EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE,
             COPPER_SWORD, COPPER_AXE, COPPER_PICKAXE, COPPER_SHOVEL, COPPER_HOE,
-            OCEANIC_SHOVEL
+            OCEANIC_SHOVEL, DYNAMITE, NUCLEAR_DYNAMITE
         );
         
         //Food

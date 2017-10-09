@@ -3,12 +3,19 @@ package com.DragonFire.entity;
 import static com.DragonFire.utility.Util.getRGB;
 
 import com.DragonFire.DragonFire;
+import com.DragonFire.entity.projectile.EntityDynamite;
+import com.DragonFire.entity.projectile.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityTikiSpear;
+import com.DragonFire.utility.Util;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
@@ -17,11 +24,15 @@ public final class DFEntities {
         reg("ender_arrow", EntityEnderArrow.class);
         reg("tiki_spear", EntityTikiSpear.class);
         reg("mummy", EntityMummy.class, getRGB(243, 226, 175), getRGB(204, 189, 146));
+        reg("dynamite", EntityDynamite.class);
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
         regEgg(EntitySnowman.class, getRGB(255, 255, 255), getRGB(227, 144, 29));
         regEgg(EntityWither.class, getRGB(26, 26, 26), getRGB(92, 92, 92));
+        
+        //Spawning
+        regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, Util.getBiomes("desert"));
     }
     
     private static int id = 0;
@@ -42,5 +53,9 @@ public final class DFEntities {
         EntityEntry ee = EntityRegistry.getEntry(clazz);
         ResourceLocation rl = ee.getRegistryName();
         EntityRegistry.registerEgg(rl, egg1, egg2);
+    }
+    
+    private static void regSpawn(Class<? extends EntityLiving> clazz, EnumCreatureType type, Biome... biomes) {
+        EntityRegistry.addSpawn(clazz, 20, 1, 2, type, biomes);
     }
 }

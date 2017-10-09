@@ -1,4 +1,4 @@
-package com.DragonFire.entity;
+package com.DragonFire.entity.projectile;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityArrow;

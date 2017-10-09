@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
@@ -72,5 +73,18 @@ public class Util {
         int b = (blue) & 0x000000FF;
         int color = (0xFF000000 | r | g | b);
         return color;
+    }
+    
+    public static Biome[] getBiomes(String matcher) {
+        List<Biome> list = newList();
+        for(Biome b : Biome.REGISTRY) {
+            String name = b.getBiomeName().toLowerCase();
+            if(name.contains(matcher.toLowerCase())) {
+                print("Found biome match for '" + matcher + "': " + b.getBiomeName());
+                list.add(b);
+            }
+        }
+        
+        return list.toArray(new Biome[0]);
     }
 }

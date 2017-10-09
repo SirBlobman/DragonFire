@@ -1,7 +1,7 @@
 package com.DragonFire.render.entity;
 
 import com.DragonFire.DragonFire;
-import com.DragonFire.entity.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityEnderArrow;
 
 import net.minecraft.client.renderer.entity.RenderArrow;
 import net.minecraft.client.renderer.entity.RenderManager;

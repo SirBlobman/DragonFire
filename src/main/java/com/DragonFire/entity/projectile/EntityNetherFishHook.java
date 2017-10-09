@@ -1,4 +1,4 @@
-package com.DragonFire.entity;
+package com.DragonFire.entity.projectile;
 
 import com.DragonFire.utility.ItemUtil;
 

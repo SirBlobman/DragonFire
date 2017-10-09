@@ -1,10 +1,12 @@
 package com.DragonFire.render;
 
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.entity.EntityEnderArrow;
 import com.DragonFire.entity.EntityMummy;
-import com.DragonFire.entity.EntityTikiSpear;
+import com.DragonFire.entity.projectile.EntityDynamite;
+import com.DragonFire.entity.projectile.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.render.entity.RenderDynamite;
 import com.DragonFire.render.entity.RenderEnderArrow;
 import com.DragonFire.render.entity.RenderMummy;
 import com.DragonFire.render.entity.RenderTikiSpear;
@@ -31,7 +33,7 @@ public final class DFRendering {
             DFItems.NETHER_ROD, DFItems.VILLAGER_HOE,
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE,
             DFItems.COPPER_SWORD, DFItems.COPPER_AXE, DFItems.COPPER_PICKAXE, DFItems.COPPER_SHOVEL, DFItems.COPPER_HOE,
-            DFItems.OCEANIC_SHOVEL
+            DFItems.OCEANIC_SHOVEL, DFItems.DYNAMITE, DFItems.NUCLEAR_DYNAMITE
         );
         
         //Food
@@ -68,6 +70,7 @@ public final class DFRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityEnderArrow.class, RenderEnderArrow::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTikiSpear.class, RenderTikiSpear::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, RenderDynamite::new);
     }
     
     private static void reg(Block... bb) {

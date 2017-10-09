@@ -1,7 +1,7 @@
 package com.DragonFire.render.entity;
 
 import com.DragonFire.DragonFire;
-import com.DragonFire.entity.EntityTikiSpear;
+import com.DragonFire.entity.projectile.EntityTikiSpear;
 
 import net.minecraft.client.renderer.entity.RenderArrow;
 import net.minecraft.client.renderer.entity.RenderManager;

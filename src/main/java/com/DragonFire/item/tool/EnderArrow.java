@@ -1,7 +1,7 @@
 package com.DragonFire.item.tool;
 
 import com.DragonFire.creative.DFTabs;
-import com.DragonFire.entity.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityEnderArrow;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityArrow;
