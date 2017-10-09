@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "  S",
+    " G ",
+    " R "
+  ],
+  "key": {
+    "G": {"item": "minecraft:gunpowder"},
+    "R": {
+      "type": "forge:ore_dict",
+      "ore": "sand"
+    },
+    "S": {"item": "minecraft:string"}
+  },
+  "result": {
+    "item": "dragonfire:copper_block",
+    "count": 1
+  }
+}
