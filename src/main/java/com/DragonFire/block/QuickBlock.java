@@ -15,4 +15,9 @@ public class QuickBlock extends Block {
         setUnlocalizedName(name);
         setCreativeTab(DFTabs.DRAGONFIRE);
     }
+    
+    public QuickBlock(String name, Material mat, float hardness, float resistance, String tool, int harvestLevel) {
+        this(name, mat, hardness, resistance);
+        setHarvestLevel(tool, harvestLevel);
+    }
 }

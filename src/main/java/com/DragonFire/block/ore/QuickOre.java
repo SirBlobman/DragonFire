@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class QuickOre extends BlockOre {
     private final String drop;
-    public QuickOre(String name, String drop, float hardness, float resistance) {
+    public QuickOre(String name, String drop, float hardness, float resistance, int harvestLevel) {
         super();
         this.drop = drop;
         name = name + "_ore";
@@ -23,6 +23,7 @@ public class QuickOre extends BlockOre {
         setSoundType(SoundType.STONE);
         setHardness(hardness);
         setResistance(resistance);
+        setHarvestLevel("pickaxe", harvestLevel);
     }
     
     @Override
