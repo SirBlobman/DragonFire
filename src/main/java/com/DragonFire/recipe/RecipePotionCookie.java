@@ -10,11 +10,10 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
+import net.minecraftforge.registries.IForgeRegistryEntry.Impl;
 
-public class RecipePotionCookie extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
-    public RecipePotionCookie() {
-        setRegistryName("potion_cookie");
-    }
+public class RecipePotionCookie extends Impl<IRecipe> implements IRecipe {
+    public RecipePotionCookie() {setRegistryName("potion_cookie");}
     
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {

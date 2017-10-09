@@ -16,7 +16,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public final class DFRecipes {
     public static void craftingRecipes(IForgeRegistry<IRecipe> ifr) {
-        ifr.register(new RecipePotionCookie());
+        ifr.registerAll(new RecipeDyableBackpack(), new RecipePotionCookie());
     }
     
     public static void furnaceRecipes() {

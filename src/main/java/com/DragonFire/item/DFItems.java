@@ -2,6 +2,7 @@ package com.DragonFire.item;
 
 import com.DragonFire.item.armor.QuickArmor;
 import com.DragonFire.item.armor.RabbitBoots;
+import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.drink.Beer;
 import com.DragonFire.item.drink.SpoiledMilk;
 import com.DragonFire.item.food.DiamondApple;
@@ -38,6 +39,7 @@ public final class DFItems {
     public static final QuickArmor COPPER_CHESTPLATE = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.CHEST);
     public static final QuickArmor COPPER_LEGGINGS = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.LEGS);
     public static final QuickArmor COPPER_BOOTS = new QuickArmor(ARMOR_COPPER, EntityEquipmentSlot.FEET);
+    public static final DyableBackpack DYABLE_BACKPACK = new DyableBackpack();
     
     //Tools and Weapons
     public static final EnderBow ENDER_BOW = new EnderBow();
@@ -90,7 +92,8 @@ public final class DFItems {
         ifr.registerAll(
             RABBIT_BOOTS,
             EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS,
-            COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS
+            COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS,
+            DYABLE_BACKPACK
         );
         
         //Tools and Weapons

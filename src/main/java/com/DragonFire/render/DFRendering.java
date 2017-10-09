@@ -24,7 +24,8 @@ public final class DFRendering {
         reg(
             DFItems.RABBIT_BOOTS,
             DFItems.EMERALD_HELMET, DFItems.EMERALD_CHESTPLATE, DFItems.EMERALD_LEGGINGS, DFItems.EMERALD_BOOTS,
-            DFItems.COPPER_HELMET, DFItems.COPPER_CHESTPLATE, DFItems.COPPER_LEGGINGS, DFItems.COPPER_BOOTS
+            DFItems.COPPER_HELMET, DFItems.COPPER_CHESTPLATE, DFItems.COPPER_LEGGINGS, DFItems.COPPER_BOOTS,
+            DFItems.DYABLE_BACKPACK
         );
         
         //Tools and Weapons

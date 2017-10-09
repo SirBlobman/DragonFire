@@ -1,6 +1,7 @@
 package com.DragonFire.proxy;
 
 import com.DragonFire.item.DFItems;
+import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.render.DFRendering;
 
 import net.minecraft.block.Block;
@@ -41,6 +42,19 @@ public class Client extends Common {
                 } else return -1;
             }
         }, DFItems.POTION_COOKIE);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int getColorFromItemstack(ItemStack is, int tint) {
+                if(tint == 0) {
+                    Item i = is.getItem();
+                    if(i == DFItems.DYABLE_BACKPACK) {
+                        DyableBackpack db = (DyableBackpack) i;
+                        return db.getColor(is);
+                    } else return -1;
+                } else return -1;
+            }
+        }, DFItems.DYABLE_BACKPACK);
     }
     
     @Override
