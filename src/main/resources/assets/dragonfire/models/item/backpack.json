@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/armor/backpack"
+    "layer0": "dragonfire:items/armor/backpack",
+    "layer1": "dragonfire:items/armor/backpack_overlay"
   }
 }

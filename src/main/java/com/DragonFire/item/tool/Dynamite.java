@@ -25,6 +25,8 @@ public class Dynamite extends Item {
         setCreativeTab(DFTabs.DRAGONFIRE);
     }
     
+    public boolean isNuclear() {return nuclear;}
+    
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer ep, EnumHand eh) {
         ItemStack is = ep.getHeldItem(eh);

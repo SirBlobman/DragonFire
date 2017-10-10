@@ -9,6 +9,10 @@ death.attack.drunk=%s drank too much beer
 <Containers>
 container.backpack=Backpack
 
+<Key Binds>
+key.categories.DragonFire=Dragon Fire
+key.dragonfire.backpack=Open Backpack (chestplate)
+
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
 item.emerald_helmet.name=Emerald Helmet
@@ -39,6 +43,7 @@ item.copper_hoe.name=Copper Hoe
 item.oceanic_shovel.name=Oceanic Shovel
 item.dynamite.name=Dynamite
 item.nuclear_dynamite.name=Nuclear Dynamite
+item.mushroom_pickaxe.name=Mushroom Pickaxe
 
 <Food>
 item.raw_calamari.name=Raw Calamari

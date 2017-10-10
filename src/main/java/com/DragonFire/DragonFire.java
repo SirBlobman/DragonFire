@@ -1,6 +1,7 @@
 package com.DragonFire;
 
 import com.DragonFire.command.CommandOreDictionary;
+import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
@@ -40,6 +41,8 @@ public class DragonFire {
     @SidedProxy(clientSide=CLIENT, serverSide=SERVER)
     public static Common proxy;
     
+    public static final DragonFirePacketHandler PACKET_HANDLER = new DragonFirePacketHandler();
+    
     @EventHandler
     public void pre(FMLPreInitializationEvent e) {
         Util.regEvents(this, 
@@ -47,7 +50,8 @@ public class DragonFire {
             new ListenCustomDrops(),
             new ListenCustomEnchants(),
             new ListenCustomLoot(),
-            new ListenCustomTarget()
+            new ListenCustomTarget(),
+            new KeyBindBackpack()
         );
         proxy.pre(e);
     }

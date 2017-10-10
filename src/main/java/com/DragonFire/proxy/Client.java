@@ -2,6 +2,7 @@ package com.DragonFire.proxy;
 
 import com.DragonFire.item.DFItems;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
+import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.render.DFRendering;
 
 import net.minecraft.block.Block;
@@ -15,6 +16,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -25,6 +27,7 @@ public class Client extends Common {
     public void pre(FMLPreInitializationEvent e) {
         super.pre(e);
         DFRendering.entities();
+        ClientRegistry.registerKeyBinding(KeyBindBackpack.backpack);
     }
     
     @Override

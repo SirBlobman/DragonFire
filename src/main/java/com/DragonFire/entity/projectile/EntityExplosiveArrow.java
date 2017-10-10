@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 public class EntityExplosiveArrow extends EntityArrow {
     public EntityExplosiveArrow(World w) {super(w);}
     public EntityExplosiveArrow(World w, EntityLivingBase elb) {super(w, elb);}
+    public EntityExplosiveArrow(World w, double x, double y, double z) {super(w, x, y, z);}
 
     @Override
     protected ItemStack getArrowStack() {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LGL",
+    "LLL"
+  ],
+  "key": {
+    "G": {"item": "minecraft:leather"},
+    "L": {"item": "minecraft:gold_block"}
+  },
+  "result": {
+    "item": "dragonfire:backpack",
+    "count": 1
+  }
+}

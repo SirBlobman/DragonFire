@@ -1,6 +1,8 @@
 package com.DragonFire.proxy;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.dispenser.BehaviorCustomProjectileDispense;
 import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.entity.DFEntities;
 import com.DragonFire.forge.DFOreDictionary;
@@ -29,6 +31,7 @@ public class Common {
     }
     
     public void init(FMLInitializationEvent e) {
+        DragonFire.PACKET_HANDLER.initialize();
         DFRecipes.furnaceRecipes();
         DFRecipes.brewingRecipes();
     }
@@ -45,6 +48,7 @@ public class Common {
 
     public void blocks(IForgeRegistry<Block> ifr) {
         DFBlocks.register1(ifr);
+        BehaviorCustomProjectileDispense.register();
     }
     
     public void recipes(IForgeRegistry<IRecipe> ifr) {
