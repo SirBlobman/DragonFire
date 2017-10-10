@@ -5,6 +5,7 @@ import static com.DragonFire.utility.Util.getRGB;
 import com.DragonFire.DragonFire;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.utility.Util;
 
@@ -25,6 +26,7 @@ public final class DFEntities {
         reg("tiki_spear", EntityTikiSpear.class);
         reg("mummy", EntityMummy.class, getRGB(243, 226, 175), getRGB(204, 189, 146));
         reg("dynamite", EntityDynamite.class);
+        reg("explosive_arrow", EntityExplosiveArrow.class);
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));

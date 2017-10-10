@@ -38,7 +38,7 @@ public class EntityDynamite extends EntityThrowable {
     public void handleStatusUpdate(byte id) {
         if(id == 3) {
             for(int i = 0; i < 8; ++i) {
-                EnumParticleTypes particles = (isNuclear() ? EnumParticleTypes.FLAME : EnumParticleTypes.SMOKE_NORMAL);
+                EnumParticleTypes particles = (isNuclear() ? EnumParticleTypes.FLAME : EnumParticleTypes.CLOUD);
                 world.spawnParticle(particles, posX, posY, posZ, 0.0D, 0.0D, 0.0D);
             }
         }
@@ -46,10 +46,12 @@ public class EntityDynamite extends EntityThrowable {
 
     @Override
     public void onImpact(RayTraceResult rtr) {
-        float explosionSize = (isNuclear() ? 25.0F : 2.0F);
-        world.createExplosion(this, posX, posY, posZ, explosionSize, true);
-        world.setEntityState(this, (byte) 3);
-        setDead();
+        if(!world.isRemote) {
+            float explosionSize = (isNuclear() ? 25.0F : 2.0F);
+            world.createExplosion(this, posX, posY, posZ, explosionSize, true);
+            world.setEntityState(this, (byte) 3);
+            setDead();
+        }
     }
 
     public void setNuclear(boolean nuclear) {dataManager.set(NUCLEAR, nuclear);}

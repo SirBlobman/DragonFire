@@ -59,6 +59,7 @@ public final class DFItems {
     public static final OceanicShovel OCEANIC_SHOVEL = new OceanicShovel();
     public static final Dynamite DYNAMITE = new Dynamite(false);
     public static final Dynamite NUCLEAR_DYNAMITE = new Dynamite(true);
+    public static final ExplosiveArrow EXPLOSIVE_ARROW = new ExplosiveArrow();
     
     //Food
     public static final QuickFood POTION_COOKIE = new PotionCookie();
@@ -102,7 +103,7 @@ public final class DFItems {
             NETHER_ROD, VILLAGER_HOE,
             EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE,
             COPPER_SWORD, COPPER_AXE, COPPER_PICKAXE, COPPER_SHOVEL, COPPER_HOE,
-            OCEANIC_SHOVEL, DYNAMITE, NUCLEAR_DYNAMITE
+            OCEANIC_SHOVEL, DYNAMITE, NUCLEAR_DYNAMITE, EXPLOSIVE_ARROW
         );
         
         //Food

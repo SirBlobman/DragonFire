@@ -4,12 +4,10 @@ import com.DragonFire.block.DFBlocks;
 import com.DragonFire.entity.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
+import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
-import com.DragonFire.render.entity.RenderDynamite;
-import com.DragonFire.render.entity.RenderEnderArrow;
-import com.DragonFire.render.entity.RenderMummy;
-import com.DragonFire.render.entity.RenderTikiSpear;
+import com.DragonFire.render.entity.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -34,7 +32,7 @@ public final class DFRendering {
             DFItems.NETHER_ROD, DFItems.VILLAGER_HOE,
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE,
             DFItems.COPPER_SWORD, DFItems.COPPER_AXE, DFItems.COPPER_PICKAXE, DFItems.COPPER_SHOVEL, DFItems.COPPER_HOE,
-            DFItems.OCEANIC_SHOVEL, DFItems.DYNAMITE, DFItems.NUCLEAR_DYNAMITE
+            DFItems.OCEANIC_SHOVEL, DFItems.DYNAMITE, DFItems.NUCLEAR_DYNAMITE, DFItems.EXPLOSIVE_ARROW
         );
         
         //Food
@@ -72,6 +70,7 @@ public final class DFRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityTikiSpear.class, RenderTikiSpear::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, RenderDynamite::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityExplosiveArrow.class, RenderExplosiveArrow::new);
     }
     
     private static void reg(Block... bb) {
