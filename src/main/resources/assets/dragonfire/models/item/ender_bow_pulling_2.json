@@ -1,6 +1,6 @@
 {
     "parent": "dragonfire:item/ender_bow",
     "textures": {
-        "layer0": "dragonfire:items/ender_bow/ender_bow_pulling_0"
+        "layer0": "dragonfire:items/ender_bow/ender_bow_pulling_2"
     }
 }
