@@ -1,6 +1,5 @@
 package com.DragonFire.item.drink;
 
-import com.DragonFire.compat.ToughAsNails.TANUtil;
 import com.DragonFire.potion.effect.DFPotions;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -16,7 +15,7 @@ import net.minecraft.world.World;
 public class Beer extends QuickDrink {
     private static final DamageSource BEER = new DamageSource("drunk").setDamageAllowedInCreativeMode().setDamageBypassesArmor();
     public Beer() {
-        super("beer", 32);
+        super("beer", 32, 1);
         setContainerItem(Items.GLASS_BOTTLE);
     }
     
@@ -46,9 +45,6 @@ public class Beer extends QuickDrink {
                 nbt.setInteger("BeersDrunk", 0);
                 ep.attackEntityFrom(BEER, Float.MAX_VALUE);
             }
-            
-            try {TANUtil.addThirst(ep, 1);}
-            catch(Throwable ex) {}
         }
         return super.onItemUseFinish(is, w, elb);
     }

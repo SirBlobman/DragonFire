@@ -11,6 +11,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventBus;
 
@@ -93,5 +94,10 @@ public class Util {
     public static void sendMessage(ICommandSender cs, String error) {
         TextComponentString text = new TextComponentString(Util.color(error));
         cs.sendMessage(text);
+    }
+    
+    public static boolean isModLoaded(String mod) {
+        boolean loaded = Loader.isModLoaded(mod);
+        return loaded;
     }
 }

@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 public class SpoiledMilk extends QuickDrink {
     public SpoiledMilk() {
-        super("spoiled_milk", 64);
+        super("spoiled_milk", 64, 2);
         setContainerItem(Items.BUCKET);
     }
     

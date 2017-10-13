@@ -1,5 +1,6 @@
 package com.DragonFire.item.drink;
 
+import com.DragonFire.compat.ToughAsNails.TANUtil;
 import com.DragonFire.creative.DFTabs;
 
 import net.minecraft.advancements.CriteriaTriggers;
@@ -17,13 +18,21 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
 public class QuickDrink extends Item {
-    private final int useDuration;
-    public QuickDrink(String name, int useDuration) {
+    private final int useDuration, thirstRestored;
+    
+    /**
+     * Create an instance of a drink item
+     * @param name Registry/Unlocalized name for the item
+     * @param useDuration How long does it take to actually drink this item?
+     * @param thirstRestored (Requires ToughAsNails) How much thirst does this item restore?
+     */
+    public QuickDrink(String name, int useDuration, int thirstRestored) {
         setUnlocalizedName(name);
         setRegistryName(name);
         setMaxStackSize(1);
         setCreativeTab(DFTabs.FOOD_AND_DRINK);
         this.useDuration = useDuration;
+        this.thirstRestored = thirstRestored;
     }
     
     public EnumAction getItemUseAction(ItemStack is) {return EnumAction.DRINK;}
@@ -32,13 +41,16 @@ public class QuickDrink extends Item {
     @Override
     public ItemStack onItemUseFinish(ItemStack is, World w, EntityLivingBase elb) {
         EntityPlayer ep = ((elb instanceof EntityPlayer) ? (EntityPlayer) elb : null);
+
         if(ep instanceof EntityPlayerMP) {
             EntityPlayerMP mp = (EntityPlayerMP) ep;
             ConsumeItemTrigger cit = CriteriaTriggers.CONSUME_ITEM;
             cit.trigger(mp, is);
         }
-        
-        if(ep != null) ep.addStat(StatList.getObjectUseStats(this));
+        if(ep != null) {
+            TANUtil.addThirst(ep, thirstRestored);
+            ep.addStat(StatList.getObjectUseStats(this));
+        }
         if(ep == null || !ep.capabilities.isCreativeMode) {
           boolean container = is.getItem().hasContainerItem(is);
           if(container) is = is.getItem().getContainerItem(is);
