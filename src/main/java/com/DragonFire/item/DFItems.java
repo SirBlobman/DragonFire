@@ -8,6 +8,7 @@ import com.DragonFire.item.drink.SpoiledMilk;
 import com.DragonFire.item.food.DiamondApple;
 import com.DragonFire.item.food.PotionCookie;
 import com.DragonFire.item.food.QuickFood;
+import com.DragonFire.item.food.SugarCookie;
 import com.DragonFire.item.tool.*;
 
 import net.minecraft.init.SoundEvents;
@@ -75,6 +76,7 @@ public final class DFItems {
     public static final QuickFood CHEESE = new QuickFood("cheese", 6, 0.0F, false);
     public static final QuickFood SLIME_JELLY = new QuickFood("slime_jelly", 3, 1.5F, false);
     public static final QuickFood SANDWICH = new QuickFood("sandwich", 9, 4.5F, true);
+    public static final SugarCookie SUGAR_COOKIE = new SugarCookie();
     
     //Drink
     public static final Beer BEER = new Beer();
@@ -113,7 +115,7 @@ public final class DFItems {
             POTION_COOKIE, DIAMOND_APPLE,
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
-            PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE, SLIME_JELLY, SANDWICH
+            PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE, SLIME_JELLY, SANDWICH, SUGAR_COOKIE
         );
         
         //Drinks

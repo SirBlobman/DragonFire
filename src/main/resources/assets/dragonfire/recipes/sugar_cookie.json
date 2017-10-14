@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:cookie"},
+    {"item": "minecraft:sugar"}
+  ],
+  "result": {
+    "item": "dragonfire:sugar_cookie",
+    "count": 1
+  }
+}
