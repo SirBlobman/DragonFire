@@ -17,8 +17,8 @@ public class SugarCookie extends QuickFood {
     @Override
     public void onFoodEaten(ItemStack is, World w, EntityPlayer ep) {
         super.onFoodEaten(is, w, ep);
-        PotionEffect jump = new PotionEffect(MobEffects.JUMP_BOOST, 15, 0, true, false);
-        PotionEffect speed = new PotionEffect(MobEffects.SPEED, 15, 0, true, false);
+        PotionEffect jump = new PotionEffect(MobEffects.JUMP_BOOST, 15 * 20, 0, true, false);
+        PotionEffect speed = new PotionEffect(MobEffects.SPEED, 15 * 20, 0, true, false);
         ep.addPotionEffect(jump);
         ep.addPotionEffect(speed);
     }
