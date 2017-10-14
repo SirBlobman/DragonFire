@@ -13,6 +13,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.monster.EntityIllusionIllager;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.util.ResourceLocation;
@@ -32,6 +33,7 @@ public final class DFEntities {
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
         regEgg(EntitySnowman.class, getRGB(255, 255, 255), getRGB(227, 144, 29));
         regEgg(EntityWither.class, getRGB(26, 26, 26), getRGB(92, 92, 92));
+        regEgg(EntityIllusionIllager.class, getRGB(19, 88, 147), getRGB(149, 155, 155));
         
         //Spawning
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, Util.getBiomes("desert"));

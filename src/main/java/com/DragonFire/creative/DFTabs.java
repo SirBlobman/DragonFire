@@ -9,6 +9,7 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.monster.EntityIllusionIllager;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
 import net.minecraft.init.Items;
@@ -58,7 +59,8 @@ public final class DFTabs {
             ItemStack is2 = ItemUtil.getSpawnEgg(EntityIronGolem.class);
             ItemStack is3 = ItemUtil.getSpawnEgg(EntitySnowman.class);
             ItemStack is4 = ItemUtil.getSpawnEgg(EntityWither.class);
-            List<ItemStack> toAdd = Util.newList(is1, is2, is3, is4);
+            ItemStack is5 = ItemUtil.getSpawnEgg(EntityIllusionIllager.class);
+            List<ItemStack> toAdd = Util.newList(is1, is2, is3, is4, is5);
             list.addAll(toAdd);
         }
     };
