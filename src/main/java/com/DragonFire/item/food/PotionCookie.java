@@ -9,6 +9,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
@@ -53,7 +54,13 @@ public class PotionCookie extends QuickFood {
         super.onFoodEaten(is, w, ep);
         PotionType pt = PotionUtils.getPotionFromItem(is);
         for(PotionEffect pe : pt.getEffects()) {
-            ep.addPotionEffect(pe);
+            Potion pot = pe.getPotion();
+            int duration = Math.max(pe.getDuration() / 8, 1);
+            int amplifier = pe.getAmplifier();
+            boolean ambient = pe.getIsAmbient();
+            boolean particles = pe.doesShowParticles();
+            PotionEffect copy = new PotionEffect(pot, duration, amplifier, ambient, particles);
+            ep.addPotionEffect(copy);
         }
     }
 }

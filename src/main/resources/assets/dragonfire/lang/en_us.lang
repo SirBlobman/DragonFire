@@ -45,6 +45,7 @@ item.oceanic_shovel.name=Oceanic Shovel
 item.dynamite.name=Dynamite
 item.nuclear_dynamite.name=Nuclear Dynamite
 item.mushroom_pickaxe.name=Mushroom Pickaxe
+item.explosive_arrow.name=Explosive Arrow
 
 <Food>
 item.raw_calamari.name=Raw Calamari
