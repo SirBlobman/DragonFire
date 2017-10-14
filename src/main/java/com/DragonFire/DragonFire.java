@@ -3,6 +3,7 @@ package com.DragonFire;
 import com.DragonFire.command.CommandOreDictionary;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
+import com.DragonFire.network.DragonFirePacketHandler;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
 

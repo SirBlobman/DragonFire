@@ -1,5 +1,6 @@
-package com.DragonFire;
+package com.DragonFire.network;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.item.armor.backpack.MessageOpenBackpack;
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;

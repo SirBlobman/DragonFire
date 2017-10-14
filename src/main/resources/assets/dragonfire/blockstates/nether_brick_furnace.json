@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "dragonfire:nether_brick_furnace"},
+    "facing=south": {"model": "dragonfire:nether_brick_furnace", "y": 180},
+    "facing=west": {"model": "dragonfire:nether_brick_furnace", "y": 270},
+    "facing=east": {"model": "dragonfire:nether_brick_furnace", "y": 90}
+  }
+}

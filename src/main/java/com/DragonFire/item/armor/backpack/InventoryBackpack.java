@@ -14,7 +14,7 @@ import net.minecraft.nbt.NBTTagList;
 public class InventoryBackpack extends InventoryBasic {
     private final ItemStack backpack;
     public InventoryBackpack(ItemStack backpack) {
-        super("container.backpack", false, 54);
+        super("dragonfire.container.backpack", false, 54);
         this.backpack = backpack;
    }
     

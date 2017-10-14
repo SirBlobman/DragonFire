@@ -3,6 +3,7 @@ package com.DragonFire.block;
 import com.DragonFire.block.item.ItemMummyHead;
 import com.DragonFire.block.item.QuickItemBlock;
 import com.DragonFire.block.ore.QuickOre;
+import com.DragonFire.block.tile.BlockNetherBrickFurnace;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -27,6 +28,7 @@ public final class DFBlocks {
     public static final BlockObsidianGlass OBSIDIAN_GLASS = new BlockObsidianGlass();
     
     //Machines
+    public static final BlockNetherBrickFurnace NETHER_BRICK_FURNACE = new BlockNetherBrickFurnace();
     
     //Ores
     public static final QuickOre COPPER_ORE = new QuickOre("copper", "dragonfire:copper_ore", 2.25F, 5.0F, 1);
@@ -41,6 +43,7 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_ENDER_PEARL_BLOCK = new QuickItemBlock(ENDER_PEARL_BLOCK);
     public static final ItemBlock ITEM_OBSIDIAN_GLASS = new QuickItemBlock(OBSIDIAN_GLASS);
     public static final ItemBlock ITEM_NUCLEAR_TNT = new QuickItemBlock(NUCLEAR_TNT);
+    public static final ItemBlock ITEM_NETHER_BRICK_FURNACE = new QuickItemBlock(NETHER_BRICK_FURNACE);
     public static final ItemBlock ITEM_COPPER_ORE = new QuickItemBlock(COPPER_ORE);
     public static final ItemBlock ITEM_COPPER_BLOCK = new QuickItemBlock(COPPER_BLOCK);
     public static final ItemBlock ITEM_NETHER_GOLD_ORE = new QuickItemBlock(NETHER_GOLD_ORE);
@@ -55,6 +58,8 @@ public final class DFBlocks {
         //Redstone
         ifr.registerAll(PLAYER_PLATE, NUCLEAR_TNT);
         
+        ifr.register(NETHER_BRICK_FURNACE);
+        
         //Ores
         ifr.registerAll(COPPER_ORE, COPPER_BLOCK, NETHER_GOLD_ORE);
         
@@ -67,6 +72,7 @@ public final class DFBlocks {
             ITEM_MUMMY_HEAD,
             ITEM_CHOCOLATE_CAKE, ITEM_PIZZA,
             ITEM_PLAYER_PLATE, ITEM_NUCLEAR_TNT,
+            ITEM_NETHER_BRICK_FURNACE,
             ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE,
             ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS
         );

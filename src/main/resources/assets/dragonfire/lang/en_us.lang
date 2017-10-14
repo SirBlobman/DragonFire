@@ -7,7 +7,8 @@ language.code=en_us
 death.attack.drunk=%s drank too much beer
 
 <Containers>
-container.backpack=Backpack
+dragonfire.container.backpack=Backpack
+dragonfire.container.nether_brick_furnace=Nether Brick Furnace
 
 <Key Binds>
 key.categories.DragonFire=Dragon Fire
@@ -90,6 +91,7 @@ tile.pizza.name=Pizza
 tile.obsidian_glass.name=Obsidian Glass
 tile.player_pressure_plate.name=Player Detector
 tile.nuclear_tnt.name=Nuclear TNT
+tile.nether_brick_furnace.name=Nether Brick Furnace
 
 <Ores>
 tile.copper_ore.name=Copper Ore

@@ -3,10 +3,12 @@ package com.DragonFire.proxy;
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.block.dispenser.BehaviorCustomProjectileDispense;
+import com.DragonFire.block.tile.TileEntityNetherBrickFurnace;
 import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.entity.DFEntities;
 import com.DragonFire.forge.DFOreDictionary;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.network.gui.DFGuiHandler;
 import com.DragonFire.potion.effect.DFPotions;
 import com.DragonFire.potion.type.DFPotionTypes;
 import com.DragonFire.recipe.DFRecipes;
@@ -21,6 +23,7 @@ import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -28,10 +31,12 @@ public class Common {
     public void pre(FMLPreInitializationEvent e) {
         DFEntities.entities();
         GameRegistry.registerWorldGenerator(new DragonFireWorldGen(), 3);
+        GameRegistry.registerTileEntity(TileEntityNetherBrickFurnace.class, "nether_brick_furnace");
     }
     
     public void init(FMLInitializationEvent e) {
         DragonFire.PACKET_HANDLER.initialize();
+        NetworkRegistry.INSTANCE.registerGuiHandler(DragonFire.INSTANCE, new DFGuiHandler());
         DFRecipes.furnaceRecipes();
         DFRecipes.brewingRecipes();
     }

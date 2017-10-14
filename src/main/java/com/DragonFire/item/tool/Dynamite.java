@@ -22,7 +22,7 @@ public class Dynamite extends Item {
         String name = (nuclear ? "nuclear_dynamite" : "dynamite");
         setRegistryName(name);
         setUnlocalizedName(name);
-        setCreativeTab(DFTabs.DRAGONFIRE);
+        setCreativeTab(DFTabs.ARMOR_AND_TOOLS);
     }
     
     public boolean isNuclear() {return nuclear;}
