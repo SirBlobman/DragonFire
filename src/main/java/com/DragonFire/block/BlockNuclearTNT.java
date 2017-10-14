@@ -1,6 +1,9 @@
 package com.DragonFire.block;
 
 import com.DragonFire.creative.DFTabs;
+
+import java.util.concurrent.ThreadLocalRandom;
+
 import net.minecraft.block.BlockTNT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -9,8 +12,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 public class BlockNuclearTNT extends BlockTNT {
     public BlockNuclearTNT() {

@@ -34,7 +34,7 @@ public class Dynamite extends Item {
         world.playSound(null, ep.posX, ep.posY, ep.posZ, SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         if(!world.isRemote) {
             EntityDynamite dynamite = new EntityDynamite(world, ep);
-            dynamite.setHeadingFromThrower(ep, ep.rotationPitch, ep.rotationYaw, 0.0F, 1.0F, 1.0F);
+            dynamite.shoot(ep, ep.rotationPitch, ep.rotationYaw, 0.0F, 1.0F, 1.0F);
             dynamite.setNuclear(nuclear);
             world.spawnEntity(dynamite);
         }

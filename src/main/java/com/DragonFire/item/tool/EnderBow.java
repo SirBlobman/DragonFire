@@ -95,7 +95,7 @@ public class EnderBow extends ItemBow {
                                 ? itemstack.getItem()
                                 : DFItems.ENDER_ARROW);
                         EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
-                        entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F,
+                        entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F,
                                 f * 3.0F, 1.0F);
 
                         if (f == 1.0F) {

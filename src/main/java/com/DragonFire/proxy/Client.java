@@ -38,7 +38,7 @@ public class Client extends Common {
         ItemColors ic = mc.getItemColors();
         ic.registerItemColorHandler(new IItemColor() {
             @Override
-            public int getColorFromItemstack(ItemStack is, int tint) {
+            public int colorMultiplier(ItemStack is, int tint) {
                 if(tint == 1) {
                     int color = PotionUtils.getColor(is);
                     return color;
@@ -48,7 +48,7 @@ public class Client extends Common {
         
         ic.registerItemColorHandler(new IItemColor() {
             @Override
-            public int getColorFromItemstack(ItemStack is, int tint) {
+            public int colorMultiplier(ItemStack is, int tint) {
                 if(tint == 0) {
                     Item i = is.getItem();
                     if(i == DFItems.DYABLE_BACKPACK) {

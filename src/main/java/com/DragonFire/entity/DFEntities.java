@@ -3,10 +3,7 @@ package com.DragonFire.entity;
 import static com.DragonFire.utility.Util.getRGB;
 
 import com.DragonFire.DragonFire;
-import com.DragonFire.entity.projectile.EntityDynamite;
-import com.DragonFire.entity.projectile.EntityEnderArrow;
-import com.DragonFire.entity.projectile.EntityExplosiveArrow;
-import com.DragonFire.entity.projectile.EntityTikiSpear;
+import com.DragonFire.entity.projectile.*;
 import com.DragonFire.utility.Util;
 
 import net.minecraft.entity.Entity;
@@ -28,6 +25,7 @@ public final class DFEntities {
         reg("mummy", EntityMummy.class, getRGB(243, 226, 175), getRGB(204, 189, 146));
         reg("dynamite", EntityDynamite.class);
         reg("explosive_arrow", EntityExplosiveArrow.class);
+        reg("nether_fish_hook", EntityNetherFishHook.class);
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
@@ -43,7 +41,7 @@ public final class DFEntities {
     private static void reg(String name, Class<? extends Entity> clazz) {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
         DragonFire df = DragonFire.INSTANCE;
-        EntityRegistry.registerModEntity(rl, clazz, name, id, df, 64, 1, true);
+        EntityRegistry.registerModEntity(rl, clazz, name, id, df, 64, 10, true);
         id = (id + 1);
     }
     
