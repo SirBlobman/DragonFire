@@ -1,5 +1,6 @@
 package com.DragonFire.render;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.entity.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
@@ -56,6 +57,27 @@ public final class DFRendering {
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
     }
     
+    public static void specialItems() {
+        reg(DFItems.GLASS_FRAGMENT, 0, "glass_fragment/black");
+        reg(DFItems.GLASS_FRAGMENT, 1, "glass_fragment/red");
+        reg(DFItems.GLASS_FRAGMENT, 2, "glass_fragment/green");
+        reg(DFItems.GLASS_FRAGMENT, 3, "glass_fragment/brown");
+        reg(DFItems.GLASS_FRAGMENT, 4, "glass_fragment/blue");
+        reg(DFItems.GLASS_FRAGMENT, 5, "glass_fragment/purple");
+        reg(DFItems.GLASS_FRAGMENT, 6, "glass_fragment/cyan");
+        reg(DFItems.GLASS_FRAGMENT, 7, "glass_fragment/silver");
+        reg(DFItems.GLASS_FRAGMENT, 8, "glass_fragment/gray");
+        reg(DFItems.GLASS_FRAGMENT, 9, "glass_fragment/pink");
+        reg(DFItems.GLASS_FRAGMENT, 10, "glass_fragment/lime");
+        reg(DFItems.GLASS_FRAGMENT, 11, "glass_fragment/yellow");
+        reg(DFItems.GLASS_FRAGMENT, 12, "glass_fragment/light_blue");
+        reg(DFItems.GLASS_FRAGMENT, 13, "glass_fragment/magenta");
+        reg(DFItems.GLASS_FRAGMENT, 14, "glass_fragment/orange");
+        reg(DFItems.GLASS_FRAGMENT, 15, "glass_fragment/white");
+        reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
+        reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
+    }
+    
     public static void blocks() {
         reg(
             DFBlocks.MUMMY_HEAD, 
@@ -90,5 +112,11 @@ public final class DFRendering {
             ModelResourceLocation mrl = new ModelResourceLocation(rl, "inventory");
             ModelLoader.setCustomModelResourceLocation(i, 0, mrl);
         }
+    }
+    
+    private static void reg(Item i, int meta, String name) {
+        ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
+        ModelResourceLocation mrl = new ModelResourceLocation(rl, "inventory");
+        ModelLoader.setCustomModelResourceLocation(i, meta, mrl);
     }
 }

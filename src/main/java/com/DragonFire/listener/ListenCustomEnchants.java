@@ -27,7 +27,7 @@ public class ListenCustomEnchants {
     public void breakBlock(HarvestDropsEvent e) {
         EntityPlayer ep = e.getHarvester();
         if(ep != null) {
-            ItemStack is = ep.getHeldItemMainhand();
+            ItemStack is = ep.getActiveItemStack();
             if(!ItemUtil.isAir(is)) {
                 Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(is);
                 Set<Enchantment> enchants = map.keySet();

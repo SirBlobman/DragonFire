@@ -51,5 +51,5 @@ public class RecipePotionCookie extends Impl<IRecipe> implements IRecipe {
     public ItemStack getRecipeOutput() {return ItemStack.EMPTY;}
     public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {return NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);}
     public boolean isHidden() {return true;}
-    public boolean canFit(int width, int height) {return width >= 2 && height >= 2;}
+    public boolean canFit(int width, int height) {return width == 3 && height == 3;}
 }

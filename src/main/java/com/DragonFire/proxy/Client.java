@@ -69,6 +69,7 @@ public class Client extends Common {
     public void items(IForgeRegistry<Item> ifr) {
         super.items(ifr);
         DFRendering.items();
+        DFRendering.specialItems();
         DFRendering.blocks();
     }
     

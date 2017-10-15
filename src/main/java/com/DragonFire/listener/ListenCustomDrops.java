@@ -1,17 +1,29 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntitySquid;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Enchantments;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -46,7 +58,43 @@ public class ListenCustomDrops {
         }
     }
     
+    @SubscribeEvent(priority=EventPriority.LOWEST)
+    public void drops(HarvestDropsEvent e) {
+        if(e.getHarvester() != null) {
+            if(!hasSilkTouch(e.getHarvester().getHeldItemMainhand())) {
+                IBlockState ibs = e.getState();
+                Block b = ibs.getBlock();
+                List<ItemStack> drops = e.getDrops();
+                if(b == Blocks.GLASS) {
+                    int amount = ThreadLocalRandom.current().nextInt(1, 5);
+                    ItemStack is = new ItemStack(DFItems.GLASS_FRAGMENT, amount, 17);
+                    drops.clear();
+                    drops.add(is);
+                } else if(b == Blocks.STAINED_GLASS) {
+                    int amount = ThreadLocalRandom.current().nextInt(1, 5);
+                    int meta = EnumDyeColor.byMetadata(b.getMetaFromState(ibs)).getDyeDamage();
+                    ItemStack is = new ItemStack(DFItems.GLASS_FRAGMENT, amount, meta);
+                    drops.clear();
+                    drops.add(is);
+                } else if(b == DFBlocks.OBSIDIAN_GLASS) {
+                    int amount = ThreadLocalRandom.current().nextInt(1, 5);
+                    ItemStack is = new ItemStack(DFItems.GLASS_FRAGMENT, amount, 16);
+                    drops.clear();
+                    drops.add(is);
+                }
+            }
+        }
+    }
+    
     private void dropItem(Entity dropper, ItemStack is) {
         dropper.entityDropItem(is, 0);
+    }
+    
+    private boolean hasSilkTouch(ItemStack tool) {
+        if(tool == null || tool.isEmpty()) return false;
+        if(tool.isItemEnchanted()) {
+            Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(tool);
+            return map.containsKey(Enchantments.SILK_TOUCH);
+        } return false;
     }
 }

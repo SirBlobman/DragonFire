@@ -91,6 +91,9 @@ public final class DFItems {
     public static final Item COPPER_INGOT = new QuickItem("copper_ingot");
     public static final Item COPPER_NUGGET = new QuickItem("copper_nugget");
     
+    //Other Stuff
+    public static final GlassFragment GLASS_FRAGMENT = new GlassFragment();
+    
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
         ifr.registerAll(
@@ -126,5 +129,8 @@ public final class DFItems {
         
         //Nuggets, Ingots, Gems, etc...
         ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
+        
+        //Other Stuff
+        ifr.registerAll(GLASS_FRAGMENT);
     }
 }
