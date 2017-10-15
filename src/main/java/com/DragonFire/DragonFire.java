@@ -52,6 +52,7 @@ public class DragonFire {
             new ListenCustomEnchants(),
             new ListenCustomLoot(),
             new ListenCustomTarget(),
+            new ListenCustomCrafting(),
             new KeyBindBackpack()
         );
         proxy.pre(e);

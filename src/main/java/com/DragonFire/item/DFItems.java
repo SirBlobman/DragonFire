@@ -29,6 +29,7 @@ public final class DFItems {
     public static final ToolMaterial TOOL_EMERALD = EnumHelper.addToolMaterial("EMERALD", 3, 1561, 8.0F, 3.0F, 100);
     public static final ToolMaterial TOOL_COPPER = EnumHelper.addToolMaterial("COPPER", 2, 150, 5.0F, 1.5F, 9);
     public static final ToolMaterial TOOL_VILLAGER = EnumHelper.addToolMaterial("VILLAGER", 500, 64, Integer.MAX_VALUE, 0, 0);
+    public static final ToolMaterial TOOL_GLASS = EnumHelper.addToolMaterial("GLASS", 0, 50, 1.0F, 0.0F, 1);
     
     //Armor
     public static final RabbitBoots RABBIT_BOOTS = new RabbitBoots();
@@ -62,6 +63,7 @@ public final class DFItems {
     public static final Dynamite NUCLEAR_DYNAMITE = new Dynamite(true);
     public static final ExplosiveArrow EXPLOSIVE_ARROW = new ExplosiveArrow();
     public static final MushroomPickaxe MUSHROOM_PICKAXE = new MushroomPickaxe();
+    public static final QuickSword GLASS_DAGGER = new QuickSword(TOOL_GLASS, "glass_dagger");
     
     //Food
     public static final QuickFood POTION_COOKIE = new PotionCookie();
@@ -110,7 +112,7 @@ public final class DFItems {
             EMERALD_SWORD, EMERALD_AXE, EMERALD_PICKAXE, EMERALD_SHOVEL, EMERALD_HOE,
             COPPER_SWORD, COPPER_AXE, COPPER_PICKAXE, COPPER_SHOVEL, COPPER_HOE,
             OCEANIC_SHOVEL, DYNAMITE, NUCLEAR_DYNAMITE, EXPLOSIVE_ARROW,
-            MUSHROOM_PICKAXE
+            MUSHROOM_PICKAXE, GLASS_DAGGER
         );
         
         //Food

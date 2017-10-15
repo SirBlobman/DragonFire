@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G",
+    "S "
+  ],
+  "key": {
+    "G": {
+      "item": "dragonfire:glass_fragment",
+      "data": 17
+    },
+    "S": {"item": "minecraft:stick"}
+  },
+  "result": {
+    "item": "dragonfire:glass_dagger",
+    "count": 1
+  }
+}

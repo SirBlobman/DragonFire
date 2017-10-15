@@ -34,6 +34,7 @@ public final class DFBlocks {
     public static final QuickOre COPPER_ORE = new QuickOre("copper", "dragonfire:copper_ore", 2.25F, 5.0F, 1);
     public static final Block COPPER_BLOCK = new QuickBlock("copper_block", Material.IRON, 3.0F, 10.0F, "pickaxe", 1);
     public static final QuickOre NETHER_GOLD_ORE = new QuickOre("nether_gold", "dragonfire:nether_gold_ore", 3.0F, 10.0F, 2);
+    public static final QuickBlock CHARCOAL_BLOCK = new QuickBlock("charcoal_block", Material.ROCK, 5.0F, 10.0F, "pickaxe", 0);
 
     //Item Blocks
     public static final ItemBlock ITEM_MUMMY_HEAD = new ItemMummyHead();
@@ -47,6 +48,7 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_COPPER_ORE = new QuickItemBlock(COPPER_ORE);
     public static final ItemBlock ITEM_COPPER_BLOCK = new QuickItemBlock(COPPER_BLOCK);
     public static final ItemBlock ITEM_NETHER_GOLD_ORE = new QuickItemBlock(NETHER_GOLD_ORE);
+    public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemBlock(CHARCOAL_BLOCK);
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
@@ -61,7 +63,7 @@ public final class DFBlocks {
         ifr.register(NETHER_BRICK_FURNACE);
         
         //Ores
-        ifr.registerAll(COPPER_ORE, COPPER_BLOCK, NETHER_GOLD_ORE);
+        ifr.registerAll(COPPER_ORE, COPPER_BLOCK, NETHER_GOLD_ORE, CHARCOAL_BLOCK);
         
         //Other
         ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS);
@@ -73,7 +75,7 @@ public final class DFBlocks {
             ITEM_CHOCOLATE_CAKE, ITEM_PIZZA,
             ITEM_PLAYER_PLATE, ITEM_NUCLEAR_TNT,
             ITEM_NETHER_BRICK_FURNACE,
-            ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE,
+            ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE, ITEM_CHARCOAL_BLOCK,
             ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS
         );
     }

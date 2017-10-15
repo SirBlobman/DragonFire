@@ -8,11 +8,13 @@ import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.item.tool.Dynamite;
 import com.DragonFire.render.entity.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
+import net.minecraft.init.Items;
+import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -34,7 +36,7 @@ public final class DFRendering {
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE,
             DFItems.COPPER_SWORD, DFItems.COPPER_AXE, DFItems.COPPER_PICKAXE, DFItems.COPPER_SHOVEL, DFItems.COPPER_HOE,
             DFItems.OCEANIC_SHOVEL, DFItems.DYNAMITE, DFItems.NUCLEAR_DYNAMITE, DFItems.EXPLOSIVE_ARROW,
-            DFItems.MUSHROOM_PICKAXE
+            DFItems.MUSHROOM_PICKAXE, DFItems.GLASS_DAGGER
         );
         
         //Food
@@ -84,7 +86,7 @@ public final class DFRendering {
             DFBlocks.CHOCOLATE_CAKE, DFBlocks.PIZZA, 
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
             DFBlocks.NETHER_BRICK_FURNACE,
-            DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE,
+            DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE, DFBlocks.CHARCOAL_BLOCK,
             DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
         );
     }
@@ -109,8 +111,11 @@ public final class DFRendering {
     private static void reg(Item... ii) {
         for(Item i : ii) {
             ResourceLocation rl = i.getRegistryName();
-            ModelResourceLocation mrl = new ModelResourceLocation(rl, "inventory");
-            ModelLoader.setCustomModelResourceLocation(i, 0, mrl);
+            String path = rl.getResourcePath();
+            if(i instanceof ItemBlock) path = "block/" + path;
+            else if(isTool(i)) path = "tool/" + path;
+            else if(i instanceof ItemArmor) path = "armor/" + path;
+            reg(i, 0, path);
         }
     }
     
@@ -118,5 +123,16 @@ public final class DFRendering {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
         ModelResourceLocation mrl = new ModelResourceLocation(rl, "inventory");
         ModelLoader.setCustomModelResourceLocation(i, meta, mrl);
+    }
+    
+    private static boolean isTool(Item i) {
+        if(i == null || i == Items.AIR) return false;
+        else if(i instanceof ItemTool) return true;
+        else if(i instanceof ItemHoe) return true;
+        else if(i instanceof ItemSword) return true;
+        else if(i instanceof ItemBow) return true;
+        else if(i instanceof ItemFishingRod) return true;
+        else if(i instanceof Dynamite) return true;
+        else return false;
     }
 }
