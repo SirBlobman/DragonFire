@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": ["C"],
+  "key": {
+    "C": {"item": "dragonfire:charcoal_block"}
+  },
+  "result": {
+    "item": "minecraft:coal",
+    "data": 1,
+    "count": 1
+  }
+}
