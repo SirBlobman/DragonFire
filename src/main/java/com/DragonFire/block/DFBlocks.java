@@ -2,6 +2,7 @@ package com.DragonFire.block;
 
 import com.DragonFire.block.item.ItemMummyHead;
 import com.DragonFire.block.item.QuickItemBlock;
+import com.DragonFire.block.item.QuickItemFuelBlock;
 import com.DragonFire.block.ore.QuickOre;
 import com.DragonFire.block.tile.BlockNetherBrickFurnace;
 
@@ -48,7 +49,7 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_COPPER_ORE = new QuickItemBlock(COPPER_ORE);
     public static final ItemBlock ITEM_COPPER_BLOCK = new QuickItemBlock(COPPER_BLOCK);
     public static final ItemBlock ITEM_NETHER_GOLD_ORE = new QuickItemBlock(NETHER_GOLD_ORE);
-    public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemBlock(CHARCOAL_BLOCK);
+    public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemFuelBlock(CHARCOAL_BLOCK, 16000);
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
