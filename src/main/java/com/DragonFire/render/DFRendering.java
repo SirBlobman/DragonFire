@@ -8,6 +8,7 @@ import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.item.drink.QuickDrink;
 import com.DragonFire.item.tool.Dynamite;
 import com.DragonFire.render.entity.*;
 
@@ -44,7 +45,8 @@ public final class DFRendering {
             DFItems.POTION_COOKIE, DFItems.DIAMOND_APPLE,
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
-            DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE, DFItems.SLIME_JELLY, DFItems.SANDWICH, DFItems.SUGAR_COOKIE
+            DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE, DFItems.SLIME_JELLY, DFItems.SANDWICH, DFItems.SUGAR_COOKIE,
+            DFItems.APPLE_PIE
         );
         
         //Drinks
@@ -112,9 +114,12 @@ public final class DFRendering {
         for(Item i : ii) {
             ResourceLocation rl = i.getRegistryName();
             String path = rl.getResourcePath();
+            
             if(i instanceof ItemBlock) path = "block/" + path;
             else if(isTool(i)) path = "tool/" + path;
             else if(i instanceof ItemArmor) path = "armor/" + path;
+            else if(isFood(i)) path = "food/" + path;
+            
             reg(i, 0, path);
         }
     }
@@ -133,6 +138,13 @@ public final class DFRendering {
         else if(i instanceof ItemBow) return true;
         else if(i instanceof ItemFishingRod) return true;
         else if(i instanceof Dynamite) return true;
+        else return false;
+    }
+    
+    private static boolean isFood(Item i) {
+        if(i == null || i == Items.AIR) return false;
+        else if(i instanceof ItemFood) return true;
+        else if(i instanceof QuickDrink) return true;
         else return false;
     }
 }

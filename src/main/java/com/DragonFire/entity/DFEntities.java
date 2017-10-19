@@ -20,12 +20,12 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public final class DFEntities {
     public static void entities() {
-        reg("ender_arrow", EntityEnderArrow.class, 10);
-        reg("tiki_spear", EntityTikiSpear.class, 10);
-        reg("mummy", EntityMummy.class, 10, getRGB(243, 226, 175), getRGB(204, 189, 146));
-        reg("dynamite", EntityDynamite.class, 10);
-        reg("explosive_arrow", EntityExplosiveArrow.class, 10);
-        reg("nether_fish_hook", EntityNetherFishHook.class, 10);
+        reg("ender_arrow", EntityEnderArrow.class);
+        reg("tiki_spear", EntityTikiSpear.class);
+        reg("mummy", EntityMummy.class, getRGB(243, 226, 175), getRGB(204, 189, 146));
+        reg("dynamite", EntityDynamite.class);
+        reg("explosive_arrow", EntityExplosiveArrow.class);
+        reg("nether_fish_hook", EntityNetherFishHook.class);
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
@@ -38,16 +38,16 @@ public final class DFEntities {
     }
     
     private static int id = 0;
-    private static void reg(String name, Class<? extends Entity> clazz, int updateSpeed) {
+    private static void reg(String name, Class<? extends Entity> clazz) {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
         DragonFire df = DragonFire.INSTANCE;
-        EntityRegistry.registerModEntity(rl, clazz, name, id, df, 64, updateSpeed, true);
+        EntityRegistry.registerModEntity(rl, clazz, name, id, df, 64, 1, true);
         id = (id + 1);
     }
     
-    private static void reg(String name, Class<? extends Entity> clazz, int updateSpeed, int egg1, int egg2) {
+    private static void reg(String name, Class<? extends Entity> clazz, int egg1, int egg2) {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
-        reg(name, clazz, updateSpeed);
+        reg(name, clazz);
         EntityRegistry.registerEgg(rl, egg1, egg2);
     }
     

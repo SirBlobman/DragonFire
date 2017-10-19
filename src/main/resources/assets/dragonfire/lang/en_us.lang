@@ -61,6 +61,7 @@ item.diamond_apple.name=Diamond Apple
 item.slime_jelly.name=Slime Jelly
 item.sandwich.name=Sandwich
 item.sugar_cookie.name=Sugar Cookie
+item.apple_pie.name=Apple Pie
 
 <Drinks>
 item.beer.name=Beer

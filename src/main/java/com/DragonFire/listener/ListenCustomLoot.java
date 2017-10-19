@@ -1,5 +1,6 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
@@ -23,11 +24,14 @@ public class ListenCustomLoot {
         String name = loot.toString();
         LootTable lt = e.getTable();
         if(name.equals("minecraft:chests/end_city_treasure")) {
-            ResourceLocation end_bow = new ResourceLocation("dragonfire", "chests/end_city");
+            ResourceLocation end_bow = new ResourceLocation(DragonFire.MODID, "chests/end_city");
             addPool(lt, "end_bow", end_bow);
         } else if(name.equals("minecraft:chests/nether_bridge")) {
-            ResourceLocation nether_rod = new ResourceLocation("dragonfire", "chests/nether_bridge");
+            ResourceLocation nether_rod = new ResourceLocation(DragonFire.MODID, "chests/nether_bridge");
             addPool(lt, "nether_rod", nether_rod);
+        } else if(name.equals("minecraft:chests/desert_pyramid")) {
+            ResourceLocation pyramid = new ResourceLocation(DragonFire.MODID, "chests/desert_pyramid");
+            addPool(lt, "mummy_rags", pyramid);
         }
     }
     
