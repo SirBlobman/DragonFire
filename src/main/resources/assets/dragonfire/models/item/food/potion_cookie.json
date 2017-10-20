@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/potion_cookie",
-    "layer1": "dragonfire:items/potion_cookie_overlay"
+    "layer0": "dragonfire:items/food/potion_cookie",
+    "layer1": "dragonfire:items/food/potion_cookie_overlay"
   }
 }

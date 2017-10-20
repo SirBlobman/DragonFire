@@ -18,6 +18,7 @@ import net.minecraft.potion.PotionHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import static net.minecraftforge.fml.common.registry.GameRegistry.addSmelting;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -29,30 +30,33 @@ public final class DFRecipes {
     
     public static void furnaceRecipes() {
         /* Normal Egg -> Fried Egg */ 
-        GameRegistry.addSmelting(Items.EGG, new ItemStack(DFItems.FRIED_EGG, 1), 0.0F);
+        addSmelting(Items.EGG, new ItemStack(DFItems.FRIED_EGG, 1), 0.0F);
         
         /* Raw Calamari -> Cooked Calamari */
-        GameRegistry.addSmelting(DFItems.RAW_CALAMARI, new ItemStack(DFItems.COOKED_CALAMARI, 1), 0.0F);
+        addSmelting(DFItems.RAW_CALAMARI, new ItemStack(DFItems.COOKED_CALAMARI, 1), 0.0F);
         
         /* Raw Bacon -> Cooked Bacon */
-        GameRegistry.addSmelting(DFItems.RAW_BACON, new ItemStack(DFItems.COOKED_BACON, 1), 0.0F);
+        addSmelting(DFItems.RAW_BACON, new ItemStack(DFItems.COOKED_BACON, 1), 0.0F);
         
         /* Copper Ore -> Copper Ingot */
-        GameRegistry.addSmelting(DFBlocks.ITEM_COPPER_ORE, new ItemStack(DFItems.COPPER_INGOT, 1), 0.0F);
+        addSmelting(DFBlocks.ITEM_COPPER_ORE, new ItemStack(DFItems.COPPER_INGOT, 1), 0.0F);
         
         /* Copper Armor/Tools -> Copper Nuggets */
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_HELMET, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_CHESTPLATE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_LEGGINGS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_BOOTS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_SWORD, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_AXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_PICKAXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_SHOVEL, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
-        GameRegistry.addSmelting(new ItemStack(DFItems.COPPER_HOE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_HELMET, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_CHESTPLATE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_LEGGINGS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_BOOTS, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_SWORD, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_AXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_PICKAXE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_SHOVEL, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
+        addSmelting(new ItemStack(DFItems.COPPER_HOE, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(DFItems.COPPER_NUGGET), 1.0F);
         
         /* Nether Ores -> Vanilla Ores */
-        GameRegistry.addSmelting(DFBlocks.NETHER_GOLD_ORE, new ItemStack(Items.GOLD_INGOT, 1), 10.0F);
+        addSmelting(DFBlocks.NETHER_GOLD_ORE, new ItemStack(Items.GOLD_INGOT, 1), 10.0F);
+        
+        /* Sea Weed -> Dried Sea Weed */
+        addSmelting(DFItems.SEA_WEED, new ItemStack(DFItems.DRIED_SEA_WEED, 1), 1.0F);
     }
     
     public static void brewingRecipes() {

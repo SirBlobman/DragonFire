@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/pineapple_slice"
+    "layer0": "dragonfire:items/food/pineapple_slice"
   }
 }

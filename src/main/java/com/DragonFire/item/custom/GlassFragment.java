@@ -1,4 +1,4 @@
-package com.DragonFire.item;
+package com.DragonFire.item.custom;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumDyeColor;

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/sugar_cookie"
+    "layer0": "dragonfire:items/food/sugar_cookie"
   }
 }

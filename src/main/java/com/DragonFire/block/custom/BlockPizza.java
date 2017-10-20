@@ -1,5 +1,6 @@
-package com.DragonFire.block;
+package com.DragonFire.block.custom;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.creative.DFTabs;
 
 import net.minecraft.block.BlockCake;

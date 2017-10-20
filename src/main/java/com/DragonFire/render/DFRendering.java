@@ -46,7 +46,7 @@ public final class DFRendering {
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
             DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE, DFItems.SLIME_JELLY, DFItems.SANDWICH, DFItems.SUGAR_COOKIE,
-            DFItems.APPLE_PIE
+            DFItems.APPLE_PIE, DFItems.SEA_WEED, DFItems.DRIED_SEA_WEED
         );
         
         //Drinks

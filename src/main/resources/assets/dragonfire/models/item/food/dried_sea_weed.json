@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfire:items/food/cooked_bacon"
+    "layer0": "dragonfire:items/food/dried_sea_weed"
   }
 }
