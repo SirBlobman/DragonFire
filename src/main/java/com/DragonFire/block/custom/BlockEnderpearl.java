@@ -4,7 +4,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.network.NetHandlerPlayServer;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
 public class BlockEnderpearl extends QuickBlock {
@@ -31,6 +33,8 @@ public class BlockEnderpearl extends QuickBlock {
                 NetHandlerPlayServer server = player.connection;
                 server.setPlayerLocation(nx, oy, nz, yaw, pitch);
             } else en.setLocationAndAngles(nx, oy, nz, yaw, pitch);
+            
+            w.playSound(null, en.posX, en.posY, en.posZ, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
     }
 }

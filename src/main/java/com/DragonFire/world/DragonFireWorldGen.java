@@ -1,7 +1,6 @@
 package com.DragonFire.world;
 
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.utility.Util;
 
 import java.util.Random;
 
@@ -28,7 +27,7 @@ public class DragonFireWorldGen implements IWorldGenerator {
 
     private void generateOverworldOres(Random rand, int cx, int cz, World world, IChunkGenerator icg, IChunkProvider icp) {
         generateOre(DFBlocks.COPPER_ORE, world, rand, cx * 16, cz * 16, 16, 64, 4 + rand.nextInt(4), 6, Blocks.STONE);
-        generateSeaWeed(world, rand, cx * 16, cz * 16, 50, 64, 50);
+        generateOre(DFBlocks.SEA_WEED, world, rand, cx * 16, cz * 16, 54, 256, 4+rand.nextInt(4), 6, Blocks.SAND);
     }
 
     private void generateNetherOres(Random rand, int cx, int cz, World world, IChunkGenerator icg, IChunkProvider icp) {
@@ -42,26 +41,6 @@ public class DragonFireWorldGen implements IWorldGenerator {
             BlockPos bp = new BlockPos(x + rand.nextInt(16), miny + rand.nextInt(deltaY), z + rand.nextInt(16));
             WorldGenMinable gen = new WorldGenMinable(ibs, size, BlockMatcher.forBlock(replace));
             gen.generate(world, rand, bp);
-        }
-    }
-    
-    /*
-     * Not Working!!
-     * Message prints, but there is no sea weed at that location
-     */
-    private void generateSeaWeed(World w, Random rand, int x, int z, int miny, int maxy, int chances) {
-        int deltaY = (maxy - miny);
-        IBlockState ibs = DFBlocks.SEA_WEED.getDefaultState();
-        for(int i = 0; i < chances; i++) {
-            int nx = (x + rand.nextInt(16));
-            int ny = (miny + rand.nextInt(deltaY));
-            int nz = (z + rand.nextInt(16));
-            BlockPos bp = new BlockPos(nz, ny, nz);
-            if(w.getBlockState(bp).getBlock() == Blocks.WATER) {
-                w.setBlockToAir(bp);
-                boolean generated = w.setBlockState(bp, ibs);
-                if(generated) Util.print("Seaweed @ " + nx + " " + ny + " " + nz);
-            }
         }
     }
 }

@@ -5,6 +5,7 @@ language.code=en_us
 
 <Damage Sources>
 death.attack.drunk=%s drank too much beer
+death.attack.radiation=%s was exposed to radiation
 
 <Containers>
 dragonfire.container.backpack=Backpack
@@ -13,6 +14,9 @@ dragonfire.container.nether_brick_furnace=Nether Brick Furnace
 <Key Binds>
 key.categories.DragonFire=Dragon Fire
 key.dragonfire.backpack=Open Backpack (chestplate)
+
+<Items>
+item.radioactive_mushroom.name=Radioactive Mushroom
 
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
@@ -62,6 +66,8 @@ item.slime_jelly.name=Slime Jelly
 item.sandwich.name=Sandwich
 item.sugar_cookie.name=Sugar Cookie
 item.apple_pie.name=Apple Pie
+item.sea_weed.name=Sea Weed
+item.dried_sea_weed.name=Dried Sea Weed
 
 <Drinks>
 item.beer.name=Beer
@@ -95,6 +101,7 @@ item.glass_fragment.yellow.name=Yellow Glass Fragment
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
 enchantment.extinguish=Extinguishing
+enchantment.bane_of_humanoids=Bane of Humanoids
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragon Fire§r
@@ -133,6 +140,7 @@ lingering_potion.effect.levitation=Lingering Potion of Floating
 
 <Potion Effects>
 dragonfire.effect.confusion=Confusion
+dragonfire.effect.radiation=Radiation
 
 <Special Potion Types>
 potion.effect.blindness=Potion of Blindness
@@ -143,6 +151,10 @@ potion.effect.wither=Potion of Decay
 splash_potion.effect.wither=Splash Potion of Decay
 lingering_potion.effect.wither=Lingering Potion of Decay
 tipped_arrow.effect.wither=Arrow of Decay
+potion.effect.radiation=Radioactive Potion
+splash_potion.effect.radiation=Radioactive Splash Potion
+lingering_potion.effect.radiation=Radioactive Lingering Potion
+tipped_arrow.effect.radiation=Radioactive Arrow
 
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Cookie
@@ -167,3 +179,4 @@ potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
 potion_cookie.effect.blindness=Cookie of Blindness
 potion_cookie.effect.wither=Cookie of Decay
+potion_cookie.effect.radiation=Radioactive Cookie

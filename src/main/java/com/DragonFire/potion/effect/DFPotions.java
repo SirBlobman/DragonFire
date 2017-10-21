@@ -5,8 +5,9 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public final class DFPotions {
     public static final Potion CONFUSION = new PotionConfusion();
+    public static final Potion RADIATION = new PotionRadiation();
     
     public static void register(IForgeRegistry<Potion> ifr) {
-        ifr.register(CONFUSION);
+        ifr.registerAll(CONFUSION, RADIATION);
     }
 }

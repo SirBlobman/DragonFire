@@ -1,11 +1,14 @@
 package com.DragonFire;
 
 import com.DragonFire.command.CommandOreDictionary;
+import com.DragonFire.config.DFConfig;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
 import com.DragonFire.network.DragonFirePacketHandler;
 import com.DragonFire.proxy.Common;
 import com.DragonFire.utility.Util;
+
+import java.io.File;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -43,9 +46,12 @@ public class DragonFire {
     public static Common proxy;
     
     public static final DragonFirePacketHandler PACKET_HANDLER = new DragonFirePacketHandler();
+    public static File FOLDER;
     
     @EventHandler
     public void pre(FMLPreInitializationEvent e) {
+        FOLDER = e.getModConfigurationDirectory();
+        DFConfig.load();
         Util.regEvents(this, 
             new ListenCustomEvents(),
             new ListenCustomDrops(),
@@ -53,6 +59,7 @@ public class DragonFire {
             new ListenCustomLoot(),
             new ListenCustomTarget(),
             new ListenCustomCrafting(),
+            new ListenCustomPotions(),
             new KeyBindBackpack()
         );
         proxy.pre(e);

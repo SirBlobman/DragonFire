@@ -50,15 +50,16 @@ public final class DFRendering {
         );
         
         //Drinks
-        reg(
-            DFItems.BEER, DFItems.SPOILED_MILK
-        );
+        reg(DFItems.BEER, DFItems.SPOILED_MILK);
         
         //Mob Drops
         reg(DFItems.BAT_WING, DFItems.MUMMY_RAG, DFItems.WITHERED_BONE);
         
         //Nuggets, Ingots, Gems, etc...
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
+        
+        //Other
+        reg(DFItems.RADIOACTIVE_MUSHROOM);
     }
     
     public static void specialItems() {

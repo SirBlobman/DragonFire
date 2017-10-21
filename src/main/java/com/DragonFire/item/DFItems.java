@@ -100,6 +100,7 @@ public final class DFItems {
     
     //Other Stuff
     public static final GlassFragment GLASS_FRAGMENT = new GlassFragment();
+    public static final Item RADIOACTIVE_MUSHROOM = new QuickItem("radioactive_mushroom");
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -139,6 +140,6 @@ public final class DFItems {
         ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
         
         //Other Stuff
-        ifr.registerAll(GLASS_FRAGMENT);
+        ifr.registerAll(GLASS_FRAGMENT, RADIOACTIVE_MUSHROOM);
     }
 }

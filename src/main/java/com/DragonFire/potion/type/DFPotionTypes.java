@@ -1,5 +1,7 @@
 package com.DragonFire.potion.type;
 
+import com.DragonFire.potion.effect.DFPotions;
+
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
@@ -16,11 +18,14 @@ public final class DFPotionTypes {
     
     public static final PotionType DECAY = new QuickPotionType("wither", "wither", new PotionEffect(MobEffects.WITHER, 900, 0));
     
+    public static final PotionType RADIATION = new QuickPotionType("radiation", "radiation", new PotionEffect(DFPotions.RADIATION, 900, 0));
+    
     public static void register(IForgeRegistry<PotionType> ifr) {
         ifr.registerAll(
             LEVITATION, LONG_LEVITATION, STRONG_LEVITATION,
             BLINDING, LONG_BLINDING, STRONG_BLINDING,
-            DECAY
+            DECAY, 
+            RADIATION
         );
     }
 }
