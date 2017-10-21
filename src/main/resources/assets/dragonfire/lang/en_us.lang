@@ -11,8 +11,8 @@ dragonfire.container.backpack=Backpack
 dragonfire.container.nether_brick_furnace=Nether Brick Furnace
 
 <Key Binds>
-key.categories.DragonFire=Dragon Fire
-key.dragonfire.backpack=Open Backpack (chestplate)
+key.categories.DragonFire=DragonFire
+key.dragonfire.backpack=Open Backpack (Chestplate)
 
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
@@ -28,7 +28,7 @@ item.backpack.name=Backpack
 
 <Tools and Weapons>
 item.ender_bow.name=Ender Bow
-item.ender_arrow.name=Ender Arrow
+item.ender_arrow.name=End Pearl Arrow
 item.emerald_sword.name=Emerald Sword
 item.emerald_axe.name=Emerald Axe
 item.emerald_pickaxe.name=Emerald Pickaxe
@@ -94,12 +94,12 @@ item.glass_fragment.yellow.name=Yellow Glass Fragment
 
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
-enchantment.extinguish=Extinguishing
+enchantment.extinguish=Extinguish
 
 <Creative Tabs>
-itemGroup.DragonFire=§5§lDragon Fire§r
-itemGroup.DragonFire_Cookies=§5§lDragon Fire§r ⎹ §eCookies
-itemGroup.DragonFire_Food_and_Drink=§5§lDragon Fire§r ⎹ §eFood and Drink
+itemGroup.DragonFire=§5§lDragonFire§r
+itemGroup.DragonFire_Cookies=§5§lDragonFire§r ⎹ §eCookies
+itemGroup.DragonFire_Food_and_Drink=§5§lDragonFire§r ⎹ §eFood and Drink
 itemGroup.DragonFire_Spawn_Eggs=§5§lDragon Fire§r ⎹ §eSpawn Eggs
 itemGroup.DragonFire_Armor_and_Tools=§5§lDragon Fire§r ⎹ §eArmor and Tools
 
@@ -112,7 +112,7 @@ tile.ender_pearl_block.name=Ender Pearl Block
 tile.chocolate_cake.name=Chocolate Cake
 tile.pizza.name=Pizza
 tile.obsidian_glass.name=Obsidian Glass
-tile.player_pressure_plate.name=Player Detector
+tile.player_pressure_plate.name=Player Detector Plate
 tile.nuclear_tnt.name=Nuclear TNT
 tile.nether_brick_furnace.name=Nether Brick Furnace
 tile.charcoal_block.name=Charcoal Block
@@ -145,11 +145,11 @@ lingering_potion.effect.wither=Lingering Potion of Decay
 tipped_arrow.effect.wither=Arrow of Decay
 
 <Potion Cookies>
-potion_cookie.effect.empty=Uncraftable Potion Cookie
-potion_cookie.effect.water=Potion Cookie
-potion_cookie.effect.mundane=Potion Cookie
-potion_cookie.effect.thick=Potion Cookie
-potion_cookie.effect.awkward=Potion Cookie
+potion_cookie.effect.empty=Uncraftable Potion Baked Cookie
+potion_cookie.effect.water=Potion Baked Cookie
+potion_cookie.effect.mundane=Potion Baked Cookie
+potion_cookie.effect.thick=Potion Baked Cookie
+potion_cookie.effect.awkward=Potion Baked Cookie
 potion_cookie.effect.night_vision=Cookie of Night Vision
 potion_cookie.effect.invisibility=Cookie of Invisibility
 potion_cookie.effect.leaping=Cookie of Leaping
