@@ -3,7 +3,6 @@
 *.log
 *.ctxt
 .mtj.tmp/
-*.jar
 *.war
 *.ear
 *.zip
@@ -26,11 +25,15 @@ hs_err_pid*
 
 # Folders
 /bin/
+/lib/
 /run/
 /.gradle/
 /.settings/
-/build/
-/src/main/resources/assets/minecraft/*
+/build/kotlin-build
+/build/kotlin
+/build/resources
+/build/sources
+/build/tmp
 
 #Allowed
 !build.gradle

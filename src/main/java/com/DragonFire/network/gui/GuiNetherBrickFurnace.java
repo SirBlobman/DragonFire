@@ -5,7 +5,6 @@ import com.DragonFire.block.tile.TileEntityNetherBrickFurnace;
 
 import java.awt.Color;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
@@ -54,11 +53,16 @@ public class GuiNetherBrickFurnace extends GuiContainer {
     LABEL_Y = 5;
     
     @Override
+        drawDefaultBackground();
+        super.drawScreen(mouseX, mouseY, partialTicks);
+        renderHoveredToolTip(mouseX, mouseY);
+    }
+    
+    @Override
     public void drawGuiContainerBackgroundLayer(float ticks, int x, int y) {
-        Minecraft mc = Minecraft.getMinecraft();
+        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         TextureManager tm = mc.getTextureManager();
         tm.bindTexture(GUI);
-        GlStateManager.color(1, 1, 1, 1);
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
         
         double progress = tileEntity.cookTimeCompleteFraction();
