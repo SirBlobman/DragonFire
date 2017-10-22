@@ -66,8 +66,8 @@ item.slime_jelly.name=Slime Jelly
 item.sandwich.name=Sandwich
 item.sugar_cookie.name=Sugar Cookie
 item.apple_pie.name=Apple Pie
-item.sea_weed.name=Sea Weed
-item.dried_sea_weed.name=Dried Sea Weed
+item.sea_weed.name=Seaweed
+item.dried_sea_weed.name=Dried Seaweed
 
 <Drinks>
 item.beer.name=Beer
@@ -143,10 +143,10 @@ dragonfire.effect.confusion=Confusion
 dragonfire.effect.radiation=Radiation
 
 <Special Potion Types>
-potion.effect.blindness=Potion of Blindness
-splash_potion.effect.blindness=Splash Potion of Blindness
-lingering_potion.effect.blindness=Lingering Potion of Blindness
-tipped_arrow.effect.blindness=Arrow of Blindness
+potion.effect.blindness=Potion of Blinding
+splash_potion.effect.blindness=Splash Potion of Blinding
+lingering_potion.effect.blindness=Lingering Potion of Blinding
+tipped_arrow.effect.blindness=Arrow of Blinding
 potion.effect.wither=Potion of Decay
 splash_potion.effect.wither=Splash Potion of Decay
 lingering_potion.effect.wither=Lingering Potion of Decay
@@ -177,6 +177,10 @@ potion_cookie.effect.regeneration=Cookie of Regeneration
 potion_cookie.effect.strength=Cookie of Strength
 potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
-potion_cookie.effect.blindness=Cookie of Blindness
+potion_cookie.effect.blindness=Cookie of Blinding
 potion_cookie.effect.wither=Cookie of Decay
 potion_cookie.effect.radiation=Radioactive Cookie
+
+<Supported Mod Cookies>
+potion_cookie.effect.cold_resistance=Cookie of Cold Resistance
+potion_cookie.effect.heat_resistance=Cookie of Heat Resistance
