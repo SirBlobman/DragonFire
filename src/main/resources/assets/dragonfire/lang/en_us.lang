@@ -151,10 +151,10 @@ potion.effect.wither=Potion of Decay
 splash_potion.effect.wither=Splash Potion of Decay
 lingering_potion.effect.wither=Lingering Potion of Decay
 tipped_arrow.effect.wither=Arrow of Decay
-potion.effect.radiation=Radioactive Potion
-splash_potion.effect.radiation=Radioactive Splash Potion
-lingering_potion.effect.radiation=Radioactive Lingering Potion
-tipped_arrow.effect.radiation=Radioactive Arrow
+potion.effect.radiation=Potion of Radiation
+splash_potion.effect.radiation=Splash Potion of Radiation
+lingering_potion.effect.radiation=Lingering Potion of Radiation
+tipped_arrow.effect.radiation=Arrow of Radiation
 
 <Potion Cookies>
 potion_cookie.effect.empty=Uncraftable Potion Baked Cookie
@@ -179,8 +179,10 @@ potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
 potion_cookie.effect.blindness=Cookie of Blinding
 potion_cookie.effect.wither=Cookie of Decay
-potion_cookie.effect.radiation=Radioactive Cookie
+potion_cookie.effect.radiation=Cookie of Radiation
 
 <Supported Mod Cookies>
-potion_cookie.effect.cold_resistance=Cookie of Cold Resistance
-potion_cookie.effect.heat_resistance=Cookie of Heat Resistance
+potion_cookie.effect.cold_resistance_type=Cookie of Cold Resistance
+potion_cookie.effect.heat_resistance_type=Cookie of Heat Resistance
+potion_cookie.effect.long_cold_resistance_type=Cookie of Cold Resistance
+potion_cookie.effect.long_heat_resistance_type=Cookie of Heat Resistance
