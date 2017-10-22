@@ -14,9 +14,9 @@ public class ListenCustomPotions {
         if(en instanceof EntityLivingBase) {
             EntityLivingBase elb = (EntityLivingBase) en;
             if(elb.isPotionActive(DFPotions.RADIATION)) {
-                e.setRed((200.0F / 255.0F));
-                e.setGreen((244.0F / 255.0F));
-                e.setBlue((66.0F / 255.0F));
+                e.setRed((0.0F / 255.0F));
+                e.setGreen((255.0F / 255.0F));
+                e.setBlue((0.0F / 255.0F));
             }
         }
     }
