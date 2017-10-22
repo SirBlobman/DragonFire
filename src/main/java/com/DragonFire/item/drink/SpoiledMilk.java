@@ -1,5 +1,9 @@
 package com.DragonFire.item.drink;
 
+import com.DragonFire.utility.Util;
+
+import java.util.List;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
@@ -16,7 +20,8 @@ public class SpoiledMilk extends QuickDrink {
     
     @Override
     public ItemStack onItemUseFinish(ItemStack is, World world, EntityLivingBase elb) {
-        for(PotionEffect pe : elb.getActivePotionEffects()) {
+        List<PotionEffect> potionEffects = Util.newList(elb.getActivePotionEffects());
+        for(PotionEffect pe : potionEffects) {
             Potion p = pe.getPotion();
             if(p.isBadEffect()) elb.removePotionEffect(p);
         }
