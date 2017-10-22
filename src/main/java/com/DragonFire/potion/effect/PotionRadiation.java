@@ -12,6 +12,6 @@ public class PotionRadiation extends QuickPotion {
     
     @Override
     public void performEffect(EntityLivingBase elb, int amplifier) {
-        elb.attackEntityFrom(RADIATION, 2.0F * amplifier);
+        elb.attackEntityFrom(RADIATION, 2.0F * (amplifier + 1));
     }
 }
