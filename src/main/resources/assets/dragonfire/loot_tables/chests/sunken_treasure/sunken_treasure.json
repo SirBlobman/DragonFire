@@ -1,0 +1,32 @@
+{
+  "pools": [{
+    "name": "sunken_treasure",
+    "rolls": 20,
+    "entries": [
+      {
+        "type": "loot_table",
+        "name": "dragonfire/chests/sunken_treasure/very_rare",
+        "weight": 5,
+        "quality": 4
+      },
+      {
+        "type": "loot_table",
+        "name": "dragonfire:chests/sunken_treasure/rare",
+        "weight": 10,
+        "quality": 3
+      },
+      {
+        "type": "loot_table",
+        "name": "dragonfire:chests/sunken_treasure/uncommon",
+        "weight": 20,
+        "quality": 2
+      },
+      {
+        "type": "loot_table",
+        "name": "dragonfire:chests/sunken_treasure/common",
+        "weight": 50,
+        "quality": 1
+      }
+    ]
+  }]
+}

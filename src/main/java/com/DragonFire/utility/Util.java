@@ -82,10 +82,7 @@ public class Util {
         List<Biome> list = newList();
         for(Biome b : Biome.REGISTRY) {
             String name = b.getBiomeName().toLowerCase();
-            if(name.contains(matcher.toLowerCase())) {
-                print("Found biome match for '" + matcher + "': " + b.getBiomeName());
-                list.add(b);
-            }
+            if(name.contains(matcher.toLowerCase())) list.add(b);
         }
         
         return list.toArray(new Biome[0]);

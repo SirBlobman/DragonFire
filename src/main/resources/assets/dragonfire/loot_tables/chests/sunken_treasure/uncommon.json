@@ -1,0 +1,38 @@
+{
+  "pools": [{
+    "name": "sunken_treasure_uncommon",
+    "rolls": 1,
+    "entries": [
+      {
+        "type": "item",
+        "name": "dragonfire:raw_calamari",
+        "weight": 10
+      },
+      {
+        "type": "item",
+        "name": "minecraft:leather_boots",
+        "weight": 10
+      },
+      {
+        "type": "item",
+        "name": "minecraft:waterlily",
+        "weight": 10
+      },
+      {
+        "type": "item",
+        "name": "minecraft:prismarine_shard",
+        "weight": 10
+      },
+      {
+        "type": "item",
+        "name": "minecraft:water_bucket",
+        "weight": 10
+      },
+      {
+        "type": "item",
+        "name": "minecraft:reeds",
+        "weight": 10
+      }
+    ]
+  }]
+}

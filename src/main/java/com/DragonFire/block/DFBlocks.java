@@ -32,9 +32,6 @@ public final class DFBlocks {
     //Machines
     public static final BlockNetherBrickFurnace NETHER_BRICK_FURNACE = new BlockNetherBrickFurnace();
     
-    //Crops and Plants
-    public static final Block SEA_WEED = new BlockSeaWeed();
-    
     //Ores
     public static final QuickOre COPPER_ORE = new QuickOre("copper", "dragonfire:copper_ore", 2.25F, 5.0F, 1);
     public static final Block COPPER_BLOCK = new QuickBlock("copper_block", Material.IRON, 3.0F, 10.0F, "pickaxe", 1);
@@ -67,9 +64,6 @@ public final class DFBlocks {
         
         //Machines
         ifr.registerAll(NETHER_BRICK_FURNACE);
-        
-        //Crops and Plants
-        ifr.registerAll(SEA_WEED);
         
         //Ores
         ifr.registerAll(COPPER_ORE, COPPER_BLOCK, NETHER_GOLD_ORE, CHARCOAL_BLOCK);
