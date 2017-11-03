@@ -32,20 +32,20 @@ item.backpack.name=Backpack
 
 <Tools and Weapons>
 item.ender_bow.name=Ender Bow
-item.ender_arrow.name=Ender Pearl Arrow
+item.ender_arrow.name=Pearl Arrow
 item.emerald_sword.name=Emerald Sword
 item.emerald_axe.name=Emerald Axe
 item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_shovel.name=Emerald Shovel
 item.emerald_hoe.name=Emerald Hoe
 item.nether_fishing_rod.name=Nether Rod
-item.villager_hoe.name=Villager Hoe
+item.villager_hoe.name=Obsidian Hoe
 item.copper_sword.name=Copper Sword
 item.copper_axe.name=Copper Axe
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_shovel.name=Copper Shovel
 item.copper_hoe.name=Copper Hoe
-item.oceanic_shovel.name=Oceanic Shovel
+item.oceanic_shovel.name=Prismarine Shovel
 item.dynamite.name=Dynamite
 item.nuclear_dynamite.name=Nuclear Dynamite
 item.mushroom_pickaxe.name=Mushroom Pickaxe
