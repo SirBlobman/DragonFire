@@ -6,6 +6,7 @@ import net.minecraft.util.ResourceLocation;
 
 public final class DFLootTables {
     public static ResourceLocation MUMMY = register("mummy");
+    public static ResourceLocation DRAUG = register("draug");
     public static ResourceLocation NETHER_FISHING = register("fishing", "nether_fishing");
     
     private static ResourceLocation register(String name) {return register("entities", name);}

@@ -15,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.EntityViewRenderEvent.FogColors;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
@@ -52,6 +53,18 @@ public class ListenCustomPotions {
                     ex.printStackTrace();
                 }
             }
+        }
+    }
+    
+    
+    @SubscribeEvent
+    public void damage(LivingHurtEvent e) {
+        EntityLivingBase elb = e.getEntityLiving();
+        float damage = e.getAmount();
+        if(elb.isPotionActive(DFPotions.CORROSION)) {
+            int level = elb.getActivePotionEffect(DFPotions.CORROSION).getAmplifier() + 1;
+            float newDamage = (damage + level);
+            e.setAmount(newDamage);
         }
     }
 }

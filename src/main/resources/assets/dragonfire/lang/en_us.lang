@@ -112,6 +112,7 @@ itemGroup.DragonFire_Armor_and_Tools=§5§lDragon Fire§r ⎹ §eArmor and Tools
 
 <Entities>
 entity.mummy.name=Mummy
+entity.draug.name=Draug
 
 <Blocks>
 tile.mummy_head.name=Mummy Head

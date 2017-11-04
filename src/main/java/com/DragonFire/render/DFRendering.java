@@ -2,6 +2,7 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.entity.EntityDraug;
 import com.DragonFire.entity.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
@@ -100,6 +101,7 @@ public final class DFRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, RenderMummy::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, RenderDynamite::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityExplosiveArrow.class, RenderExplosiveArrow::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityDraug.class, RenderDraug::new);
     }
     
     private static void reg(Block... bb) {
