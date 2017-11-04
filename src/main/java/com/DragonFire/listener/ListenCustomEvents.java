@@ -1,5 +1,6 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.event.PlayerMoveEvent;
 import com.DragonFire.utility.Util;
 
@@ -7,8 +8,10 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@EventBusSubscriber(modid=DragonFire.MODID)
 public class ListenCustomEvents {
     @SubscribeEvent
     public void moveEvent(LivingUpdateEvent e) {

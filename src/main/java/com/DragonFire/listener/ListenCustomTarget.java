@@ -1,5 +1,6 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -8,8 +9,10 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@EventBusSubscriber(modid=DragonFire.MODID)
 public class ListenCustomTarget {
     @SubscribeEvent
     public void target(LivingSetAttackTargetEvent e) {

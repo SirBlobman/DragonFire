@@ -1,5 +1,7 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.DragonFire;
+
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;
 
@@ -24,9 +26,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@EventBusSubscriber(modid=DragonFire.MODID)
 public class ListenCustomDrops {
     public static Random RANDOM = new Random();
     

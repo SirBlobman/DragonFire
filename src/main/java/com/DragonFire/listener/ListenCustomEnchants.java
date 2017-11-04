@@ -1,5 +1,6 @@
 package com.DragonFire.listener;
 
+import com.DragonFire.DragonFire;
 import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.enchantment.EnchantmentBaneOfHumanoids;
 import com.DragonFire.enchantment.EnchantmentExtinguish;
@@ -24,9 +25,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@EventBusSubscriber(modid=DragonFire.MODID)
 public class ListenCustomEnchants {
     @SubscribeEvent(priority=EventPriority.LOWEST)
     public void breakBlock(HarvestDropsEvent e) {
