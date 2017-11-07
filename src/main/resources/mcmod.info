@@ -1,9 +1,9 @@
 [{
   "modid": "dragonfire",
   "name": "Dragon Fire",
-  "description": "Vanilla enhancement and game changing mod",
+  "description": "A modpack in a mod that includes vanilla enchancement and game changing features",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "authorList": ["SirBlobman", "DrainedPupper", "Hoopa", "Winterr", "Soul", "Swooty"],
+  "authorList": ["SirBlobman", "Mitchdog", "Winterr"],
   "logoFile": "assets/dragonfire/logo/logo2.png"
 }]
