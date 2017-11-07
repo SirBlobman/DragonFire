@@ -11,6 +11,7 @@ import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -41,4 +42,5 @@ public class BlockNetherBrickFurnace extends BlockFurnace {
     }
     
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {return DFBlocks.ITEM_NETHER_BRICK_FURNACE;}
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {return new ItemStack(DFBlocks.NETHER_BRICK_FURNACE);}
 }

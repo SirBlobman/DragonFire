@@ -19,7 +19,7 @@ public class EnchantmentExtinguish extends Enchantment {
         setName("extinguish");
     }
     
-    public int getMaxLevel() {return 2;}
+    public int getMaxLevel() {return 3;}
     
     public static void extinguishNearby(EntityLivingBase elb, World world, BlockPos bp, int level) {
         if(elb.onGround) {

@@ -10,7 +10,6 @@ import com.DragonFire.utility.Util;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,6 +20,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -35,11 +35,12 @@ public class ListenCustomEnchants {
     public void breakBlock(HarvestDropsEvent e) {
         EntityPlayer ep = e.getHarvester();
         if(ep != null) {
-            ItemStack is = ep.getActiveItemStack();
+            ItemStack is = ep.getHeldItem(EnumHand.MAIN_HAND);
             if(!ItemUtil.isAir(is)) {
                 Map<Enchantment, Integer> map = EnchantmentHelper.getEnchantments(is);
-                Set<Enchantment> enchants = map.keySet();
-                boolean smelting = enchants.contains(DFEnchants.AUTO_SMELT);
+                boolean smelting = map.containsKey(DFEnchants.AUTO_SMELT);
+                boolean pickup = map.containsKey(DFEnchants.PICKUP);
+                
                 if(smelting) {
                     List<ItemStack> drops = e.getDrops();
                     List<ItemStack> copyDrops = Util.newList(drops);
@@ -50,6 +51,16 @@ public class ListenCustomEnchants {
                             drops.remove(drop);
                             drops.add(smelt);
                         }
+                    }
+                }
+                
+                if(pickup) {
+                    List<ItemStack> drops = e.getDrops();
+                    List<ItemStack> copyDrops = Util.newList(drops);
+                    drops.clear();
+                    for(ItemStack drop : copyDrops) {
+                        boolean fail = !ep.addItemStackToInventory(drop);
+                        if(fail) drops.add(drop);
                     }
                 }
             }

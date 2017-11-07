@@ -102,6 +102,7 @@ item.glass_fragment.yellow.name=Yellow Glass Fragment
 enchantment.auto_smelt=Auto Smelt
 enchantment.extinguish=Extinguish
 enchantment.bane_of_humanoids=Bane of Humanoids
+enchantment.pickup=Auto Pickup
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragonFire§r

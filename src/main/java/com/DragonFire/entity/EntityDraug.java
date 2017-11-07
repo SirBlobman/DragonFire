@@ -16,7 +16,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class EntityDraug extends AbstractSkeleton {
@@ -27,6 +26,11 @@ public class EntityDraug extends AbstractSkeleton {
     public SoundEvent getHurtSound(DamageSource ds) {return SoundEvents.ENTITY_WITHER_SKELETON_HURT;}
     public SoundEvent getDeathSound() {return SoundEvents.ENTITY_WITHER_SKELETON_DEATH;}
     public SoundEvent getStepSound() {return SoundEvents.ENTITY_WITHER_SKELETON_STEP;}
+    public boolean canBreatheUnderwater() {return true;}
+    public boolean getCanSpawnHere() {return true;}
+    public boolean isPushedByWater() {return false;}
+    public boolean isNotColliding() {return world.checkNoEntityCollision(this.getEntityBoundingBox(), this);}
+    public boolean canDespawn() {return true;}
 
     @Override
     public void initEntityAI() {
@@ -53,12 +57,6 @@ public class EntityDraug extends AbstractSkeleton {
     }
 
     @Override
-    public boolean attackEntityFrom(DamageSource ds, float amount) {
-        if (ds == DamageSource.DROWN) return false;
-        else return super.attackEntityFrom(ds, amount);
-    }
-
-    @Override
     public void onLivingUpdate() {
         super.onLivingUpdate();
         if (world.isRemote && !isInWater()) {
@@ -66,10 +64,5 @@ public class EntityDraug extends AbstractSkeleton {
                 world.spawnParticle(EnumParticleTypes.DRIP_WATER, posX + (rand.nextDouble() - 0.5D) * width, posY + rand.nextDouble() * height - 0.25D, posZ + (rand.nextDouble() - 0.5D) * width, (rand.nextDouble() - 0.5D) * 2.0D, -rand.nextDouble(), (rand.nextDouble() - 0.5D) * 2.0D);
             }
         }
-    }
-    
-    @Override
-    public boolean getCanSpawnHere() {
-        return (rand.nextInt(20) == 0 || !world.canBlockSeeSky(new BlockPos(this))) && super.getCanSpawnHere();
     }
 }

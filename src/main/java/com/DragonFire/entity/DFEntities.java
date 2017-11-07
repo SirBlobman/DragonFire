@@ -45,9 +45,9 @@ public final class DFEntities {
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.SANDY), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.WASTELAND), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.DRY), 70);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.OCEAN), 150);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WET), 150);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WATER), 150);
+        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.OCEAN), 100);
+        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WET), 100);
+        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WATER), 100);
     }
     
     private static int id = 0;
