@@ -142,7 +142,7 @@ lingering_potion.effect.levitation=Lingering Potion of Floating
 <Potion Effects>
 dragonfire.effect.confusion=Confusion
 dragonfire.effect.radiation=Radiation
-dragonfire.effect.scarecrow=Scarecrow
+dragonfire.effect.scarecrow=Dreariness
 
 <Special Potion Types>
 potion.effect.blindness=Potion of Blinding
