@@ -24,8 +24,7 @@ public class EnchantmentBaneOfHumanoids extends Enchantment {
     
     @Override
     public boolean canApplyTogether(Enchantment e) {
-        if(e == this) return false;
-        else if(e == Enchantments.BANE_OF_ARTHROPODS || e == Enchantments.SMITE || e == Enchantments.SHARPNESS) return false;
+        if(e == Enchantments.BANE_OF_ARTHROPODS || e == Enchantments.SMITE || e == Enchantments.SHARPNESS) return false;
         else return super.canApplyTogether(e);
     }
     

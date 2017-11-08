@@ -15,7 +15,6 @@ import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIllusionIllager;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -25,7 +24,7 @@ import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public final class DFEntities {
-    private static final EnumCreatureType WATER_MONSTER = EnumHelper.addCreatureType("WATER_MONSTER", IMob.class, 70, Material.WATER, false, false);
+    private static final EnumCreatureType WATER_DRAUG = EnumHelper.addCreatureType("WATER_DRAUG", EntityDraug.class, 70, Material.WATER, false, false);
     public static void entities() {
         reg("ender_arrow", EntityEnderArrow.class);
         reg("tiki_spear", EntityTikiSpear.class);
@@ -45,9 +44,9 @@ public final class DFEntities {
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.SANDY), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.WASTELAND), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.DRY), 70);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.OCEAN), 100);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WET), 100);
-        regSpawn(EntityDraug.class, WATER_MONSTER, BiomeDictionary.getBiomes(Type.WATER), 100);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 100);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 100);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WATER), 100);
     }
     
     private static int id = 0;
