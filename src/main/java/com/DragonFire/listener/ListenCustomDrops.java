@@ -1,7 +1,6 @@
 package com.DragonFire.listener;
 
 import com.DragonFire.DragonFire;
-
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;
 
@@ -18,13 +17,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntitySquid;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -57,6 +59,23 @@ public class ListenCustomDrops {
                     Item item = DFItems.WITHERED_BONE;
                     ItemStack is = new ItemStack(item, 1);
                     dropItem(en, is);
+                }
+            }
+        }
+    }
+    
+    @SubscribeEvent(priority=EventPriority.LOWEST)
+    public void changeXP(LivingExperienceDropEvent e) {
+        EntityPlayer ep = e.getAttackingPlayer();
+        if(ep != null) {
+            ItemStack is = ep.getHeldItem(EnumHand.MAIN_HAND);
+            if(is != null && !is.isEmpty()) {
+                Item item = is.getItem();
+                if(item == DFItems.PHILOSOPHERS_SWORD) {
+                    double oldXP = e.getDroppedExperience();
+                    double percent = (oldXP * 0.3D);
+                    int newXP = (int) (oldXP + percent);
+                    e.setDroppedExperience(newXP);
                 }
             }
         }

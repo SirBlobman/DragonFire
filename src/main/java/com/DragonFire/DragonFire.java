@@ -60,6 +60,7 @@ public class DragonFire {
             new ListenCustomTarget(),
             new ListenCustomCrafting(),
             new ListenCustomPotions(),
+            new ListenCustomItems(),
             new KeyBindBackpack()
         );
         proxy.pre(e);

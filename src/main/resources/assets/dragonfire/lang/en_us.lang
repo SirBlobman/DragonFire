@@ -51,6 +51,8 @@ item.nuclear_dynamite.name=Nuclear Dynamite
 item.mushroom_pickaxe.name=Mushroom Pickaxe
 item.explosive_arrow.name=Explosive Arrow
 item.glass_dagger.name=Glass Dagger
+item.philosophers_sword.name=Philisopher's Sword
+item.tree_axe.name=Sandstone Axe
 
 <Food>
 item.raw_calamari.name=Raw Calamari

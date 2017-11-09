@@ -38,7 +38,7 @@ public final class DFRendering {
             DFItems.EMERALD_SWORD, DFItems.EMERALD_AXE, DFItems.EMERALD_PICKAXE, DFItems.EMERALD_SHOVEL, DFItems.EMERALD_HOE,
             DFItems.COPPER_SWORD, DFItems.COPPER_AXE, DFItems.COPPER_PICKAXE, DFItems.COPPER_SHOVEL, DFItems.COPPER_HOE,
             DFItems.OCEANIC_SHOVEL, DFItems.DYNAMITE, DFItems.NUCLEAR_DYNAMITE, DFItems.EXPLOSIVE_ARROW,
-            DFItems.MUSHROOM_PICKAXE, DFItems.GLASS_DAGGER
+            DFItems.MUSHROOM_PICKAXE, DFItems.GLASS_DAGGER, DFItems.PHILOSOPHERS_SWORD, DFItems.TREE_AXE
         );
         
         //Food
@@ -119,8 +119,8 @@ public final class DFRendering {
             String path = rl.getResourcePath();
             
             if(i instanceof ItemBlock) path = "block/" + path;
-            else if(isTool(i)) path = "tool/" + path;
             else if(i instanceof ItemArmor) path = "armor/" + path;
+            else if(isTool(i)) path = "tool/" + path;
             else if(isFood(i)) path = "food/" + path;
             
             reg(i, 0, path);

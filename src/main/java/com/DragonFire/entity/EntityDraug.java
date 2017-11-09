@@ -28,6 +28,7 @@ public class EntityDraug extends AbstractSkeleton {
     public SoundEvent getStepSound() {return SoundEvents.ENTITY_WITHER_SKELETON_STEP;}
     public boolean canBreatheUnderwater() {return true;}
     public boolean getCanSpawnHere() {return true;}
+    public boolean isValidLightLevel() {return true;}
     public boolean isPushedByWater() {return false;}
     public boolean isNotColliding() {return world.checkNoEntityCollision(this.getEntityBoundingBox(), this);}
     public boolean canDespawn() {return true;}
