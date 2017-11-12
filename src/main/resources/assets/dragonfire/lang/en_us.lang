@@ -1,4 +1,4 @@
-<Language Information>
+﻿<Language Information>
 language.name=English
 language.region=United States
 language.code=en_us
@@ -191,3 +191,7 @@ potion_cookie.effect.cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.heat_resistance_type=Cookie of Heat Resistance
 potion_cookie.effect.long_cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.long_heat_resistance_type=Cookie of Heat Resistance
+potion_cookie.effect.haste=Cookie of Haste
+potion_cookie.effect.mining_fatigue=Cookie of Lagging
+potion_cookie.effect.danger_sight=Cookie of Danger Sight
+potion_cookie.effect.resistance=Cookie of Fortitude
