@@ -1,3 +1,10 @@
 {
-    "records.dog": {"category": "master","sounds": [{"name": "records.dog","stream": true}]}
+  "record.dog": {
+    "category": "records",
+    "subtitle": "dragonfire.subtitle.record_dog",
+    "sounds": [{
+      "name": "record_dog",
+      "stream": true
+    }]
+  }
 }
