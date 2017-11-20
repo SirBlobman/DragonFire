@@ -1,7 +1,5 @@
 package com.DragonFire.item.food;
 
-import com.DragonFire.creative.DFTabs;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
@@ -11,7 +9,7 @@ import net.minecraft.world.World;
 public class SugarCookie extends QuickFood {
     public SugarCookie() {
         super("sugar_cookie", 2, 0.4F, false);
-        setCreativeTab(DFTabs.COOKIES);
+        setCreativeTab(null);
     }
     
     @Override

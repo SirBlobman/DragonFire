@@ -2,8 +2,8 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.entity.EntityDraug;
-import com.DragonFire.entity.EntityMummy;
+import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;

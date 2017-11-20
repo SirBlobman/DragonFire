@@ -1,4 +1,4 @@
-package com.DragonFire.entity;
+package com.DragonFire.entity.living;
 
 import com.DragonFire.entity.loot.DFLootTables;
 

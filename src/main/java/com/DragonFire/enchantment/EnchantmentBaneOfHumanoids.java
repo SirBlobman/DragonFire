@@ -3,9 +3,9 @@ package com.DragonFire.enchantment;
 import com.DragonFire.config.DFConfig;
 
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentDamage;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Enchantments;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -24,7 +24,7 @@ public class EnchantmentBaneOfHumanoids extends Enchantment {
     
     @Override
     public boolean canApplyTogether(Enchantment e) {
-        if(e == Enchantments.BANE_OF_ARTHROPODS || e == Enchantments.SMITE || e == Enchantments.SHARPNESS) return false;
+        if(e instanceof EnchantmentDamage || e == DFEnchants.RIPTIDE) return false;
         else return super.canApplyTogether(e);
     }
     

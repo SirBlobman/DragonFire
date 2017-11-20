@@ -3,6 +3,9 @@ package com.DragonFire.entity;
 import static com.DragonFire.utility.Util.getRGB;
 
 import com.DragonFire.DragonFire;
+import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityMummy;
+import com.DragonFire.entity.living.EntityTiki;
 import com.DragonFire.entity.projectile.*;
 
 import java.util.Set;
@@ -10,7 +13,9 @@ import java.util.Set;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.EntityLiving.SpawnPlacementType;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIllusionIllager;
 import net.minecraft.entity.monster.EntityIronGolem;
@@ -33,6 +38,7 @@ public final class DFEntities {
         reg("explosive_arrow", EntityExplosiveArrow.class);
         reg("nether_fish_hook", EntityNetherFishHook.class);
         reg("draug", EntityDraug.class, getRGB(92, 143, 120), getRGB(146, 212, 223));
+        reg("tiki", EntityTiki.class, getRGB(127, 51, 0), getRGB(0, 127, 0));
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));
@@ -41,9 +47,12 @@ public final class DFEntities {
         regEgg(EntityIllusionIllager.class, getRGB(19, 88, 147), getRGB(149, 155, 155));
         
         //Spawning
+        EntitySpawnPlacementRegistry.setPlacementType(EntityMummy.class, SpawnPlacementType.ON_GROUND);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.SANDY), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.WASTELAND), 70);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.DRY), 70);
+        
+        EntitySpawnPlacementRegistry.setPlacementType(EntityDraug.class, SpawnPlacementType.IN_WATER);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 100);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 100);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WATER), 100);
@@ -70,7 +79,7 @@ public final class DFEntities {
     }
     
     private static void regSpawn(Class<? extends EntityLiving> clazz, EnumCreatureType type, Set<Biome> bb, int weight) {
-        Biome[] biomes = bb.toArray(new Biome[0]);
+        Biome[] biomes = bb.toArray(new Biome[bb.size()]);
         EntityRegistry.addSpawn(clazz, weight, 1, 2, type, biomes);
     }
 }
