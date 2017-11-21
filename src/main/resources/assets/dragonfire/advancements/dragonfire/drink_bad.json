@@ -1,0 +1,36 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:spoiled_milk"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.a_bad_drink.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.a_bad_drink.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "dragonfire:root",
+    "rewards": {
+        "experience": 100
+    },
+    "criteria": {
+        "apple": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "item": "dragonfire:spoiled_milk"
+                }
+            }
+        },
+        "mushroom_stew": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "item": "dragonfire:beer"
+                }
+            }
+        }
+    }
+}

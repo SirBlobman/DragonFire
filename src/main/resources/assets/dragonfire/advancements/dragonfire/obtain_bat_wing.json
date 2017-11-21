@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:bat_wing"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.obtain_bat_wing.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.obtain_bat_wing.description"
+        }
+    },
+    "parent": "dragonfire:root",
+    "criteria": {
+        "blaze_rod": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:bat_wing"
+                    }
+                ]
+            }
+        }
+    }
+}

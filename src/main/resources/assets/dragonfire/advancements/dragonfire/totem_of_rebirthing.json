@@ -11,7 +11,7 @@
         },
         "frame": "goal"
     },
-    "parent": "dragonfire:kill_a_mummy",
+    "parent": "dragonfire:root",
     "criteria": {
         "used_totem": {
             "trigger": "minecraft:used_totem",

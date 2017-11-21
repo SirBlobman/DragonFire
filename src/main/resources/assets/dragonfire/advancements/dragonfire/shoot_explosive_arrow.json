@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:explosive_arrow"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.shoot_explosive_arrow.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.shoot_explosive_arrow.description"
+        }
+    },
+    "parent": "dragonfire:root",
+    "criteria": {
+        "shot_arrow": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "is_projectile": true,
+                        "direct_entity": {
+                            "type": "dragonfire:explosive_arrow"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
