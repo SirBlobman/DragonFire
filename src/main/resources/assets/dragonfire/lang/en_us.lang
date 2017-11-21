@@ -3,6 +3,17 @@ language.name=English
 language.region=United States
 language.code=en_us
 
+<Advancments>
+advancements.dragonfire.story.root.title=DragonFire
+advancements.dragonfire.story.root.description=DragonFire Advancments
+advancements.dragonfire.smelt_copper.title=It's Copper
+advancements.story.smelt_copper.description=Smelt a copper ingot
+advancements.story.obtain_armor_copper.title=It's More Copper
+advancements.story.obtain_armor_copper.description=Wear a full suit of Copper armor
+advancements.dragonfire.kill_a_mummy.title=Mummy No More
+advancements.dragonfire.kill_a_mummy.description=Kill a mummy
+advancements.dragonfire.totem_of_rebirthing.title=I live again
+advancements.dragonfire.totem_of_rebirthing.description=Use a totem of rebirthing
 <Records>
 item.record.dragonfire.dog.desc=C418 - Dog
 
