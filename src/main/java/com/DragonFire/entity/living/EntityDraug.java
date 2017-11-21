@@ -60,10 +60,9 @@ public class EntityDraug extends AbstractSkeleton {
     
     @Override
     public boolean getCanSpawnHere() {
-        boolean b1 = (isInWater());
-        boolean b2 = !(world.isDaytime());
-        boolean b3 = (world.getDifficulty() != EnumDifficulty.PEACEFUL);
-        return (b1 && b2 && b3);
+        boolean b1 = !(world.isDaytime());
+        boolean b2 = (world.getDifficulty() != EnumDifficulty.PEACEFUL);
+        return (b1 && b2);
     }
 
     @Override

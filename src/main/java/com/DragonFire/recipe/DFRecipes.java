@@ -67,7 +67,7 @@ public final class DFRecipes {
         PotionHelper.addMix(DFPotionTypes.BLINDING, Items.REDSTONE, DFPotionTypes.LONG_BLINDING);
         PotionHelper.addMix(DFPotionTypes.BLINDING, Items.GLOWSTONE_DUST, DFPotionTypes.STRONG_BLINDING);
         PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.WITHERED_BONE, DFPotionTypes.DECAY);
-        PotionHelper.addMix(PotionTypes.AWKWARD, DFItems.RADIOACTIVE_MUSHROOM, DFPotionTypes.RADIATION);
+        PotionHelper.addMix(PotionTypes.AWKWARD, DFBlocks.ITEM_RADIOACTIVE_MUSHROOM, DFPotionTypes.RADIATION);
         BrewingRecipeRegistry.addRecipe(new ItemStack(Items.MILK_BUCKET), new ItemStack(Items.ROTTEN_FLESH), new ItemStack(DFItems.SPOILED_MILK));
     }
     

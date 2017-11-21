@@ -16,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -115,5 +116,11 @@ public class DragonFire {
     public void enchantments(Register<Enchantment> e) {
         IForgeRegistry<Enchantment> ifr = e.getRegistry();
         proxy.enchants(ifr);
+    }
+    
+    @SubscribeEvent
+    public void sounds(Register<SoundEvent> e) {
+        IForgeRegistry<SoundEvent> ifr = e.getRegistry();
+        proxy.sounds(ifr);
     }
 }

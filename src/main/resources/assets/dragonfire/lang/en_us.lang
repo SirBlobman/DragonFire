@@ -3,6 +3,12 @@ language.name=English
 language.region=United States
 language.code=en_us
 
+<Records>
+item.record.dragonfire.dog.desc=C418 - Dog
+
+<Subtitles>
+dragonfire.subtitle.record_dog=Now Playing: C418 - Dog
+
 <Damage Sources>
 death.attack.drunk=%s drank too much beer
 death.attack.radiation=%s was exposed to radiation
@@ -14,9 +20,6 @@ dragonfire.container.nether_brick_furnace=Nether Brick Furnace
 <Key Binds>
 key.categories.DragonFire=DragonFire
 key.dragonfire.backpack=Open Backpack (Chestplate)
-
-<Items>
-item.radioactive_mushroom.name=Radioactive Mushroom
 
 <Armor>
 item.rabbit_boots.name=Rabbit Boots
@@ -127,6 +130,7 @@ tile.player_pressure_plate.name=Player Detector Plate
 tile.nuclear_tnt.name=Nuclear TNT
 tile.nether_brick_furnace.name=Nether Brick Furnace
 tile.charcoal_block.name=Charcoal Block
+tile.radioactive_mushroom.name=Radioactive Mushroom
 
 <Ores>
 tile.copper_ore.name=Copper Ore

@@ -28,6 +28,7 @@ public final class DFBlocks {
     //Random
     public static final BlockEnderpearl ENDER_PEARL_BLOCK = new BlockEnderpearl();
     public static final BlockObsidianGlass OBSIDIAN_GLASS = new BlockObsidianGlass();
+    public static final BlockRadioactiveMushroom RADIOACTIVE_MUSHROOM = new BlockRadioactiveMushroom();
     
     //Machines
     public static final BlockNetherBrickFurnace NETHER_BRICK_FURNACE = new BlockNetherBrickFurnace();
@@ -51,6 +52,7 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_COPPER_BLOCK = new QuickItemBlock(COPPER_BLOCK);
     public static final ItemBlock ITEM_NETHER_GOLD_ORE = new QuickItemBlock(NETHER_GOLD_ORE);
     public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemFuelBlock(CHARCOAL_BLOCK, 16000);
+    public static final ItemBlock ITEM_RADIOACTIVE_MUSHROOM = new QuickItemBlock(RADIOACTIVE_MUSHROOM);
 
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
@@ -69,7 +71,7 @@ public final class DFBlocks {
         ifr.registerAll(COPPER_ORE, COPPER_BLOCK, NETHER_GOLD_ORE, CHARCOAL_BLOCK);
         
         //Other
-        ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS);
+        ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS, RADIOACTIVE_MUSHROOM);
     }
 
     public static void register2(IForgeRegistry<Item> ifr) {
@@ -79,7 +81,7 @@ public final class DFBlocks {
             ITEM_PLAYER_PLATE, ITEM_NUCLEAR_TNT,
             ITEM_NETHER_BRICK_FURNACE,
             ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE, ITEM_CHARCOAL_BLOCK,
-            ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS
+            ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS, ITEM_RADIOACTIVE_MUSHROOM
         );
     }
 }

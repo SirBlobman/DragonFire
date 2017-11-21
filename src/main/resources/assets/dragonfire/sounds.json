@@ -1,9 +1,9 @@
 {
-  "record.dog": {
-    "category": "records",
+  "record_dog": {
+    "category": "record",
     "subtitle": "dragonfire.subtitle.record_dog",
     "sounds": [{
-      "name": "record_dog",
+      "name": "dragonfire:record_dog",
       "stream": true
     }]
   }
