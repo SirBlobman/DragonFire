@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:copper_ingot"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.smelt_copper.title"
+        },
+        "description": {
+            "translate": "advancements.story.smelt_copper.description"
+        }
+    },
+    "parent": "dragonfire:root",
+    "criteria": {
+        "copper": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:copper_ingot"
+                    }
+                ]
+            }
+        }
+    }
+}

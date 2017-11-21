@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:bat_wing"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.story.root.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.story.root.description"
+        },
+        "background": "dragonfire:textures/blocks/charcoal_block.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "crafting_table": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:bat_wing"
+                    }
+                ]
+            }
+        }
+    }
+}
