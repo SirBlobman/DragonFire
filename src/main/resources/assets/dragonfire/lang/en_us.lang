@@ -19,8 +19,8 @@ advancements.dragonfire.radioactive.title=I'm Radioactive
 
 <Advancement Descriptions>
 advancements.dragonfire.story.root.description=DragonFire Advancements
-advancements.dragonfire.smelt_copper.description=Smelt a copper ingot
-advancements.dragonfire.obtain_armor_copper.description=Wear a full suit of Copper armor
+advancements.dragonfire.story.smelt_copper.description=Smelt a copper ingot
+advancements.dragonfire.story.obtain_armor_copper.description=Wear a full suit of Copper armor
 advancements.dragonfire.kill_a_mummy.description=Kill a mummy
 advancements.dragonfire.totem_of_rebirthing.description=Use a totem of rebirthing
 advancements.dragonfire.shoot_explosive_arrow.description=Shoot an explosive arrow
