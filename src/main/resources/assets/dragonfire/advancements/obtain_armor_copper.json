@@ -4,10 +4,10 @@
             "item": "dragonfire:copper_chestplate"
         },
         "title": {
-            "translate": "advancements.story.obtain_armor_copper.title"
+            "translate": "advancements.dragonfire.story.obtain_armor_copper.title"
         },
         "description": {
-            "translate": "advancements.story.obtain_armor_copper.description"
+            "translate": "advancements.dragonfire.story.obtain_armor_copper.description"
         }
     },
     "parent": "dragonfire:smelt_copper",

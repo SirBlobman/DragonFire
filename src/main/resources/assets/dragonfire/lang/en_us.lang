@@ -3,28 +3,30 @@ language.name=English
 language.region=United States
 language.code=en_us
 
-<Advancments>
+<Advancement Titles>
 advancements.dragonfire.story.root.title=DragonFire
-advancements.dragonfire.story.root.description=DragonFire Advancments
 advancements.dragonfire.smelt_copper.title=It's Copper
-advancements.dragonfire.smelt_copper.description=Smelt a copper ingot
 advancements.dragonfire.obtain_armor_copper.title=It's More Copper
-advancements.dragonfire.obtain_armor_copper.description=Wear a full suit of Copper armor
 advancements.dragonfire.kill_a_mummy.title=Mummy No More
-advancements.dragonfire.kill_a_mummy.description=Kill a mummy
 advancements.dragonfire.totem_of_rebirthing.title=I live again
-advancements.dragonfire.totem_of_rebirthing.description=Use a totem of rebirthing
 advancements.dragonfire.shoot_explosive_arrow.title=Are arrows supposed to explode?
-advancements.dragonfire.shoot_explosive_arrow.description=Shoot an explosive arrow
 advancements.dragonfire.shoot_pearl_arrow.title=Uhh.. What? Where am I?
-advancements.dragonfire.shoot_pearl_arrow.description=Shoot an Ender Pearl Arrow
 advancements.dragonfire.a_bad_drink.title=I don't feel so well
 advancements.dragonfire.a_bad_drink.description=Drink something bad
 advancements.dragonfire.obtain_bat_wing.title=Eww..
-advancements.dragonfire.obtain_bat_wing.description=Obtain a bat wing
 advancements.dragonfire.obtain_mummy_rag.title=Umm... I guess I can wipe my butt with it
-advancements.dragonfire.obtain_mummy_rag.description=Obtain a mummy rag
 advancements.dragonfire.radioactive.title=I'm Radioactive
+
+<Advancement Descriptions>
+advancements.dragonfire.story.root.description=DragonFire Advancements
+advancements.dragonfire.smelt_copper.description=Smelt a copper ingot
+advancements.dragonfire.obtain_armor_copper.description=Wear a full suit of Copper armor
+advancements.dragonfire.kill_a_mummy.description=Kill a mummy
+advancements.dragonfire.totem_of_rebirthing.description=Use a totem of rebirthing
+advancements.dragonfire.shoot_explosive_arrow.description=Shoot an explosive arrow
+advancements.dragonfire.shoot_pearl_arrow.description=Shoot an Ender Pearl Arrow
+advancements.dragonfire.obtain_bat_wing.description=Obtain a bat wing
+advancements.dragonfire.obtain_mummy_rag.description=Obtain a mummy rag
 advancements.dragonfire.radioactive.description=Get radiation poison
 
 <Records>
