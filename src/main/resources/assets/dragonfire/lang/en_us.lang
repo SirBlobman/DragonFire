@@ -81,30 +81,30 @@ item.mummy_rag.name=Mummy Rag
 item.withered_bone.name=Withered Bone
 
 <Glass Fragments>
-item.glass_fragment.black.name=Black Glass Fragment
-item.glass_fragment.blue.name=Blue Glass Fragment
-item.glass_fragment.brown.name=Brown Glass Fragment
-item.glass_fragment.clear.name=Glass Fragment
-item.glass_fragment.cyan.name=Cyan Glass Fragment
-item.glass_fragment.gray.name=Gray Glass Fragment
-item.glass_fragment.green.name=Green Glass Fragment
-item.glass_fragment.lightBlue.name=Light Blue Glass Fragment
-item.glass_fragment.lime.name=Lime Glass Fragment
-item.glass_fragment.magenta.name=Magenta Glass Fragment
-item.glass_fragment.obsidian.name=Obsidian Glass Fragment
-item.glass_fragment.orange.name=Orange Glass Fragment
-item.glass_fragment.pink.name=Pink Glass Fragment
-item.glass_fragment.purple.name=Purple Glass Fragment
-item.glass_fragment.red.name=Red Glass Fragment
-item.glass_fragment.silver.name=Light Gray Glass Fragment
-item.glass_fragment.white.name=White Glass Fragment
-item.glass_fragment.yellow.name=Yellow Glass Fragment
+item.glass_fragment.black.name=Black Glass Shard
+item.glass_fragment.blue.name=Blue Glass Shard
+item.glass_fragment.brown.name=Brown Glass Shard
+item.glass_fragment.clear.name=Glass Shard
+item.glass_fragment.cyan.name=Cyan Glass Shard
+item.glass_fragment.gray.name=Gray Glass Shard
+item.glass_fragment.green.name=Green Glass Shard
+item.glass_fragment.lightBlue.name=Light Blue Glass Shard
+item.glass_fragment.lime.name=Lime Glass Shard
+item.glass_fragment.magenta.name=Magenta Glass Shard
+item.glass_fragment.obsidian.name=Obsidian Glass Shard
+item.glass_fragment.orange.name=Orange Glass Shard
+item.glass_fragment.pink.name=Pink Glass Shard
+item.glass_fragment.purple.name=Purple Glass Shard
+item.glass_fragment.red.name=Red Glass Shard
+item.glass_fragment.silver.name=Light Gray Glass Shard
+item.glass_fragment.white.name=White Glass Shard
+item.glass_fragment.yellow.name=Yellow Glass Shard
 
 <Enchantments>
 enchantment.auto_smelt=Auto Smelt
 enchantment.extinguish=Extinguish
 enchantment.bane_of_humanoids=Bane of Humanoids
-enchantment.pickup=Auto Pickup
+enchantment.pickup=Pickup
 
 <Creative Tabs>
 itemGroup.DragonFire=§5§lDragonFire§r
