@@ -5,6 +5,7 @@ import com.DragonFire.item.armor.RabbitBoots;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.custom.GlassFragment;
 import com.DragonFire.item.custom.QuickItem;
+import com.DragonFire.item.custom.QuickRecord;
 import com.DragonFire.item.drink.Beer;
 import com.DragonFire.item.drink.SpoiledMilk;
 import com.DragonFire.item.food.DiamondApple;
@@ -12,12 +13,14 @@ import com.DragonFire.item.food.PotionCookie;
 import com.DragonFire.item.food.QuickFood;
 import com.DragonFire.item.food.SugarCookie;
 import com.DragonFire.item.tool.*;
+import com.DragonFire.sound.DFSoundHandler;
 
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemRecord;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -103,7 +106,7 @@ public final class DFItems {
     
     //Other Stuff
     public static final GlassFragment GLASS_FRAGMENT = new GlassFragment();
-    public static final Item RADIOACTIVE_MUSHROOM = new QuickItem("radioactive_mushroom");
+    public static final ItemRecord RECORD_DOG = new QuickRecord("dog", DFSoundHandler.RECORD_DOG);
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -143,6 +146,6 @@ public final class DFItems {
         ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
         
         //Other Stuff
-        ifr.registerAll(GLASS_FRAGMENT, RADIOACTIVE_MUSHROOM);
+        ifr.registerAll(GLASS_FRAGMENT, RECORD_DOG);
     }
 }

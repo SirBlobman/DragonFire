@@ -15,6 +15,7 @@ hs_err_pid*
 *.classpath
 *.project
 *.gradle
+*.xml
 
 # IntelliJ Ignore
 /.idea/

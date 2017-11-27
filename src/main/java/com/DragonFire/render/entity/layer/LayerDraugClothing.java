@@ -1,7 +1,7 @@
 package com.DragonFire.render.entity.layer;
 
 import com.DragonFire.DragonFire;
-import com.DragonFire.entity.EntityDraug;
+import com.DragonFire.entity.living.EntityDraug;
 
 import net.minecraft.client.model.ModelSkeleton;
 import net.minecraft.client.renderer.GlStateManager;

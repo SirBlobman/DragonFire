@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:potion"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.radioactive.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.radioactive.description"
+        }
+    },
+    "parent": "dragonfire:root",
+    "criteria": {
+        "blaze_rod": {
+            "trigger": "minecraft:effects_changed",
+               "conditions": {
+                   "effects": {
+                       "dragonfire:radiation": {
+                           }
+                       }
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -55,5 +56,10 @@ public class Server extends Common {
     @Override
     public void enchants(IForgeRegistry<Enchantment> ifr) {
         super.enchants(ifr);
+    }
+
+    @Override
+    public void sounds(IForgeRegistry<SoundEvent> ifr) {
+        super.sounds(ifr);
     }
 }

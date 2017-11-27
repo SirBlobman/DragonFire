@@ -1,6 +1,8 @@
 package com.DragonFire.creative;
 
-import com.DragonFire.entity.EntityMummy;
+import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityMummy;
+import com.DragonFire.entity.living.EntityTiki;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
@@ -60,7 +62,9 @@ public final class DFTabs {
             ItemStack is3 = ItemUtil.getSpawnEgg(EntitySnowman.class);
             ItemStack is4 = ItemUtil.getSpawnEgg(EntityWither.class);
             ItemStack is5 = ItemUtil.getSpawnEgg(EntityIllusionIllager.class);
-            List<ItemStack> toAdd = Util.newList(is1, is2, is3, is4, is5);
+            ItemStack is6 = ItemUtil.getSpawnEgg(EntityDraug.class);
+            ItemStack is7 = ItemUtil.getSpawnEgg(EntityTiki.class);
+            List<ItemStack> toAdd = Util.newList(is1, is2, is3, is4, is5, is6, is7);
             list.addAll(toAdd);
         }
     };

@@ -1,0 +1,64 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:copper_chestplate"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.story.obtain_armor_copper.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.story.obtain_armor_copper.description"
+        }
+    },
+    "parent": "dragonfire:smelt_copper",
+    "criteria": {
+        "iron_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:copper_helmet"
+                    }
+                ]
+            }
+        },
+        "iron_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:copper_chestplate"
+                    }
+                ]
+            }
+        },
+        "iron_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:copper_leggings"
+                    }
+                ]
+            }
+        },
+        "iron_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:copper_boots"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "iron_helmet",
+            "iron_chestplate",
+            "iron_leggings",
+            "iron_boots"
+        ]
+    ]
+}

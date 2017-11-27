@@ -4,6 +4,7 @@ import com.DragonFire.DragonFire;
 import com.DragonFire.enchantment.DFEnchants;
 import com.DragonFire.enchantment.EnchantmentBaneOfHumanoids;
 import com.DragonFire.enchantment.EnchantmentExtinguish;
+import com.DragonFire.enchantment.EnchantmentRiptide;
 import com.DragonFire.event.PlayerMoveEvent;
 import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
@@ -98,6 +99,13 @@ public class ListenCustomEnchants {
                         int level = enchants.get(DFEnchants.BANE_OF_HUMANOIDS);
                         float damage = e.getAmount();
                         float newDamage = EnchantmentBaneOfHumanoids.getDamageWithEnchant(hit, level, damage);
+                        e.setAmount(newDamage);
+                    }
+                    
+                    if(enchants.containsKey(DFEnchants.RIPTIDE)) {
+                        int level = enchants.get(DFEnchants.RIPTIDE);
+                        float damage = e.getAmount();
+                        float newDamage = EnchantmentRiptide.getDamageWithEnchant(hit, level, damage);
                         e.setAmount(newDamage);
                     }
                 }

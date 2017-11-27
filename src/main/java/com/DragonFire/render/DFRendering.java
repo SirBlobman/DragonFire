@@ -2,8 +2,8 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.entity.EntityDraug;
-import com.DragonFire.entity.EntityMummy;
+import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;
@@ -60,7 +60,7 @@ public final class DFRendering {
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
         
         //Other
-        reg(DFItems.RADIOACTIVE_MUSHROOM);
+        reg(DFItems.RECORD_DOG);
     }
     
     public static void specialItems() {
@@ -91,7 +91,7 @@ public final class DFRendering {
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
             DFBlocks.NETHER_BRICK_FURNACE,
             DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE, DFBlocks.CHARCOAL_BLOCK,
-            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS
+            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS, DFBlocks.RADIOACTIVE_MUSHROOM
         );
     }
     
