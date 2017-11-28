@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:nuclear_tnt"
+        },
+        "title": {
+            "translate": "dragonfire.advancements.nuke_tnt.title"
+        },
+        "description": {
+            "translate": "dragonfire.advancements.nuke_tnt.description"
+
+    },
+    "parent": "dragonfire/dynamite",
+    "criteria": {
+        "dragon_egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:nuclear_tnt"
+                    }
+                ]
+            }
+        }
+    }
+}

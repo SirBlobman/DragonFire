@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "item": "dragonfire:copper_ingot"
+            "item": "dragonfire:mushroom_pickaxe"
         },
         "title": {
-            "translate": "advancements.dragonfire.smelt_copper.title"
+            "translate": "dragonfire.advancements.mushroom_pickaxe.title"
         },
         "description": {
-            "translate": "advancements.dragonfire.story.smelt_copper.description"
-        }
+            "translate": "dragonfire.advancements.mushroom_pickaxe.description"
+
     },
-    "parent": "dragonfire:root",
+    "parent": "dragonfire/radiation",
     "criteria": {
-        "copper": {
+        "dragon_egg": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:copper_ingot"
+                        "item": "dragonfire:mushroom_pickaxe"
                     }
                 ]
             }

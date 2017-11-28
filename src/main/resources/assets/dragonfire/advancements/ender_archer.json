@@ -1,0 +1,36 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:ender_pearl_arrow
+        },
+        "title": {
+            "translate": "dragonfire.advancements.ender_archer.title
+        },
+        "description": {
+            "translate": "advancements.dragonfire.ender_archer.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "dragonfire/ender_bow"
+    "rewards": {
+        "experience": 100
+    },
+    "criteria": {
+        "killed_skeleton": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "killing_blow": {
+                    "is_projectile": true
+                },
+                "entity": {
+                    "type": "enderman
+                    "distance": {
+                        "horizontal": {
+                            "min": 50
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

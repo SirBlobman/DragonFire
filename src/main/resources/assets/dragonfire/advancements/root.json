@@ -9,7 +9,7 @@
         "description": {
             "translate": "advancements.dragonfire.story.root.description"
         },
-        "background": "dragonfire:textures/blocks/charcoal_block.png",
+        "background": "dragonfire:advancements/background/seamless_copper.png",
         "show_toast": false,
         "announce_to_chat": false
     },

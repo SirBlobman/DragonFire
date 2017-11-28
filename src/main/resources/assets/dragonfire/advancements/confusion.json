@@ -1,13 +1,13 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:potion"
+            "item": "dragonfire:beer"
         },
         "title": {
-            "translate": "advancements.dragonfire.radioactive.title"
+            "translate": "advancements.dragonfire.confusion.title"
         },
         "description": {
-            "translate": "advancements.dragonfire.radioactive.description"
+            "translate": "advancements.dragonfire.confusion.description"
         }
     },
     "parent": "dragonfire:root",
@@ -16,7 +16,7 @@
             "trigger": "minecraft:effects_changed",
                "conditions": {
                    "effects": {
-                       "dragonfire:radiation": {
+                       "dragonfire:confusion": {
                            }
                        }
             }

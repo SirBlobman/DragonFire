@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:radioactive_mushroom"
+        },
+        "title": {
+            "translate": "dragonfire.advancements.radiation.title"
+        },
+        "description": {
+            "translate": "dragonfire.advancements.radiation.description"
+
+    },
+    "parent": "dragonfire/root",
+    "criteria": {
+        "dragon_egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dragonfire:radioactive_mushroom"
+                    }
+                ]
+            }
+        }
+    }
+}
