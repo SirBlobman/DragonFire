@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "dragonfire:mummy_head" },
-        "facing=south": { "model": "dragonfire:mummy_head", "y": 180 },
-        "facing=west":  { "model": "dragonfire:mummy_head", "y": 270 },
-        "facing=east":  { "model": "dragonfire:mummy_head", "y": 90 }
-    }
-}

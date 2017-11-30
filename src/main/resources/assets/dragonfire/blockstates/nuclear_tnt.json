@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "normal": {"model": "dragonfire:nuclear_tnt"},
-    "explode=true": {"model": "dragonfire:nuclear_tnt"},
-    "explode=false": {"model": "dragonfire:nuclear_tnt"}
-  }
-}

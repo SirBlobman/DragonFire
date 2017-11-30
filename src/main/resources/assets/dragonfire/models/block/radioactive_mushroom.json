@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "dragonfire:blocks/radioactive_mushroom"
-  }
-}

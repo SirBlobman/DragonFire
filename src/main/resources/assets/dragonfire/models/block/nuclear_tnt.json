@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "dragonfire:blocks/nuclear_tnt/bottom",
-    "top": "dragonfire:blocks/nuclear_tnt/top",
-    "side": "dragonfire:blocks/nuclear_tnt/side"
-  }
-}

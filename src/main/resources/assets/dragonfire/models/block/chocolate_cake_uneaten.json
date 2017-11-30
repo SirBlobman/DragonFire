@@ -1,9 +1,0 @@
-{
-  "parent": "block/cake_uneaten",
-  "textures": {
-    "particle": "dragonfire:blocks/chocolate_cake/side",
-    "bottom": "dragonfire:blocks/chocolate_cake/bottom",
-    "top": "dragonfire:blocks/chocolate_cake/top",
-    "side": "dragonfire:blocks/chocolate_cake/side"
-  }
-}

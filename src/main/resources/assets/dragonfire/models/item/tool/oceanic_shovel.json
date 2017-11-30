@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "dragonfire:items/tools/oceanic_shovel"
-  }
-}

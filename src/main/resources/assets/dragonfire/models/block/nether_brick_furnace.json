@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "blocks/nether_brick",
-    "front": "dragonfire:blocks/nether_brick_furnace",
-    "side": "blocks/nether_brick"
-  }
-}
