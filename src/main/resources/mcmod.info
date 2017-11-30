@@ -1,7 +1,7 @@
 [{
   "modid": "dragonfire",
   "name": "§6§lDragon Fire",
-  "description": "A modpack in a mod that includes vanilla enchancement and game changing features.",
+  "description": "A mod that includes vanilla enchancement and game changing features.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "authorList": ["§b§lSirBlobman", "Mitchdog", "Winterr", "§2§ljtrent238"],
