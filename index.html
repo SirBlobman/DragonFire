@@ -1,18 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<title>DragonFire</title>
-	
-	<link rel="stylesheet" href="assets/styles/main.css">
-	
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #720000;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
 </head>
 <body>
 
-	<script src="assets/scripts/main.js"></script>
+<div class="container">
+
+<header>
+	<h1><img src="assets/images/logo/logo5.png" alt="logo" align=""></h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Ideas">Ideas</a></li>
+    <li><a href="#Download">Download</a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>About</h1>
+  <p>Vanilla enhancement and game changing mod.</p>
+  
+  <h1>Ideas</h1>
+  <p>If you have an idea please submit it to the <a href="https://discord.gg/mRDkPFg">Discord</a>.</p>
+  
+  <h1>Download</h1>
+  <p>You can download a Pre-Release <a href="https://github.com/SirBlobman/DragonFire/raw/master/build/libs/dragonfire-0.0.1.jar">here</a>.</p>
+  <p>*NOTE: The mod is not finished yet and will have bugs, please submit any issues/bugs <a href="https://github.com/SirBlobman/DragonFire/issues">here</a>.</p>
+</article>
+
+<footer>Copyright 2017 &copy; <a href="https://github.com/SirBlobman/DragonFire/graphs/contributors">The DragonFire Team</a>.</footer>
+
+</div>
 
 </body>
 </html>
