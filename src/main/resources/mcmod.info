@@ -4,6 +4,6 @@
   "description": "A modpack in a mod that includes vanilla enchancement and game changing features.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "authorList": ["SirBlobman", "Mitchdog", "Winterr", "§2§ljtrent238"],
+  "authorList": ["§b§lSirBlobman", "Mitchdog", "Winterr", "§2§ljtrent238"],
   "logoFile": "assets/dragonfire/logo/logo2.png"
 }]
