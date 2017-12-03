@@ -402,8 +402,7 @@ public class EntityNetherFishHook extends EntityFishHook {
     }
 
     private static class EntityFishHookAccessor {
-        private static final Method CHECK_COLLISION = ReflectionHelper.findMethod(EntityFishHook.class,
-                "checkCollision", "func_190624r");
+        private static final Method CHECK_COLLISION = ReflectionHelper.findMethod(EntityFishHook.class, "checkCollision", "func_190624_r");
 
         public static void checkCollision(EntityFishHook efh)
                 throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {

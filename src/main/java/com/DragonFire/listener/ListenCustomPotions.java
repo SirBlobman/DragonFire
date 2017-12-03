@@ -9,7 +9,6 @@ import java.lang.reflect.Method;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiIngame;
 import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.EntityViewRenderEvent.FogColors;
@@ -24,15 +23,8 @@ import net.minecraftforge.fml.relauncher.ReflectionHelper;
 public class ListenCustomPotions {
     @SubscribeEvent
     public void updateScreen(FogColors e) {
-        Entity en = e.getEntity();
-        if(en instanceof EntityLivingBase) {
-            EntityLivingBase elb = (EntityLivingBase) en;
-            if(elb.isPotionActive(DFPotions.RADIATION)) {
-                e.setRed((0.0F / 255.0F));
-                e.setGreen((255.0F / 255.0F));
-                e.setBlue((0.0F / 255.0F));
-            }
-        }
+        //Used to change screen tint
+        //Originally for radiation
     }
     
     @SubscribeEvent

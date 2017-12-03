@@ -2,4 +2,6 @@
 
 Vanilla enhancement and game changing mod
 
-[Trello](https://trello.com/b/PS4jA9na/dragonfire-development) (Submit Your Ideas Here!)
+[Discord](https://discord.gg/hfFCA2n) (Join Our Discord!)
+
+[Trello](https://trello.com/b/PS4jA9na/dragonfire-development) (Check out the Planned Features and mod ideas!)
