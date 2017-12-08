@@ -165,7 +165,6 @@ tile.nether_gold_ore.name=Nether Gold Ore
 
 <Potion Effects>
 dragonfire.effect.confusion=Confusion
-dragonfire.effect.radiation=Radiation
 dragonfire.effect.scarecrow=Dreariness
 dragonfire.effect.corrosion=Corrosion
 
@@ -178,10 +177,6 @@ potion.effect.wither=Potion of Decay
 splash_potion.effect.wither=Splash Potion of Decay
 lingering_potion.effect.wither=Lingering Potion of Decay
 tipped_arrow.effect.wither=Arrow of Decay
-potion.effect.radiation=Potion of Radiation
-splash_potion.effect.radiation=Splash Potion of Radiation
-lingering_potion.effect.radiation=Lingering Potion of Radiation
-tipped_arrow.effect.radiation=Arrow of Radiation
 potion_cookie.effect.levitation=Cookie of Floating
 tipped_arrow.effect.levitation=Arrow of Floating
 potion.effect.levitation=Potion of Floating
@@ -211,7 +206,6 @@ potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
 potion_cookie.effect.blindness=Cookie of Blinding
 potion_cookie.effect.wither=Cookie of Decay
-potion_cookie.effect.radiation=Cookie of Radiation
 
 <Supported Mod Cookies>
 potion_cookie.effect.cold_resistance_type=Cookie of Cold Resistance
