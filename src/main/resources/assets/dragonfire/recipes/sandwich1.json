@@ -3,7 +3,7 @@
   "group": "sandwich",
   "ingredients": [
     {"item": "minecraft:bread"},
-    {"item": "minecraft:beetroot"},
+    {"item": "minecraft:carrot"},
     {"item": "dragonfire:cheese"},
     {"item": "dragonfire:cooked_bacon"}
   ],

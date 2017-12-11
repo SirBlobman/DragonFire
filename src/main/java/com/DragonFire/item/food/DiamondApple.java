@@ -19,8 +19,9 @@ public class DiamondApple extends QuickFood {
             PotionEffect resis3 = new PotionEffect(MobEffects.RESISTANCE, 90 * 20, 2, false, true);
             PotionEffect speed2 = new PotionEffect(MobEffects.SPEED, 90 * 20, 1, false, true);
             PotionEffect fresi1 = new PotionEffect(MobEffects.FIRE_RESISTANCE, 30 * 20, 0, false, true);
+            PotionEffect absrb1 = new PotionEffect(MobEffects.ABSORBTION, 60 * 20, 1, false, true);
             ep.addPotionEffect(regen2); ep.addPotionEffect(resis3); ep.addPotionEffect(speed2);
-            ep.addPotionEffect(fresi1);
+            ep.addPotionEffect(fresi1); ep.addPotionEffect(absrb1);
         }
     }
 }

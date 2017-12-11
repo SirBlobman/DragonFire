@@ -7,7 +7,7 @@ language.code=en_us
 advancements.dragonfire.story.root.title=DragonFire
 advancements.dragonfire.kill_a_mummy.title=Mummy? Was that you?
 advancements.dragonfire.confusion.title=Too much to drink
-advancements.dragonfire.ender_archer.title=Now you see me, Now you're dead
+advancements.dragonfire.ender_archer.title=Now you see me, Now you don't
 advancements.dragonfire.made_of_money.title=Made of Money
 advancements.dragonfire.radioactive.title=Radioactive?
 advancements.dragonfire.mushroom_pickaxe.title=Delicious Pickaxe
@@ -212,7 +212,4 @@ potion_cookie.effect.cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.heat_resistance_type=Cookie of Heat Resistance
 potion_cookie.effect.long_cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.long_heat_resistance_type=Cookie of Heat Resistance
-potion_cookie.effect.haste=Cookie of Haste
-potion_cookie.effect.mining_fatigue=Cookie of Lagging
-potion_cookie.effect.danger_sight=Cookie of Danger Sight
-potion_cookie.effect.resistance=Cookie of Fortitude
+
