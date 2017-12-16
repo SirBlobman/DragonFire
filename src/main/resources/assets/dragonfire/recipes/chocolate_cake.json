@@ -2,14 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "MMM",
-    "SES",
-    "CCC"
+    "CEC",
+    "WSW"
   ],
   "key": {
     "C": {"item": "dragonfire:chocolate_bar"},
     "E": {"item": "minecraft:egg"},
     "M": {"item": "minecraft:milk_bucket"},
-    "S": {"item": "minecraft:sugar"}
+	"M": {"item": "minecraft:sugar"},
+    "W": {"item": "minecraft:wheat"}
   },
   "result": {
     "item": "dragonfire:chocolate_cake",

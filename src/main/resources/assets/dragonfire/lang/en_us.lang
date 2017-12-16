@@ -5,31 +5,28 @@ language.code=en_us
 
 <Advancement Titles>
 advancements.dragonfire.story.root.title=DragonFire
-advancements.dragonfire.smelt_copper.title=It's Copper
-advancements.dragonfire.obtain_armor_copper.title=It's More Copper
-advancements.dragonfire.kill_a_mummy.title=Mummy No More
-advancements.dragonfire.totem_of_rebirthing.title=I live again
-advancements.dragonfire.shoot_explosive_arrow.title=Are arrows supposed to explode?
-advancements.dragonfire.shoot_pearl_arrow.title=Uhh.. What? Where am I?
-advancements.dragonfire.a_bad_drink.title=I don't feel so well
-advancements.dragonfire.a_bad_drink.description=Drink something bad
-advancements.dragonfire.obtain_bat_wing.title=Eww..
-advancements.dragonfire.obtain_mummy_rag.title=Umm... I guess I can wipe my butt with it
-advancements.dragonfire.radioactive.title=I'm Radioactive
+advancements.dragonfire.kill_a_mummy.title=Mummy? Was that you?
+advancements.dragonfire.confusion.title=Too much to drink
+advancements.dragonfire.ender_archer.title=Now you see me, Now you don't
+advancements.dragonfire.made_of_money.title=Made of Money
+advancements.dragonfire.radioactive.title=Radioactive?
+advancements.dragonfire.mushroom_pickaxe.title=Delicious Pickaxe
+advancements.dragonfire.ender_bow.title=Ender Archer
+advancements.dragonfire.nuke_tnt.title=This Means War
+advancements.dragonfire.dynamite.title=Portable Bomb
 
 <Advancement Descriptions>
-advancements.dragonfire.story.root.description=DragonFire Advancements
-advancements.dragonfire.story.smelt_copper.description=Smelt a copper ingot
-advancements.dragonfire.story.obtain_armor_copper.description=Wear a full suit of Copper armor
-advancements.dragonfire.kill_a_mummy.description=Kill a mummy
-advancements.dragonfire.totem_of_rebirthing.description=Use a totem of rebirthing
-advancements.dragonfire.shoot_explosive_arrow.description=Shoot an explosive arrow
-advancements.dragonfire.shoot_pearl_arrow.description=Shoot an Ender Pearl Arrow
-advancements.dragonfire.obtain_bat_wing.description=Obtain a bat wing
-advancements.dragonfire.obtain_mummy_rag.description=Obtain a mummy rag
-advancements.dragonfire.radioactive.description=Get radiation poison
 
-<Records>
+advancements.dragonfire.kill_a_mummy.description=Kill a mummy
+advancements.dragonfire.ender_archer.description=Shoot an Ender Pearl Arrow at an Enderman
+advancements.dragonfire.confusion.description=Drink enough beer to get a confusion debuff
+advancements.dragonfire.made_of_money.description=Wear a set of Emerald Armour
+advancements.dragonfire.radioactive.description=Break a Poisonous Mushroom
+advancements.dragonfire.mushroom_pickaxe.description=Find a Mushroom Pickaxe
+advancements.dragonfire.ender_bow.description=Find an Ender Bow in a chest
+advancements.dragonfire.nuke_tnt.description=Craft a block of Nuclear TNT
+advancements.dragonfire.dynamite.description=Throw some dynamite and watch explode
+<Records> 
 item.record.dragonfire.dog.desc=C418 - Dog
 
 <Subtitles>
@@ -68,13 +65,13 @@ item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_shovel.name=Emerald Shovel
 item.emerald_hoe.name=Emerald Hoe
 item.nether_fishing_rod.name=Nether Rod
-item.villager_hoe.name=Obsidian Hoe
+item.villager_hoe.name=Villager Hoe
 item.copper_sword.name=Copper Sword
 item.copper_axe.name=Copper Axe
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_shovel.name=Copper Shovel
 item.copper_hoe.name=Copper Hoe
-item.oceanic_shovel.name=Prismarine Shovel
+item.oceanic_shovel.name=Oceanic Shovel
 item.dynamite.name=Dynamite
 item.nuclear_dynamite.name=Nuclear Dynamite
 item.mushroom_pickaxe.name=Mushroom Pickaxe
@@ -157,7 +154,7 @@ tile.player_pressure_plate.name=Player Detector Plate
 tile.nuclear_tnt.name=Nuclear TNT
 tile.nether_brick_furnace.name=Nether Brick Furnace
 tile.charcoal_block.name=Charcoal Block
-tile.radioactive_mushroom.name= Poisonshroom
+tile.radioactive_mushroom.name= Poisonous Mushroom
 
 <Ores>
 tile.copper_ore.name=Copper Ore
@@ -168,7 +165,6 @@ tile.nether_gold_ore.name=Nether Gold Ore
 
 <Potion Effects>
 dragonfire.effect.confusion=Confusion
-dragonfire.effect.radiation=Radiation
 dragonfire.effect.scarecrow=Dreariness
 dragonfire.effect.corrosion=Corrosion
 
@@ -181,10 +177,6 @@ potion.effect.wither=Potion of Decay
 splash_potion.effect.wither=Splash Potion of Decay
 lingering_potion.effect.wither=Lingering Potion of Decay
 tipped_arrow.effect.wither=Arrow of Decay
-potion.effect.radiation=Potion of Radiation
-splash_potion.effect.radiation=Splash Potion of Radiation
-lingering_potion.effect.radiation=Lingering Potion of Radiation
-tipped_arrow.effect.radiation=Arrow of Radiation
 potion_cookie.effect.levitation=Cookie of Floating
 tipped_arrow.effect.levitation=Arrow of Floating
 potion.effect.levitation=Potion of Floating
@@ -214,14 +206,10 @@ potion_cookie.effect.weakness=Cookie of Weakness
 potion_cookie.effect.luck=Cookie of Luck
 potion_cookie.effect.blindness=Cookie of Blinding
 potion_cookie.effect.wither=Cookie of Decay
-potion_cookie.effect.radiation=Cookie of Radiation
 
 <Supported Mod Cookies>
 potion_cookie.effect.cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.heat_resistance_type=Cookie of Heat Resistance
 potion_cookie.effect.long_cold_resistance_type=Cookie of Cold Resistance
 potion_cookie.effect.long_heat_resistance_type=Cookie of Heat Resistance
-potion_cookie.effect.haste=Cookie of Haste
-potion_cookie.effect.mining_fatigue=Cookie of Lagging
-potion_cookie.effect.danger_sight=Cookie of Danger Sight
-potion_cookie.effect.resistance=Cookie of Fortitude
+

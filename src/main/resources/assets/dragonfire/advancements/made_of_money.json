@@ -1,53 +1,53 @@
 {
     "display": {
         "icon": {
-            "item": "dragonfire:copper_chestplate"
+            "item": "dragonfire:emerald_chestplate"W
         },
         "title": {
-            "translate": "advancements.dragonfire.story.obtain_armor_copper.title"
+            "translate": "advancements.dragonfire.made_of_money.title"
         },
         "description": {
-            "translate": "advancements.dragonfire.story.obtain_armor_copper.description"
+            "translate": "advancements.dragonfire.made_of_money.description"
         }
     },
-    "parent": "dragonfire:smelt_copper",
+    "parent": "root"
     "criteria": {
-        "iron_helmet": {
+        "diamond_helmet": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:copper_helmet"
+                        "item": "dragonfire:emerald_helmet"
                     }
                 ]
             }
         },
-        "iron_chestplate": {
+        "diamond_chestplate": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:copper_chestplate"
+                        "item": "dragonfire:emerald_chestplate"
                     }
                 ]
             }
         },
-        "iron_leggings": {
+        "diamond_leggings": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:copper_leggings"
+                        "item": "dragonfire:emerald_leggings"
                     }
                 ]
             }
         },
-        "iron_boots": {
+        "diamond_boots": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:copper_boots"
+                        "item": "dragonfire:emerald_boots"
                     }
                 ]
             }
@@ -55,10 +55,10 @@
     },
     "requirements": [
         [
-            "iron_helmet",
-            "iron_chestplate",
-            "iron_leggings",
-            "iron_boots"
+            "diamond_helmet",
+            "diamond_chestplate",
+            "diamond_leggings",
+            "diamond_boots"
         ]
     ]
 }

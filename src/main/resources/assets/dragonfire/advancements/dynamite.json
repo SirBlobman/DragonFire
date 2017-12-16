@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "item": "dragonfire:bat_wing"
+            "item": "dragonfire:dynamite"
         },
         "title": {
-            "translate": "advancements.dragonfire.obtain_bat_wing.title"
+            "translate": "dragonfire.advancements.dynamite.title"
         },
         "description": {
-            "translate": "advancements.dragonfire.obtain_bat_wing.description"
-        }
+            "translate": "dragonfire.advancements.dynamite.description"
+
     },
-    "parent": "dragonfire:root",
+    "parent": "dragonfire/dynamite",
     "criteria": {
-        "blaze_rod": {
+        "dragon_egg": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:bat_wing"
+                        "item": "dragonfire:dynamite"
                     }
                 ]
             }

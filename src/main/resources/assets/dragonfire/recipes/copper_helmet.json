@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "E E"
+  ],
+  "key": {
+    "E": {"item": "dragonfire:copper_ingot"},
+  },
+  "result": {
+    "item": "dragonfire:copper_helmet",
+    "count": 1
+  }
+}

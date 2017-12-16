@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "E": {"item": "minecraft:copper_ingot"},
+    "S": {"item": "minecraft:stick"}
+  },
+  "result": {
+    "item": "dragonfire:copper_pickaxe",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "E E"
+  ],
+  "key": {
+    "E": {"item": "minecraft:emerald"},
+  },
+  "result": {
+    "item": "dragonfire:emerald_helmet",
+    "count": 1
+  }
+}

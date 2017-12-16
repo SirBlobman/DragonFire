@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "item": "dragonfire:mummy_rag"
+            "item": "dragonfire:ender_bow"
         },
         "title": {
-            "translate": "advancements.dragonfire.obtain_mummy_rag.title"
+            "translate": "dragonfire.advancements.ender_bow.title"
         },
         "description": {
-            "translate": "advancements.dragonfire.obtain_mummy_rag.description"
-        }
+            "translate": "dragonfire.advancements.ender_bow.description"
+
     },
-    "parent": "dragonfire:root",
+    "parent": "dragonfire/root",
     "criteria": {
-        "blaze_rod": {
+        "dragon_egg": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "dragonfire:mummy_rag"
+                        "item": "dragonfire:ender_bow"
                     }
                 ]
             }

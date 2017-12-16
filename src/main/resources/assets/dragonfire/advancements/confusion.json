@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "dragonfire:beer"
+        },
+        "title": {
+            "translate": "advancements.dragonfire.confusion.title"
+        },
+        "description": {
+            "translate": "advancements.dragonfire.confusion.description"
+        }
+    },
+    "parent": "dragonfire:root",
+    "criteria": {
+        "blaze_rod": {
+            "trigger": "minecraft:effects_changed",
+               "conditions": {
+                   "effects": {
+                       "dragonfire:confusion": {
+                           }
+                       }
+            }
+        }
+    }
+}
