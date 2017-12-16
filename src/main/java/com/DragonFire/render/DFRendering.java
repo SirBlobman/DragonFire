@@ -2,6 +2,10 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.tree.BlockDFLeaves;
+import com.DragonFire.block.tree.BlockDFLog;
+import com.DragonFire.block.tree.BlockDFPlanks;
+import com.DragonFire.block.tree.BlockDFSapling;
 import com.DragonFire.entity.living.EntityDraug;
 import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
@@ -12,14 +16,18 @@ import com.DragonFire.item.DFItems;
 import com.DragonFire.item.drink.QuickDrink;
 import com.DragonFire.item.tool.Dynamite;
 import com.DragonFire.render.entity.*;
+import com.DragonFire.utility.BlockUtil;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public final class DFRendering {
     public static void items() {
@@ -47,7 +55,7 @@ public final class DFRendering {
             DFItems.RAW_CALAMARI, DFItems.RAW_BACON,
             DFItems.FRIED_EGG, DFItems.COOKED_CALAMARI, DFItems.COOKED_BACON, 
             DFItems.PINEAPPLE_SLICE, DFItems.CHOCOLATE_BAR, DFItems.CHEESE, DFItems.SLIME_JELLY, DFItems.SANDWICH, DFItems.SUGAR_COOKIE,
-            DFItems.APPLE_PIE, DFItems.SEA_WEED, DFItems.DRIED_SEA_WEED
+            DFItems.APPLE_PIE, DFItems.SEA_WEED, DFItems.DRIED_SEA_WEED, DFItems.CHERRY
         );
         
         //Drinks
@@ -63,7 +71,7 @@ public final class DFRendering {
         reg(DFItems.RECORD_DOG);
     }
     
-    public static void specialItems() {
+    public static void special() {
         reg(DFItems.GLASS_FRAGMENT, 0, "glass_fragment/black");
         reg(DFItems.GLASS_FRAGMENT, 1, "glass_fragment/red");
         reg(DFItems.GLASS_FRAGMENT, 2, "glass_fragment/green");
@@ -82,6 +90,11 @@ public final class DFRendering {
         reg(DFItems.GLASS_FRAGMENT, 15, "glass_fragment/white");
         reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
         reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
+        
+        reg(DFBlocks.DRAGONFIRE_LOG, 0, "block/tree/cherry_log");
+        reg(DFBlocks.DRAGONFIRE_LEAVES, 0, "block/tree/cherry_leaves");
+        reg(DFBlocks.DRAGONFIRE_SAPLING, 0, "block/tree/cherry_sapling");
+        reg(DFBlocks.DRAGONFIRE_PLANKS, 0, "block/tree/cherry_planks");
     }
     
     public static void blocks() {
@@ -127,6 +140,11 @@ public final class DFRendering {
         }
     }
     
+    private static void reg(Block b, int meta, String name) {
+        Item ib = Item.getItemFromBlock(b);
+        reg(ib, meta, name);
+    }
+    
     private static void reg(Item i, int meta, String name) {
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, name);
         ModelResourceLocation mrl = new ModelResourceLocation(rl, "inventory");
@@ -149,5 +167,13 @@ public final class DFRendering {
         else if(i instanceof ItemFood) return true;
         else if(i instanceof QuickDrink) return true;
         else return false;
+    }
+    
+    @SubscribeEvent
+    public void customBlockStates(ModelRegistryEvent e) {
+        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_LEAVES, BlockUtil.buildStateMap(BlockDFLeaves.TYPE, "_leaves", BlockLeaves.DECAYABLE, BlockLeaves.CHECK_DECAY));
+        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_LOG, BlockUtil.buildStateMap(BlockDFLog.TYPE, "_log"));
+        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_PLANKS, BlockUtil.buildStateMap(BlockDFPlanks.TYPE, "_planks"));
+        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
     }
 }

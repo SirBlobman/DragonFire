@@ -6,6 +6,10 @@ import com.DragonFire.block.item.QuickItemBlock;
 import com.DragonFire.block.item.QuickItemFuelBlock;
 import com.DragonFire.block.ore.QuickOre;
 import com.DragonFire.block.tile.BlockNetherBrickFurnace;
+import com.DragonFire.block.tree.BlockDFLeaves;
+import com.DragonFire.block.tree.BlockDFLog;
+import com.DragonFire.block.tree.BlockDFPlanks;
+import com.DragonFire.block.tree.BlockDFSapling;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -39,6 +43,12 @@ public final class DFBlocks {
     public static final QuickOre NETHER_GOLD_ORE = new QuickOre("nether_gold", "dragonfire:nether_gold_ore", 3.0F, 10.0F, 2);
     public static final QuickBlock CHARCOAL_BLOCK = new QuickBlock("charcoal_block", Material.ROCK, 5.0F, 10.0F, "pickaxe", 0);
 
+    //Plants
+    public static final BlockDFLeaves DRAGONFIRE_LEAVES = new BlockDFLeaves();
+    public static final BlockDFLog DRAGONFIRE_LOG = new BlockDFLog();
+    public static final BlockDFPlanks DRAGONFIRE_PLANKS = new BlockDFPlanks();
+    public static final BlockDFSapling DRAGONFIRE_SAPLING = new BlockDFSapling();
+
     //Item Blocks
     public static final ItemBlock ITEM_MUMMY_HEAD = new ItemMummyHead();
     public static final ItemBlock ITEM_CHOCOLATE_CAKE = new QuickItemBlock(CHOCOLATE_CAKE);
@@ -53,7 +63,11 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_NETHER_GOLD_ORE = new QuickItemBlock(NETHER_GOLD_ORE);
     public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemFuelBlock(CHARCOAL_BLOCK, 16000);
     public static final ItemBlock ITEM_RADIOACTIVE_MUSHROOM = new QuickItemBlock(RADIOACTIVE_MUSHROOM);
-
+    public static final ItemBlock ITEM_DRAGONFIRE_LEAVES = new QuickItemBlock(DRAGONFIRE_LEAVES);
+    public static final ItemBlock ITEM_DRAGONFIRE_LOG = new QuickItemBlock(DRAGONFIRE_LOG);
+    public static final ItemBlock ITEM_DRAGONFIRE_PLANKS = new QuickItemBlock(DRAGONFIRE_PLANKS);
+    public static final ItemBlock ITEM_DRAGONFIRE_SAPLING = new QuickItemBlock(DRAGONFIRE_SAPLING);
+    
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
         ifr.registerAll(MUMMY_HEAD);
@@ -72,6 +86,9 @@ public final class DFBlocks {
         
         //Other
         ifr.registerAll(ENDER_PEARL_BLOCK, OBSIDIAN_GLASS, RADIOACTIVE_MUSHROOM);
+        
+        //Wood
+        ifr.registerAll(DRAGONFIRE_LEAVES, DRAGONFIRE_LOG, DRAGONFIRE_PLANKS, DRAGONFIRE_SAPLING);
     }
 
     public static void register2(IForgeRegistry<Item> ifr) {
@@ -81,7 +98,8 @@ public final class DFBlocks {
             ITEM_PLAYER_PLATE, ITEM_NUCLEAR_TNT,
             ITEM_NETHER_BRICK_FURNACE,
             ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE, ITEM_CHARCOAL_BLOCK,
-            ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS, ITEM_RADIOACTIVE_MUSHROOM
+            ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS, ITEM_RADIOACTIVE_MUSHROOM,
+            ITEM_DRAGONFIRE_LEAVES, ITEM_DRAGONFIRE_LOG, ITEM_DRAGONFIRE_PLANKS, ITEM_DRAGONFIRE_SAPLING
         );
     }
 }

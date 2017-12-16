@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y": {"model": "dragonfire:tree/cherry_log"},
+    "axis=z": {"model": "dragonfire:tree/cherry_log", "x": 90},
+    "axis=x": {"model": "dragonfire:tree/cherry_log", "x": 90, "y": 90},
+    "axis=none": {"model": "dragonfire:tree/cherry_bark"}
+  }
+}

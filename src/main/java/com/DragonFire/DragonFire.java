@@ -6,6 +6,7 @@ import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
 import com.DragonFire.network.DragonFirePacketHandler;
 import com.DragonFire.proxy.Common;
+import com.DragonFire.render.DFRendering;
 import com.DragonFire.utility.Util;
 
 import java.io.File;
@@ -53,7 +54,8 @@ public class DragonFire {
     public void pre(FMLPreInitializationEvent e) {
         FOLDER = e.getModConfigurationDirectory();
         DFConfig.load();
-        Util.regEvents(this, 
+        Util.regEvents(this,
+            new DFRendering(),
             new ListenCustomEvents(),
             new ListenCustomDrops(),
             new ListenCustomEnchants(),

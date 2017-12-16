@@ -90,6 +90,7 @@ public final class DFItems {
     public static final QuickFood APPLE_PIE = new QuickFood("apple_pie", 9, 4.8F, false);
     public static final QuickFood SEA_WEED = new QuickFood("sea_weed", 1, 0.1F, false);
     public static final QuickFood DRIED_SEA_WEED = new QuickFood("dried_sea_weed", 2, 0.2F, false);
+    public static final QuickFood CHERRY = new QuickFood("cherry", 1, 0.1F, false);
     
     //Drink
     public static final Beer BEER = new Beer();
@@ -133,7 +134,7 @@ public final class DFItems {
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
             PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE, SLIME_JELLY, SANDWICH, SUGAR_COOKIE,
-            APPLE_PIE, SEA_WEED, DRIED_SEA_WEED
+            APPLE_PIE, SEA_WEED, DRIED_SEA_WEED, CHERRY
         );
         
         //Drinks
