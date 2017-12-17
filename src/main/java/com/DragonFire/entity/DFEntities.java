@@ -5,6 +5,7 @@ import static com.DragonFire.utility.Util.getRGB;
 import com.DragonFire.DragonFire;
 import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityJungleSpider;
 import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.living.EntityTiki;
 import com.DragonFire.entity.projectile.*;
@@ -14,9 +15,9 @@ import java.util.Set;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLiving.SpawnPlacementType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.EntityLiving.SpawnPlacementType;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityIllusionIllager;
 import net.minecraft.entity.monster.EntityIronGolem;
@@ -41,6 +42,7 @@ public final class DFEntities {
         reg("draug", EntityDraug.class, getRGB(92, 143, 120), getRGB(146, 212, 223));
         reg("tiki", EntityTiki.class, getRGB(127, 51, 0), getRGB(0, 127, 0));
         reg("custom_boat", EntityCustomBoat.class);
+        reg("jungle_spider", EntityJungleSpider.class, getRGB(59, 71, 46), getRGB(184, 57, 7));
         
         //Extra Eggs
         regEgg(EntityIronGolem.class, getRGB(225, 221, 219), getRGB(191, 162, 142));

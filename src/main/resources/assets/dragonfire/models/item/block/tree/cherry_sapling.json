@@ -1,1 +1,6 @@
-{"parent": "dragonfire:block/tree/cherry_sapling"}
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonfire:blocks/tree/sapling_cherry"
+  }
+}

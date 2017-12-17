@@ -8,6 +8,7 @@ public final class DFLootTables {
     public static ResourceLocation MUMMY = register("mummy");
     public static ResourceLocation DRAUG = register("draug");
     public static ResourceLocation NETHER_FISHING = register("fishing", "nether_fishing");
+    public static final ResourceLocation JUNGLE_SPIDER = register("jungle_spider");
     
     private static ResourceLocation register(String name) {return register("entities", name);}
     private static ResourceLocation register(String path, String name) {

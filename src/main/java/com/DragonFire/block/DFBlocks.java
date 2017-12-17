@@ -74,7 +74,7 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_CHARCOAL_BLOCK = new QuickItemFuelBlock(CHARCOAL_BLOCK, 16000);
     public static final ItemBlock ITEM_RADIOACTIVE_MUSHROOM = new QuickItemBlock(RADIOACTIVE_MUSHROOM);
     
-    public static final ItemBlock ITEM_LEAVES = new TreeItemBlock(LEAVES, "leaves");
+    public static final ItemBlock ITEM_LEAVES = new LeavesItemBlock(LEAVES);
     public static final ItemBlock ITEM_LOG = new TreeItemBlock(LOG, "log");
     public static final ItemBlock ITEM_PLANKS = new TreeItemBlock(PLANKS, "planks");
     public static final ItemBlock ITEM_SAPLING = new TreeItemBlock(SAPLING, "sapling");

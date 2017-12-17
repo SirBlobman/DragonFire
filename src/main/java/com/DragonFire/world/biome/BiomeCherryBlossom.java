@@ -12,6 +12,9 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class BiomeCherryBlossom extends Biome {
+    public static final int GRASS_COLOR = Util.getRGB(55, 183, 63);
+    public static final int LEAVES_COLOR = Util.getRGB(255, 127, 255);
+    
     public BiomeCherryBlossom(BiomeProperties properties) {
         super(properties);
         setRegistryName("cherry_blossom");
@@ -28,13 +31,11 @@ public class BiomeCherryBlossom extends Biome {
     
     @Override
     public int getGrassColorAtPos(BlockPos bp) {
-        int color = Util.getRGB(55, 183, 63);
-        return color;
+        return GRASS_COLOR;
     }
     
     @Override
     public int getFoliageColorAtPos(BlockPos bp) {
-        int color = Util.getRGB(255, 127, 255);
-        return color;
+        return LEAVES_COLOR;
     }
 }

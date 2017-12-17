@@ -1,6 +1,7 @@
 package com.DragonFire.proxy;
 
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.item.LeavesItemBlock;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
@@ -42,7 +43,6 @@ public class Client extends Common {
     @Override
     public void init(FMLInitializationEvent e) {
         super.init(e);
-        //Potion Cookie Effects
         Minecraft mc = Minecraft.getMinecraft();
         ItemColors ic = mc.getItemColors();
         BlockColors bc = mc.getBlockColors();
@@ -69,6 +69,17 @@ public class Client extends Common {
                 } else return -1;
             }
         }, DFItems.DYABLE_BACKPACK);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                Item item = is.getItem();
+                if(item == DFBlocks.ITEM_LEAVES) {
+                    LeavesItemBlock leaves = (LeavesItemBlock) item;
+                    return leaves.getColor(is);
+                } else return -1;
+            }
+        }, DFBlocks.ITEM_LEAVES);
         
         bc.registerBlockColorHandler(new IBlockColor() {
             @Override
