@@ -139,7 +139,7 @@ public class BlockDFWoodFenceGate extends BlockHorizontal {
             if(ibs.getValue(POWERED) != flag) {
                 world.setBlockState(bp, ibs.withProperty(POWERED, flag).withProperty(OPEN, flag), 2);
                 if(ibs.getValue(OPEN) != flag) {
-                    world.playEvent(null, flag ? 1008 : 1024, bp, 0);
+                    world.playEvent(null, flag ? 1008 : 1014, bp, 0);
                 }
             }
         }

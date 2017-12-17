@@ -68,7 +68,7 @@ public final class DFRendering {
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
         
         //Other
-        reg(DFItems.RECORD_DOG);
+        reg(DFItems.RECORD_DOG, DFItems.CHERRY_BOAT);
     }
     
     public static void special() {
@@ -96,6 +96,10 @@ public final class DFRendering {
         reg(DFBlocks.SAPLING, 0, "block/tree/cherry_sapling");
         reg(DFBlocks.PLANKS, 0, "block/tree/cherry_planks");
         reg(DFBlocks.WOODEN_SLAB, 0, "block/tree/cherry_slab");
+        reg(DFBlocks.CHERRY_STAIRS, 0, "block/tree/cherry_wooden_stairs");
+        reg(DFBlocks.ITEM_CHERRY_DOOR, 0, "block/tree/cherry_wood_door");
+        reg(DFBlocks.CHERRY_FENCE, 0, "block/tree/cherry_fence");
+        reg(DFBlocks.CHERRY_FENCE_GATE, 0, "block/tree/cherry_fence_gate");
     }
     
     public static void blocks() {
@@ -105,8 +109,7 @@ public final class DFRendering {
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
             DFBlocks.NETHER_BRICK_FURNACE,
             DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE, DFBlocks.CHARCOAL_BLOCK,
-            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS, DFBlocks.RADIOACTIVE_MUSHROOM,
-            DFBlocks.CHERRY_STAIRS, DFBlocks.CHERRY_FENCE, DFBlocks.CHERRY_FENCE_GATE, DFBlocks.CHERRY_DOOR
+            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS, DFBlocks.RADIOACTIVE_MUSHROOM
         );
     }
     

@@ -15,7 +15,7 @@ public class BiomeCherryBlossom extends Biome {
     public BiomeCherryBlossom(BiomeProperties properties) {
         super(properties);
         setRegistryName("cherry_blossom");
-        this.decorator.treesPerChunk = 10;
+        this.decorator.treesPerChunk = 1;
         this.decorator.grassPerChunk = 2;
         this.spawnableCreatureList.add(new SpawnListEntry(EntityWolf.class, 5, 4, 4));
     }
@@ -28,7 +28,13 @@ public class BiomeCherryBlossom extends Biome {
     
     @Override
     public int getGrassColorAtPos(BlockPos bp) {
-        int pink = Util.getRGB(255, 0, 110);
-        return pink;
+        int color = Util.getRGB(119, 211, 57);
+        return color;
+    }
+    
+    @Override
+    public int getFoliageColorAtPos(BlockPos bp) {
+        int color = Util.getRGB(255, 181, 216);
+        return color;
     }
 }
