@@ -28,13 +28,13 @@ public class BiomeCherryBlossom extends Biome {
     
     @Override
     public int getGrassColorAtPos(BlockPos bp) {
-        int color = Util.getRGB(119, 211, 57);
+        int color = Util.getRGB(55, 183, 63);
         return color;
     }
     
     @Override
     public int getFoliageColorAtPos(BlockPos bp) {
-        int color = Util.getRGB(255, 181, 216);
+        int color = Util.getRGB(255, 127, 255);
         return color;
     }
 }
