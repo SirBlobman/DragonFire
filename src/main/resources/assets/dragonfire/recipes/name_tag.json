@@ -7,8 +7,9 @@
   ],
   "key": {
     "L": {"item": "minecraft:leather"},
-   "S": {"item": "minecraft:string"},
-    "I": {"item": "minecraft:iron_ingot"}
+    "S": {"item": "minecraft:string"},
+    "I": {"item": "minecraft:iron_ingot"},
+    "P": {"item": "minecraft:paper"}
   },
   "result": {
     "item": "minecraft:name_tag",

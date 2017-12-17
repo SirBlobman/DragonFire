@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=bottom": {"model": "dragonfire:tree/cherry_half_slab"},
+    "half=top": {"model": "dragonfire:tree/cherry_upper_slab"}
+  }
+}

@@ -7,6 +7,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -61,5 +62,10 @@ public class Server extends Common {
     @Override
     public void sounds(IForgeRegistry<SoundEvent> ifr) {
         super.sounds(ifr);
+    }
+    
+    @Override
+    public void biomes(IForgeRegistry<Biome> ifr) {
+        super.biomes(ifr);
     }
 }

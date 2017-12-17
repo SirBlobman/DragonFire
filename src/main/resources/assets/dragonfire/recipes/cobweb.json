@@ -6,8 +6,8 @@
 	"SSS"
   ],
   "key": {
-    "E": {"item": "minecraft:string"},
-	 "B": {"item": "minecraft:slimeball"},
+    "S": {"item": "minecraft:string"},
+	"B": {"item": "minecraft:slime_ball"}
   },
   "result": {
     "item": "minecraft:cobweb",

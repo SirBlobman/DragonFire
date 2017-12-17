@@ -18,6 +18,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -124,5 +125,11 @@ public class DragonFire {
     public void sounds(Register<SoundEvent> e) {
         IForgeRegistry<SoundEvent> ifr = e.getRegistry();
         proxy.sounds(ifr);
+    }
+    
+    @SubscribeEvent
+    public void biomes(Register<Biome> e) {
+        IForgeRegistry<Biome> ifr = e.getRegistry();
+        proxy.biomes(ifr);
     }
 }

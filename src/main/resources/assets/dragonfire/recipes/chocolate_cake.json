@@ -9,7 +9,7 @@
     "C": {"item": "dragonfire:chocolate_bar"},
     "E": {"item": "minecraft:egg"},
     "M": {"item": "minecraft:milk_bucket"},
-	"M": {"item": "minecraft:sugar"},
+	"S": {"item": "minecraft:sugar"},
     "W": {"item": "minecraft:wheat"}
   },
   "result": {

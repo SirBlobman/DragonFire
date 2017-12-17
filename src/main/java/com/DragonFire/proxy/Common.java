@@ -14,6 +14,7 @@ import com.DragonFire.potion.type.DFPotionTypes;
 import com.DragonFire.recipe.DFRecipes;
 import com.DragonFire.sound.DFSoundHandler;
 import com.DragonFire.world.DragonFireWorldGen;
+import com.DragonFire.world.biome.DFBiomes;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -22,6 +23,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -76,5 +78,9 @@ public class Common {
 
     public void sounds(IForgeRegistry<SoundEvent> ifr) {
         DFSoundHandler.register(ifr);
+    }
+
+    public void biomes(IForgeRegistry<Biome> ifr) {
+        DFBiomes.register(ifr);
     }
 }

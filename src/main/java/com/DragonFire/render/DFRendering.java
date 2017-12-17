@@ -6,6 +6,8 @@ import com.DragonFire.block.tree.BlockDFLeaves;
 import com.DragonFire.block.tree.BlockDFLog;
 import com.DragonFire.block.tree.BlockDFPlanks;
 import com.DragonFire.block.tree.BlockDFSapling;
+import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
+import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.living.EntityDraug;
 import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
@@ -91,10 +93,11 @@ public final class DFRendering {
         reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
         reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
         
-        reg(DFBlocks.DRAGONFIRE_LOG, 0, "block/tree/cherry_log");
-        reg(DFBlocks.DRAGONFIRE_LEAVES, 0, "block/tree/cherry_leaves");
-        reg(DFBlocks.DRAGONFIRE_SAPLING, 0, "block/tree/cherry_sapling");
-        reg(DFBlocks.DRAGONFIRE_PLANKS, 0, "block/tree/cherry_planks");
+        reg(DFBlocks.LOG, 0, "block/tree/cherry_log");
+        reg(DFBlocks.LEAVES, 0, "block/tree/cherry_leaves");
+        reg(DFBlocks.SAPLING, 0, "block/tree/cherry_sapling");
+        reg(DFBlocks.PLANKS, 0, "block/tree/cherry_planks");
+        reg(DFBlocks.WOODEN_SLAB, 0, "block/tree/cherry_slab");
     }
     
     public static void blocks() {
@@ -104,7 +107,8 @@ public final class DFRendering {
             DFBlocks.PLAYER_PLATE, DFBlocks.NUCLEAR_TNT,
             DFBlocks.NETHER_BRICK_FURNACE,
             DFBlocks.COPPER_ORE, DFBlocks.COPPER_BLOCK, DFBlocks.NETHER_GOLD_ORE, DFBlocks.CHARCOAL_BLOCK,
-            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS, DFBlocks.RADIOACTIVE_MUSHROOM
+            DFBlocks.ENDER_PEARL_BLOCK, DFBlocks.OBSIDIAN_GLASS, DFBlocks.RADIOACTIVE_MUSHROOM,
+            DFBlocks.CHERRY_STAIRS, DFBlocks.CHERRY_FENCE, DFBlocks.CHERRY_FENCE_GATE, DFBlocks.CHERRY_DOOR
         );
     }
     
@@ -115,6 +119,7 @@ public final class DFRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, RenderDynamite::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityExplosiveArrow.class, RenderExplosiveArrow::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDraug.class, RenderDraug::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityCustomBoat.class, RenderCustomBoat::new);
     }
     
     private static void reg(Block... bb) {
@@ -171,9 +176,11 @@ public final class DFRendering {
     
     @SubscribeEvent
     public void customBlockStates(ModelRegistryEvent e) {
-        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_LEAVES, BlockUtil.buildStateMap(BlockDFLeaves.TYPE, "_leaves", BlockLeaves.DECAYABLE, BlockLeaves.CHECK_DECAY));
-        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_LOG, BlockUtil.buildStateMap(BlockDFLog.TYPE, "_log"));
-        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_PLANKS, BlockUtil.buildStateMap(BlockDFPlanks.TYPE, "_planks"));
-        ModelLoader.setCustomStateMapper(DFBlocks.DRAGONFIRE_SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
+        ModelLoader.setCustomStateMapper(DFBlocks.LEAVES, BlockUtil.buildStateMap(BlockDFLeaves.TYPE, "_leaves", BlockLeaves.DECAYABLE, BlockLeaves.CHECK_DECAY));
+        ModelLoader.setCustomStateMapper(DFBlocks.LOG, BlockUtil.buildStateMap(BlockDFLog.TYPE, "_log"));
+        ModelLoader.setCustomStateMapper(DFBlocks.PLANKS, BlockUtil.buildStateMap(BlockDFPlanks.TYPE, "_planks"));
+        ModelLoader.setCustomStateMapper(DFBlocks.SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
+        ModelLoader.setCustomStateMapper(DFBlocks.WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_slab"));
+        ModelLoader.setCustomStateMapper(DFBlocks.DOUBLE_WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_double_slab"));
     }
 }

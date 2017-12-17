@@ -6,7 +6,7 @@
     " S "
   ],
   "key": {
-    "E": {"item": "minecraft:copper_ingot"},
+    "E": {"item": "dragonfire:copper_ingot"},
     "S": {"item": "minecraft:stick"}
   },
   "result": {

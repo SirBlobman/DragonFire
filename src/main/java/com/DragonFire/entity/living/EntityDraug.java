@@ -35,7 +35,6 @@ public class EntityDraug extends AbstractSkeleton {
 
     @Override
     public void initEntityAI() {
-        tasks.addTask(1, new EntityAISwimming(this));
         tasks.addTask(2, new EntityAIRestrictSun(this));
         tasks.addTask(3, new EntityAIFleeSun(this, 1.0D));
         tasks.addTask(3, new EntityAIAvoidEntity<>(this, EntityWolf.class, 6.0F, 1.0D, 1.2D));

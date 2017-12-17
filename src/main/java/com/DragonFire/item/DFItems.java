@@ -1,9 +1,11 @@
 package com.DragonFire.item;
 
+import com.DragonFire.entity.custom.EntityCustomBoat.Type;
 import com.DragonFire.item.armor.QuickArmor;
 import com.DragonFire.item.armor.RabbitBoots;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.custom.GlassFragment;
+import com.DragonFire.item.custom.ItemCustomBoat;
 import com.DragonFire.item.custom.QuickItem;
 import com.DragonFire.item.custom.QuickRecord;
 import com.DragonFire.item.drink.Beer;
@@ -108,6 +110,7 @@ public final class DFItems {
     //Other Stuff
     public static final GlassFragment GLASS_FRAGMENT = new GlassFragment();
     public static final ItemRecord RECORD_DOG = new QuickRecord("dog", DFSoundHandler.RECORD_DOG);
+    public static final ItemCustomBoat CHERRY_BOAT = new ItemCustomBoat(Type.CHERRY);
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor

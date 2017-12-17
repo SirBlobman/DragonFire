@@ -1,5 +1,5 @@
 {
-  "parent": "block/leaveS",
+  "parent": "block/leaves",
   "textures": {
     "all": "dragonfire:blocks/tree/leaves_cherry"
   }

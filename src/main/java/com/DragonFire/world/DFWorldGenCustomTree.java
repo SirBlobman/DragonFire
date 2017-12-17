@@ -20,8 +20,8 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
     private final IBlockState LOG, LEAF;
     public DFWorldGenCustomTree(boolean notify, DFWoodType type) {
         super(notify);
-        this.LOG  = DFBlocks.DRAGONFIRE_LOG.getDefaultState().withProperty(BlockDFLog.TYPE, type);
-        this.LEAF = DFBlocks.DRAGONFIRE_LEAVES.getDefaultState().withProperty(BlockDFLeaves.TYPE, type);
+        this.LOG  = DFBlocks.LOG.getDefaultState().withProperty(BlockDFLog.TYPE, type);
+        this.LEAF = DFBlocks.LEAVES.getDefaultState().withProperty(BlockDFLeaves.TYPE, type);
     }
     
     @Override

@@ -25,7 +25,6 @@ public class BlockDFLeaves extends BlockLeaves {
     public BlockDFLeaves() {
         super();
         setRegistryName("leaves");
-        setUnlocalizedName("dragonfire.leaves");
     }
     
     @Override
