@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "dragonfire:blocks/tree/door_lower_cherry",
+    "top": "dragonfire:blocks/tree/door_upper_cherry"
+  }
+}

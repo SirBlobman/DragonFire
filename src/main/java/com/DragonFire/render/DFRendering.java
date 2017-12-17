@@ -2,10 +2,7 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.block.tree.BlockDFLeaves;
-import com.DragonFire.block.tree.BlockDFLog;
-import com.DragonFire.block.tree.BlockDFPlanks;
-import com.DragonFire.block.tree.BlockDFSapling;
+import com.DragonFire.block.tree.*;
 import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
 import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.living.EntityDraug;
@@ -21,6 +18,7 @@ import com.DragonFire.render.entity.*;
 import com.DragonFire.utility.BlockUtil;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
@@ -182,5 +180,7 @@ public final class DFRendering {
         ModelLoader.setCustomStateMapper(DFBlocks.SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
         ModelLoader.setCustomStateMapper(DFBlocks.WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_slab"));
         ModelLoader.setCustomStateMapper(DFBlocks.DOUBLE_WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_double_slab"));
+        ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
+        ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
     }
 }

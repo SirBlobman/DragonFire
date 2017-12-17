@@ -3,10 +3,10 @@ package com.DragonFire.render.entity;
 import com.DragonFire.DragonFire;
 import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.custom.EntityCustomBoat.Type;
+import com.DragonFire.render.entity.model.ModelCustomBoat;
 
 import net.minecraft.client.model.IMultipassModel;
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelBoat;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderCustomBoat extends Render<EntityCustomBoat> {
     /** instance of ModelBoat for rendering */
-    protected ModelBase modelBoat = new ModelBoat();
+    protected ModelBase modelBoat = new ModelCustomBoat();
 
     public RenderCustomBoat(RenderManager renderManagerIn) {
         super(renderManagerIn);
@@ -76,7 +76,7 @@ public class RenderCustomBoat extends Render<EntityCustomBoat> {
      * you call Render.bindEntityTexture.
      */
     protected ResourceLocation getEntityTexture(EntityCustomBoat entity) {
-        Type type = entity.getBoatType();
+        Type type = entity.getCustomBoatType();
         String name = type.getName();
         String path = "textures/entity/boat_" + name + ".png";
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, path);

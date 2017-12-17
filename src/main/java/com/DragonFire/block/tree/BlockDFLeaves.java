@@ -1,6 +1,9 @@
 package com.DragonFire.block.tree;
 
+import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;
+
+import java.util.Random;
 
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks.EnumType;
@@ -34,6 +37,12 @@ public class BlockDFLeaves extends BlockLeaves {
             ItemStack is = new ItemStack(DFItems.CHERRY);
             spawnAsEntity(world, bp, is);
         }
+    }
+    
+    @Override
+    public Item getItemDropped(IBlockState ibs, Random rand, int fortune) {
+        Item item = Item.getItemFromBlock(DFBlocks.SAPLING);
+        return item;
     }
     
     @Override

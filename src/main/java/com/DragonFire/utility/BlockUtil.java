@@ -14,4 +14,11 @@ public class BlockUtil extends Util {
         StateMap sm = builder.build();
         return sm;
     }
+    
+    public static IStateMapper buildIgnoreMap(IProperty<?>... ignore) {
+        Builder builder = new Builder();
+        if(ignore != null && ignore.length > 0) builder = builder.ignore(ignore);
+        StateMap sm = builder.build();
+        return sm;
+    }
 }

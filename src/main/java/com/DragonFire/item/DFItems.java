@@ -150,6 +150,6 @@ public final class DFItems {
         ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
         
         //Other Stuff
-        ifr.registerAll(GLASS_FRAGMENT, RECORD_DOG);
+        ifr.registerAll(GLASS_FRAGMENT, RECORD_DOG, CHERRY_BOAT);
     }
 }

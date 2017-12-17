@@ -9,6 +9,7 @@ public class WoodDoorItemBlock extends ItemDoor {
     public WoodDoorItemBlock(BlockDoor door) {
         super(door);
         setRegistryName(door.getRegistryName());
+        setUnlocalizedName(door.getUnlocalizedName());
         setCreativeTab(DFTabs.DRAGONFIRE);
     }
 }

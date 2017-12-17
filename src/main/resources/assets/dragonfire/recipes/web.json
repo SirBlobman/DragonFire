@@ -10,7 +10,7 @@
 	"B": {"item": "minecraft:slime_ball"}
   },
   "result": {
-    "item": "minecraft:cobweb",
+    "item": "minecraft:web",
     "count": 3
   }
 }

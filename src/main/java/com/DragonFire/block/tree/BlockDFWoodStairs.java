@@ -3,6 +3,8 @@ package com.DragonFire.block.tree;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.creative.DFTabs;
 
+import org.apache.commons.lang3.StringUtils;
+
 import net.minecraft.block.BlockStairs;
 
 public class BlockDFWoodStairs extends BlockStairs {
@@ -10,7 +12,7 @@ public class BlockDFWoodStairs extends BlockStairs {
         super(DFBlocks.PLANKS.getDefaultState().withProperty(BlockDFPlanks.TYPE, wood));
         this.useNeighborBrightness = true;
         setRegistryName(wood.getName() + "_wooden_stairs");
-        setUnlocalizedName("stairsWood");
+        setUnlocalizedName("stairsWood" + StringUtils.capitalize(wood.getName()));
         setCreativeTab(DFTabs.DRAGONFIRE);
     }
 }

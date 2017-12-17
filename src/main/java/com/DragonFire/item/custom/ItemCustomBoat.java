@@ -81,7 +81,7 @@ public class ItemCustomBoat extends Item {
                 boolean flag1 = block == Blocks.WATER || block == Blocks.FLOWING_WATER;
                 EntityCustomBoat entityboat = new EntityCustomBoat(worldIn, raytraceresult.hitVec.x,
                         flag1 ? raytraceresult.hitVec.y - 0.12D : raytraceresult.hitVec.y, raytraceresult.hitVec.z);
-                entityboat.setBoatType(this.type);
+                entityboat.setCustomBoatType(this.type);
                 entityboat.rotationYaw = playerIn.rotationYaw;
 
                 if (!worldIn.getCollisionBoxes(entityboat, entityboat.getEntityBoundingBox().grow(-0.1D)).isEmpty()) {

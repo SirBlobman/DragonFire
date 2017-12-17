@@ -36,7 +36,7 @@ public class BlockDFWoodFenceGate extends BlockHorizontal {
     
     public BlockDFWoodFenceGate(DFWoodType wood) {
         super(Material.WOOD, wood.getMapColor());
-        setRegistryName("wooden_fence_gate");
+        setRegistryName(wood.getName() + "_fence_gate");
         setUnlocalizedName(wood.getName() + "_fence_gate");
         setDefaultState(blockState.getBaseState().withProperty(OPEN, false).withProperty(POWERED, false).withProperty(IN_WALL, false));
         setCreativeTab(DFTabs.DRAGONFIRE);
