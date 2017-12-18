@@ -4,6 +4,7 @@ import com.DragonFire.entity.loot.DFLootTables;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityCaveSpider;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
@@ -12,7 +13,17 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class EntityJungleSpider extends EntityCaveSpider {
-    public EntityJungleSpider(World world) {super(world);}
+    public EntityJungleSpider(World world) {
+        super(world);
+        setSize(0.35F, 0.25F);
+    }
+
+    @Override
+    public void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(10.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.6D);
+    }
     
     @Override
     public boolean attackEntityAsMob(Entity en) {

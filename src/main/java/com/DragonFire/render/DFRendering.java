@@ -6,6 +6,7 @@ import com.DragonFire.block.tree.*;
 import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
 import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.living.EntityDraug;
+import com.DragonFire.entity.living.EntityJungleSpider;
 import com.DragonFire.entity.living.EntityMummy;
 import com.DragonFire.entity.projectile.EntityDynamite;
 import com.DragonFire.entity.projectile.EntityEnderArrow;
@@ -121,6 +122,7 @@ public final class DFRendering {
         RenderingRegistry.registerEntityRenderingHandler(EntityExplosiveArrow.class, RenderExplosiveArrow::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDraug.class, RenderDraug::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityCustomBoat.class, RenderCustomBoat::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityJungleSpider.class, RenderJungleSpider::new);
     }
     
     private static void reg(Block... bb) {

@@ -143,6 +143,7 @@ itemGroup.DragonFire_Armor_and_Tools=§5§lDragonFire§r §eTools
 entity.mummy.name=Mummy
 entity.draug.name=Draug
 entity.tiki.name=Tiki
+entity.jungle_spider.name=Jungle Spider
 
 <Blocks>
 tile.mummy_head.name=Mummy Head

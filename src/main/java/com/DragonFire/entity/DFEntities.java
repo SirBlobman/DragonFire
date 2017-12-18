@@ -60,6 +60,9 @@ public final class DFEntities {
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 10);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 10);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WATER), 10);
+        
+        EntitySpawnPlacementRegistry.setPlacementType(EntityJungleSpider.class, SpawnPlacementType.ON_GROUND);
+        regSpawn(EntityJungleSpider.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.JUNGLE), 10);
     }
     
     private static int id = 0;
