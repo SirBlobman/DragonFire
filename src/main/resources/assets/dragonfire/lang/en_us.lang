@@ -145,6 +145,9 @@ entity.draug.name=Draug
 entity.tiki.name=Tiki
 entity.jungle_spider.name=Jungle Spider
 
+<Villagers>
+entity.Villager.musician=Musician
+
 <Blocks>
 tile.mummy_head.name=Mummy Head
 tile.ender_pearl_block.name=Ender Pearl Block
