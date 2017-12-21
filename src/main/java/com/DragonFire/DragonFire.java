@@ -2,6 +2,7 @@ package com.DragonFire;
 
 import com.DragonFire.command.CommandOreDictionary;
 import com.DragonFire.config.DFConfig;
+import com.DragonFire.item.DFItems;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
 import com.DragonFire.network.DragonFirePacketHandler;
@@ -10,14 +11,22 @@ import com.DragonFire.render.DFRendering;
 import com.DragonFire.utility.Util;
 
 import java.io.File;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.IMerchant;
+import net.minecraft.entity.passive.EntityVillager.ITradeList;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.village.MerchantRecipe;
+import net.minecraft.village.MerchantRecipeList;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +38,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerCareer;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerProfession;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod(modid = DragonFire.MODID, name = DragonFire.NAME, version = DragonFire.VERSION)
@@ -131,5 +142,23 @@ public class DragonFire {
     public void biomes(Register<Biome> e) {
         IForgeRegistry<Biome> ifr = e.getRegistry();
         proxy.biomes(ifr);
+    }
+    
+    @SubscribeEvent
+    public void villagerProfessions(Register<VillagerProfession> e) {
+        IForgeRegistry<VillagerProfession> ifr = e.getRegistry();
+        ResourceLocation rl = new ResourceLocation("minecraft", "librarian");
+        VillagerProfession librarian = ifr.getValue(rl);
+        VillagerCareer vc = new VillagerCareer(librarian, "musician");
+        vc.addTrade(1, new ITradeList() {
+            @Override
+            public void addMerchantRecipe(IMerchant im, MerchantRecipeList mrl, Random rand) {
+                ItemStack emeralds = new ItemStack(Items.EMERALD, rand.nextInt(5) + 1);
+                ItemStack dog_disc = new ItemStack(DFItems.RECORD_DOG, 1);
+                MerchantRecipe mr = new MerchantRecipe(emeralds, dog_disc);
+                mrl.add(mr);
+                im.setRecipes(mrl);
+            }
+        });
     }
 }
