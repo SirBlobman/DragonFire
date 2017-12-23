@@ -2,6 +2,7 @@ package com.DragonFire;
 
 import com.DragonFire.command.CommandOreDictionary;
 import com.DragonFire.config.DFConfig;
+import com.DragonFire.entity.living.villager.VillagerCareerMusician;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.listener.*;
 import com.DragonFire.network.DragonFirePacketHandler;
@@ -18,6 +19,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -28,6 +30,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerProfession;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod(modid = DragonFire.MODID, name = DragonFire.NAME, version = DragonFire.VERSION)
@@ -124,5 +127,17 @@ public class DragonFire {
     public void sounds(Register<SoundEvent> e) {
         IForgeRegistry<SoundEvent> ifr = e.getRegistry();
         proxy.sounds(ifr);
+    }
+    
+    @SubscribeEvent
+    public void biomes(Register<Biome> e) {
+        IForgeRegistry<Biome> ifr = e.getRegistry();
+        proxy.biomes(ifr);
+    }
+    
+    @SubscribeEvent
+    public void villagerProfessions(Register<VillagerProfession> e) {
+        VillagerCareerMusician vcm = new VillagerCareerMusician();
+        vcm.register();
     }
 }

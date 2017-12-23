@@ -1,12 +1,17 @@
 package com.DragonFire.proxy;
 
+import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.item.LeavesItemBlock;
 import com.DragonFire.item.DFItems;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.armor.backpack.KeyBindBackpack;
 import com.DragonFire.render.DFRendering;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.enchantment.Enchantment;
@@ -17,6 +22,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -34,9 +43,10 @@ public class Client extends Common {
     @Override
     public void init(FMLInitializationEvent e) {
         super.init(e);
-        //Potion Cookie Effects
         Minecraft mc = Minecraft.getMinecraft();
         ItemColors ic = mc.getItemColors();
+        BlockColors bc = mc.getBlockColors();
+        
         ic.registerItemColorHandler(new IItemColor() {
             @Override
             public int colorMultiplier(ItemStack is, int tint) {
@@ -59,6 +69,25 @@ public class Client extends Common {
                 } else return -1;
             }
         }, DFItems.DYABLE_BACKPACK);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                Item item = is.getItem();
+                if(item == DFBlocks.ITEM_LEAVES) {
+                    LeavesItemBlock leaves = (LeavesItemBlock) item;
+                    return leaves.getColor(is);
+                } else return -1;
+            }
+        }, DFBlocks.ITEM_LEAVES);
+        
+        bc.registerBlockColorHandler(new IBlockColor() {
+            @Override
+            public int colorMultiplier(IBlockState ibs, IBlockAccess world, BlockPos bp, int tint) {
+                int color = BiomeColorHelper.getFoliageColorAtPos(world, bp);
+                return color;
+            }
+        }, DFBlocks.LEAVES);
     }
     
     @Override
@@ -102,5 +131,10 @@ public class Client extends Common {
     @Override
     public void sounds(IForgeRegistry<SoundEvent> ifr) {
         super.sounds(ifr);
+    }
+    
+    @Override
+    public void biomes(IForgeRegistry<Biome> ifr) {
+        super.biomes(ifr);
     }
 }

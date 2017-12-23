@@ -5,7 +5,7 @@
     "E E"
   ],
   "key": {
-    "E": {"item": "minecraft:emerald"},
+    "E": {"item": "minecraft:emerald"}
   },
   "result": {
     "item": "dragonfire:emerald_helmet",

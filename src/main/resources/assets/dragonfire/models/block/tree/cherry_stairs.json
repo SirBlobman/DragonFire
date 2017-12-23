@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "dragonfire:blocks/tree/planks_cherry",
+        "top": "dragonfire:blocks/tree/planks_cherry",
+        "side": "dragonfire:blocks/tree/planks_cherry"
+    }
+}

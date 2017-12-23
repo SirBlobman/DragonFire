@@ -16,7 +16,6 @@ advancements.dragonfire.nuke_tnt.title=This Means War
 advancements.dragonfire.dynamite.title=Portable Bomb
 
 <Advancement Descriptions>
-
 advancements.dragonfire.kill_a_mummy.description=Kill a mummy
 advancements.dragonfire.ender_archer.description=Shoot an Ender Pearl Arrow at an Enderman
 advancements.dragonfire.confusion.description=Drink enough beer to get a confusion debuff
@@ -26,6 +25,7 @@ advancements.dragonfire.mushroom_pickaxe.description=Find a Mushroom Pickaxe
 advancements.dragonfire.ender_bow.description=Find an Ender Bow in a chest
 advancements.dragonfire.nuke_tnt.description=Craft a block of Nuclear TNT
 advancements.dragonfire.dynamite.description=Throw some dynamite and watch explode
+
 <Records> 
 item.record.dragonfire.dog.desc=C418 - Dog
 
@@ -143,6 +143,10 @@ itemGroup.DragonFire_Armor_and_Tools=§5§lDragonFire§r §eTools
 entity.mummy.name=Mummy
 entity.draug.name=Draug
 entity.tiki.name=Tiki
+entity.jungle_spider.name=Jungle Spider
+
+<Villagers>
+entity.Villager.musician=Musician
 
 <Blocks>
 tile.mummy_head.name=Mummy Head
@@ -155,6 +159,19 @@ tile.nuclear_tnt.name=Nuclear TNT
 tile.nether_brick_furnace.name=Nether Brick Furnace
 tile.charcoal_block.name=Charcoal Block
 tile.radioactive_mushroom.name= Poisonous Mushroom
+
+<Tree Stuff>
+tile.leaves.cherry.name=Cherry Leaves
+item.cherry.name=Cherries
+item.boat.cherry.name=Cherry Boat
+item.cherry_log.name=Cherry Log
+item.cherry_planks.name=Cherry Planks
+item.cherry_sapling.name=Cherry Sapling
+item.cherry_wooden_slab.name=Cherry Wooden Slab
+tile.stairsWoodCherry.name=Cherry Wooden Stairs
+tile.cherryFence.name=Cherry Fence
+tile.cherry_fence_gate.name=Cherry Fence Gate
+item.doorCherry.name=Cherry Door
 
 <Ores>
 tile.copper_ore.name=Copper Ore

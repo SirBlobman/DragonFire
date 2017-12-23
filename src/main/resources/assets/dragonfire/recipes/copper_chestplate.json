@@ -6,7 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {"item": "dragonfire:copper_ingot"},
+    "E": {"item": "dragonfire:copper_ingot"}
   },
   "result": {
     "item": "dragonfire:copper_chestplate",
