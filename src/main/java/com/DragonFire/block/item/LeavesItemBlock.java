@@ -1,6 +1,7 @@
 package com.DragonFire.block.item;
 
 import com.DragonFire.block.tree.BlockDFLeaves;
+import com.DragonFire.utility.Util;
 import com.DragonFire.world.biome.BiomeCherryBlossom;
 
 import net.minecraft.item.ItemLeaves;
@@ -27,8 +28,7 @@ public class LeavesItemBlock extends ItemLeaves {
         int meta = is.getMetadata();
         switch(meta) {
             case 0: return BiomeCherryBlossom.LEAVES_COLOR;
-            
-            default: return -1;
+            default: return Util.getRGB(0, 128, 0);
         }
     }
 }

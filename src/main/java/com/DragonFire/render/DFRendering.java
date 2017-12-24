@@ -2,6 +2,7 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.item.LeavesItemBlock;
 import com.DragonFire.block.tree.*;
 import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
 import com.DragonFire.entity.custom.EntityCustomBoat;
@@ -13,6 +14,7 @@ import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.drink.QuickDrink;
 import com.DragonFire.item.tool.Dynamite;
 import com.DragonFire.render.entity.*;
@@ -21,10 +23,20 @@ import com.DragonFire.utility.BlockUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockLeaves;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
+import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -203,5 +215,53 @@ public final class DFRendering {
         
         ModelLoader.setCustomStateMapper(DFBlocks.PALM_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
         ModelLoader.setCustomStateMapper(DFBlocks.PALM_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
+    }
+
+    public static void customColors() {
+        Minecraft mc = Minecraft.getMinecraft();
+        ItemColors ic = mc.getItemColors();
+        BlockColors bc = mc.getBlockColors();
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                if(tint == 1) {
+                    int color = PotionUtils.getColor(is);
+                    return color;
+                } else return -1;
+            }
+        }, DFItems.POTION_COOKIE);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                if(tint == 0) {
+                    Item i = is.getItem();
+                    if(i == DFItems.DYABLE_BACKPACK) {
+                        DyableBackpack db = (DyableBackpack) i;
+                        return db.getColor(is);
+                    } else return -1;
+                } else return -1;
+            }
+        }, DFItems.DYABLE_BACKPACK);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                Item item = is.getItem();
+                if(item == DFBlocks.ITEM_LEAVES) {
+                    LeavesItemBlock leaves = (LeavesItemBlock) item;
+                    return leaves.getColor(is);
+                } else return -1;
+            }
+        }, DFBlocks.ITEM_LEAVES);
+        
+        bc.registerBlockColorHandler(new IBlockColor() {
+            @Override
+            public int colorMultiplier(IBlockState ibs, IBlockAccess world, BlockPos bp, int tint) {
+                int color = BiomeColorHelper.getFoliageColorAtPos(world, bp);
+                return color;
+            }
+        }, DFBlocks.LEAVES);
     }
 }

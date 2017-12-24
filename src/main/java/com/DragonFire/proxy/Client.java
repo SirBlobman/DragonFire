@@ -43,51 +43,7 @@ public class Client extends Common {
     @Override
     public void init(FMLInitializationEvent e) {
         super.init(e);
-        Minecraft mc = Minecraft.getMinecraft();
-        ItemColors ic = mc.getItemColors();
-        BlockColors bc = mc.getBlockColors();
-        
-        ic.registerItemColorHandler(new IItemColor() {
-            @Override
-            public int colorMultiplier(ItemStack is, int tint) {
-                if(tint == 1) {
-                    int color = PotionUtils.getColor(is);
-                    return color;
-                } else return -1;
-            }
-        }, DFItems.POTION_COOKIE);
-        
-        ic.registerItemColorHandler(new IItemColor() {
-            @Override
-            public int colorMultiplier(ItemStack is, int tint) {
-                if(tint == 0) {
-                    Item i = is.getItem();
-                    if(i == DFItems.DYABLE_BACKPACK) {
-                        DyableBackpack db = (DyableBackpack) i;
-                        return db.getColor(is);
-                    } else return -1;
-                } else return -1;
-            }
-        }, DFItems.DYABLE_BACKPACK);
-        
-        ic.registerItemColorHandler(new IItemColor() {
-            @Override
-            public int colorMultiplier(ItemStack is, int tint) {
-                Item item = is.getItem();
-                if(item == DFBlocks.ITEM_LEAVES) {
-                    LeavesItemBlock leaves = (LeavesItemBlock) item;
-                    return leaves.getColor(is);
-                } else return -1;
-            }
-        }, DFBlocks.ITEM_LEAVES);
-        
-        bc.registerBlockColorHandler(new IBlockColor() {
-            @Override
-            public int colorMultiplier(IBlockState ibs, IBlockAccess world, BlockPos bp, int tint) {
-                int color = BiomeColorHelper.getFoliageColorAtPos(world, bp);
-                return color;
-            }
-        }, DFBlocks.LEAVES);
+        DFRendering.customColors();
     }
     
     @Override
