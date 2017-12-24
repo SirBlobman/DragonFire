@@ -81,7 +81,7 @@ public final class DFRendering {
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
         
         //Other
-        reg(DFItems.RECORD_DOG, DFItems.CHERRY_BOAT);
+        reg(DFItems.RECORD_DOG, DFItems.CHERRY_BOAT, DFItems.PALM_BOAT, DFItems.COCONUT);
     }
     
     public static void special() {

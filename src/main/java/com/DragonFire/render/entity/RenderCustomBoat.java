@@ -78,7 +78,7 @@ public class RenderCustomBoat extends Render<EntityCustomBoat> {
     protected ResourceLocation getEntityTexture(EntityCustomBoat entity) {
         Type type = entity.getCustomBoatType();
         String name = type.getName();
-        String path = "textures/entity/boat_" + name + ".png";
+        String path = "textures/entity/boat/boat_" + name + ".png";
         ResourceLocation rl = new ResourceLocation(DragonFire.MODID, path);
         return rl;
     }

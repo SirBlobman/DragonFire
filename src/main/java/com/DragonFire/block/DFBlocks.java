@@ -49,6 +49,7 @@ public final class DFBlocks {
     public static final BlockDFLeaves LEAVES = new BlockDFLeaves();
     public static final BlockDFLog LOG = new BlockDFLog();
     public static final BlockDFSapling SAPLING = new BlockDFSapling();
+    public static final BlockCoconut COCONUT = new BlockCoconut();
     
     //Wood
     public static final BlockDFPlanks PLANKS = new BlockDFPlanks();
@@ -119,7 +120,7 @@ public final class DFBlocks {
         ifr.registerAll(
             LEAVES, LOG, PLANKS, SAPLING, WOODEN_SLAB, DOUBLE_WOODEN_SLAB,
             CHERRY_STAIRS, CHERRY_FENCE, CHERRY_FENCE_GATE, CHERRY_DOOR,
-            PALM_STAIRS, PALM_FENCE, PALM_FENCE_GATE, PALM_DOOR
+            PALM_STAIRS, PALM_FENCE, PALM_FENCE_GATE, PALM_DOOR, COCONUT
         );
     }
 
