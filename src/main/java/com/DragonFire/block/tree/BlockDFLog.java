@@ -19,7 +19,7 @@ public class BlockDFLog extends BlockLog {
     public BlockDFLog() {
         super();
         setRegistryName("log");
-        setUnlocalizedName("dragonfire.log");
+        setUnlocalizedName("log");
         setCreativeTab(DFTabs.DRAGONFIRE);
         setDefaultState(blockState.getBaseState().withProperty(TYPE, DFWoodType.CHERRY).withProperty(LOG_AXIS, EnumAxis.Y));
     }

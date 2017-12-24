@@ -4,7 +4,8 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.util.IStringSerializable;
 
 public enum DFWoodType implements IStringSerializable {
-    CHERRY("cherry", 0, MapColor.RED);
+    CHERRY("cherry", 0, MapColor.WOOD),
+    PALM("palm", 1, MapColor.WOOD);
     
     private final String name;
     private final int meta;

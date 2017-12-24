@@ -54,10 +54,16 @@ public final class DFBlocks {
     public static final BlockDFPlanks PLANKS = new BlockDFPlanks();
     public static final BlockDFWoodSlab WOODEN_SLAB = new BlockDFHalfWoodSlab();
     public static final BlockDFWoodSlab DOUBLE_WOODEN_SLAB = new BlockDFDoubleWoodSlab();
+    
     public static final BlockStairs CHERRY_STAIRS = new BlockDFWoodStairs(DFWoodType.CHERRY);
     public static final BlockFence CHERRY_FENCE = new BlockDFWoodFence(DFWoodType.CHERRY);
     public static final BlockDFWoodFenceGate CHERRY_FENCE_GATE = new BlockDFWoodFenceGate(DFWoodType.CHERRY);
     public static final BlockDoor CHERRY_DOOR = new BlockDFWoodDoor(DFWoodType.CHERRY);
+    
+    public static final BlockStairs PALM_STAIRS = new BlockDFWoodStairs(DFWoodType.PALM);
+    public static final BlockFence PALM_FENCE = new BlockDFWoodFence(DFWoodType.PALM);
+    public static final BlockDFWoodFenceGate PALM_FENCE_GATE = new BlockDFWoodFenceGate(DFWoodType.PALM);
+    public static final BlockDoor PALM_DOOR = new BlockDFWoodDoor(DFWoodType.PALM);
     
     //Item Blocks
     public static final ItemBlock ITEM_MUMMY_HEAD = new ItemMummyHead();
@@ -79,10 +85,16 @@ public final class DFBlocks {
     public static final ItemBlock ITEM_PLANKS = new TreeItemBlock(PLANKS, "planks");
     public static final ItemBlock ITEM_SAPLING = new TreeItemBlock(SAPLING, "sapling");
     public static final ItemBlock ITEM_WOODEN_SLAB = new WoodSlabItemBlock(WOODEN_SLAB, DOUBLE_WOODEN_SLAB);
+    
     public static final ItemBlock ITEM_CHERRY_STAIRS = new QuickItemBlock(CHERRY_STAIRS);
     public static final ItemBlock ITEM_CHERRY_FENCE = new QuickItemBlock(CHERRY_FENCE);
     public static final ItemBlock ITEM_CHERRY_FENCE_GATE = new QuickItemBlock(CHERRY_FENCE_GATE);
     public static final ItemDoor ITEM_CHERRY_DOOR = new WoodDoorItemBlock(CHERRY_DOOR);
+    
+    public static final ItemBlock ITEM_PALM_STAIRS = new QuickItemBlock(PALM_STAIRS);
+    public static final ItemBlock ITEM_PALM_FENCE = new QuickItemBlock(PALM_FENCE);
+    public static final ItemBlock ITEM_PALM_FENCE_GATE = new QuickItemBlock(PALM_FENCE_GATE);
+    public static final ItemDoor ITEM_PALM_DOOR = new WoodDoorItemBlock(PALM_DOOR);
     
     public static void register1(IForgeRegistry<Block> ifr) {
         //Mob Blocks
@@ -106,7 +118,8 @@ public final class DFBlocks {
         //Wood
         ifr.registerAll(
             LEAVES, LOG, PLANKS, SAPLING, WOODEN_SLAB, DOUBLE_WOODEN_SLAB,
-            CHERRY_STAIRS, CHERRY_FENCE, CHERRY_FENCE_GATE, CHERRY_DOOR
+            CHERRY_STAIRS, CHERRY_FENCE, CHERRY_FENCE_GATE, CHERRY_DOOR,
+            PALM_STAIRS, PALM_FENCE, PALM_FENCE_GATE, PALM_DOOR
         );
     }
 
@@ -119,7 +132,8 @@ public final class DFBlocks {
             ITEM_COPPER_ORE, ITEM_COPPER_BLOCK, ITEM_NETHER_GOLD_ORE, ITEM_CHARCOAL_BLOCK,
             ITEM_ENDER_PEARL_BLOCK, ITEM_OBSIDIAN_GLASS, ITEM_RADIOACTIVE_MUSHROOM,
             ITEM_LEAVES, ITEM_LOG, ITEM_PLANKS, ITEM_SAPLING, ITEM_WOODEN_SLAB,
-            ITEM_CHERRY_STAIRS, ITEM_CHERRY_FENCE, ITEM_CHERRY_FENCE_GATE, ITEM_CHERRY_DOOR
+            ITEM_CHERRY_STAIRS, ITEM_CHERRY_FENCE, ITEM_CHERRY_FENCE_GATE, ITEM_CHERRY_DOOR,
+            ITEM_PALM_STAIRS, ITEM_PALM_FENCE, ITEM_PALM_FENCE_GATE, ITEM_PALM_DOOR
         );
     }
 }

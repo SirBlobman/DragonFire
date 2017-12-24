@@ -91,16 +91,28 @@ public final class DFRendering {
         reg(DFItems.GLASS_FRAGMENT, 15, "glass_fragment/white");
         reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
         reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
-        
+
         reg(DFBlocks.LOG, 0, "block/tree/cherry_log");
         reg(DFBlocks.LEAVES, 0, "block/tree/cherry_leaves");
         reg(DFBlocks.SAPLING, 0, "block/tree/cherry_sapling");
         reg(DFBlocks.PLANKS, 0, "block/tree/cherry_planks");
         reg(DFBlocks.WOODEN_SLAB, 0, "block/tree/cherry_slab");
+        
         reg(DFBlocks.CHERRY_STAIRS, 0, "block/tree/cherry_wooden_stairs");
         reg(DFBlocks.ITEM_CHERRY_DOOR, 0, "block/tree/cherry_wood_door");
         reg(DFBlocks.CHERRY_FENCE, 0, "block/tree/cherry_fence");
         reg(DFBlocks.CHERRY_FENCE_GATE, 0, "block/tree/cherry_fence_gate");
+        
+        reg(DFBlocks.LOG, 1, "block/tree/palm_log");
+        reg(DFBlocks.LEAVES, 1, "block/tree/palm_leaves");
+        reg(DFBlocks.SAPLING, 1, "block/tree/palm_sapling");
+        reg(DFBlocks.PLANKS, 1, "block/tree/palm_planks");
+        reg(DFBlocks.WOODEN_SLAB, 1, "block/tree/palm_slab");
+        
+        reg(DFBlocks.PALM_STAIRS, 0, "block/tree/palm_wooden_stairs");
+        reg(DFBlocks.ITEM_PALM_DOOR, 0, "block/tree/palm_wood_door");
+        reg(DFBlocks.PALM_FENCE, 0, "block/tree/palm_fence");
+        reg(DFBlocks.PALM_FENCE_GATE, 0, "block/tree/palm_fence_gate");
     }
     
     public static void blocks() {
@@ -185,7 +197,11 @@ public final class DFRendering {
         ModelLoader.setCustomStateMapper(DFBlocks.SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
         ModelLoader.setCustomStateMapper(DFBlocks.WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_slab"));
         ModelLoader.setCustomStateMapper(DFBlocks.DOUBLE_WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_double_slab"));
+        
         ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
         ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
+        
+        ModelLoader.setCustomStateMapper(DFBlocks.PALM_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
+        ModelLoader.setCustomStateMapper(DFBlocks.PALM_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
     }
 }

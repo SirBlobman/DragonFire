@@ -161,17 +161,29 @@ tile.charcoal_block.name=Charcoal Block
 tile.radioactive_mushroom.name= Poisonous Mushroom
 
 <Tree Stuff>
+tile.log.cherry.name=Cherry Log
 tile.leaves.cherry.name=Cherry Leaves
-item.cherry.name=Cherries
-item.boat.cherry.name=Cherry Boat
-item.cherry_log.name=Cherry Log
-item.cherry_planks.name=Cherry Planks
-item.cherry_sapling.name=Cherry Sapling
-item.cherry_wooden_slab.name=Cherry Wooden Slab
 tile.stairsWoodCherry.name=Cherry Wooden Stairs
 tile.cherryFence.name=Cherry Fence
 tile.cherry_fence_gate.name=Cherry Fence Gate
+tile.planks.cherry.name=Cherry Planks
+tile.sapling.cherry.name=Cherry Sapling
 item.doorCherry.name=Cherry Door
+item.boat.cherry.name=Cherry Boat
+item.cherry_wooden_slab.name=Cherry Wooden Slab
+item.cherry.name=Cherries
+
+tile.log.palm.name=Palm Log
+tile.leaves.palm.name=Palm Leaves
+tile.stairsWoodPalm.name=Palm Wooden Stairs
+tile.palmFence.name=Palm Fence
+tile.palm_fence_gate.name=Palm Fence Gate
+tile.planks.palm.name=Palm Planks
+tile.sapling.palm.name=Palm Sapling
+item.doorPalm.name=Palm Door
+item.boat.palm.name=Plam Boat
+item.palm_wooden_slab.name=Palm Wooden Slab
+
 
 <Ores>
 tile.copper_ore.name=Copper Ore
