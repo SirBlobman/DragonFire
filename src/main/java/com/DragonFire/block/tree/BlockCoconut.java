@@ -26,7 +26,6 @@ import net.minecraftforge.common.ForgeHooks;
 
 public class BlockCoconut extends Block implements IGrowable {
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 2);
-    public static final AxisAlignedBB[] COCONUT_AABB = new AxisAlignedBB[] {};
     public BlockCoconut() {
         super(Material.PLANTS);
         setRegistryName("coconut");
@@ -69,7 +68,7 @@ public class BlockCoconut extends Block implements IGrowable {
     public boolean canBlockStay(World world, BlockPos bp, IBlockState ibs) {
         bp = bp.offset(EnumFacing.UP);
         IBlockState ibs2 = world.getBlockState(bp);
-        return ((ibs2 == DFBlocks.LEAVES) && (ibs2.getValue(BlockDFLeaves.TYPE) == DFWoodType.PALM));
+        return ((ibs2.getBlock() == DFBlocks.LEAVES) && (ibs2.getValue(BlockDFLeaves.TYPE) == DFWoodType.PALM));
     }
     
     @Override
@@ -84,8 +83,8 @@ public class BlockCoconut extends Block implements IGrowable {
     
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState ibs, IBlockAccess world, BlockPos bp) {
-        int age = ibs.getValue(AGE);
-        return COCONUT_AABB[age];
+        AxisAlignedBB aabb = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
+        return aabb;
     }
     
     @Override
@@ -110,8 +109,10 @@ public class BlockCoconut extends Block implements IGrowable {
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos bp, IBlockState ibs, int fortune) {
         super.getDrops(drops, world, bp, ibs, fortune);
-        ItemStack coconut = new ItemStack(DFItems.COCONUT, 1);
-        drops.add(coconut);
+        if(ibs.getValue(AGE) == 2) {
+            ItemStack coconut = new ItemStack(DFItems.COCONUT, 1);
+            drops.add(coconut);
+        }
     }
     
     @Override

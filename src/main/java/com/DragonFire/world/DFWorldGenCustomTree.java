@@ -39,7 +39,11 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
         boolean b6 = (type instanceof BlockDFSapling);
         boolean b7 = (type == Blocks.VINE);
         boolean b8 = (type == Blocks.LOG || type == Blocks.LOG2 || type == Blocks.SAPLING);
-        return (b1 || b2 || b3 || b4 || b5 || b6 || b7 || b8);
+        boolean b9 =  (b1 || b2 || b3 || b4 || b5 || b6 || b7 || b8);
+        if(WOOD_TYPE == DFWoodType.PALM) {
+            boolean b10 = (type == Blocks.SAND);
+            return (b9 || b10);
+        } else return b9;
     }
     
     @Override
@@ -187,7 +191,7 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
             {
                 BlockPos down = position.down();
                 IBlockState state = worldIn.getBlockState(down);
-                boolean isSoil = state.getBlock().canSustainPlant(state, worldIn, down, net.minecraft.util.EnumFacing.UP, ((net.minecraft.block.BlockSapling)Blocks.SAPLING));
+                boolean isSoil = state.getBlock() == Blocks.SAND || state.getBlock() == Blocks.DIRT;
 
                 if (isSoil && position.getY() < worldIn.getHeight() - i - 1)
                 {
@@ -322,6 +326,14 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
         IBlockState ibs = world.getBlockState(bp);
         if(ibs.getBlock().isAir(ibs, world, bp) || ibs.getBlock().isLeaves(ibs, world, bp)) {
             setBlockAndNotifyAdequately(world, bp, LEAF);
+            if(WOOD_TYPE == DFWoodType.PALM) {
+                double random = Math.random();
+                double chance = (random * 100.0D);
+                if(chance <= 25.0D) {
+                    BlockPos down = bp.offset(EnumFacing.DOWN);
+                    setBlockAndNotifyAdequately(world, down, DFBlocks.COCONUT.getDefaultState());
+                }
+            }
         }
     }
     

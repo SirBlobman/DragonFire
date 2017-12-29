@@ -16,6 +16,15 @@ public final class DFOreDictionary {
         reg(DFBlocks.NETHER_GOLD_ORE, "oreGold");
         reg(DFBlocks.OBSIDIAN_GLASS, "blockGlass");
         reg(DFBlocks.OBSIDIAN_GLASS, "blockGlassColorless");
+        reg(DFBlocks.CHERRY_STAIRS, "stairWood");
+        reg(DFBlocks.PALM_STAIRS, "stairWood");
+        
+        //Special Blocks
+        reg(new ItemStack(DFBlocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), "plankWood");
+        reg(new ItemStack(DFBlocks.LOG, 1, OreDictionary.WILDCARD_VALUE), "logWood");
+        reg(new ItemStack(DFBlocks.WOODEN_SLAB, 1, OreDictionary.WILDCARD_VALUE), "slabWood");
+        reg(new ItemStack(DFBlocks.LEAVES, 1, OreDictionary.WILDCARD_VALUE), "treeLeaves");
+        reg(new ItemStack(DFBlocks.SAPLING, 1, OreDictionary.WILDCARD_VALUE), "treeSapling");
     }
     
     public static void registerItems() {
