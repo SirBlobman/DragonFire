@@ -86,7 +86,8 @@ public final class DFEntities {
     }
     
     private static void regSpawn(Class<? extends EntityLiving> clazz, EnumCreatureType type, Set<Biome> bb, int weight) {
-        Biome[] biomes = bb.toArray(new Biome[bb.size()]);
-        EntityRegistry.addSpawn(clazz, weight, 1, 2, type, biomes);
+        for(Biome biome : bb) {
+            EntityRegistry.addSpawn(clazz, weight, 1, 2, type, biome);
+        }
     }
 }
