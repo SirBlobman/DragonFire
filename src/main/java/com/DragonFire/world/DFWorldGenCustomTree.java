@@ -329,7 +329,7 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
             if(WOOD_TYPE == DFWoodType.PALM) {
                 double random = Math.random();
                 double chance = (random * 100.0D);
-                if(chance <= 25.0D) {
+                if(chance <= 5.0D) {
                     BlockPos down = bp.offset(EnumFacing.DOWN);
                     setBlockAndNotifyAdequately(world, down, DFBlocks.COCONUT.getDefaultState());
                 }

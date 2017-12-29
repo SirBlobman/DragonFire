@@ -12,7 +12,7 @@ public class BiomeTropicalBeach extends BiomeBeach {
     public BiomeTropicalBeach(BiomeProperties bp) {
         super(bp);
         setRegistryName("tropical_beach");
-        this.decorator.treesPerChunk = 2;
+        this.decorator.treesPerChunk = 1;
     }
     
     @Override
