@@ -31,7 +31,6 @@ import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public final class DFEntities {
-    private static final EnumCreatureType WATER_DRAUG = EnumHelper.addCreatureType("WATER_DRAUG", EntityDraug.class, 70, Material.WATER, false, false);
     public static void entities() {
         reg("ender_arrow", EntityEnderArrow.class);
         reg("tiki_spear", EntityTikiSpear.class);
@@ -56,6 +55,7 @@ public final class DFEntities {
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.WASTELAND), 10);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.DRY), 10);
         
+        EnumCreatureType WATER_DRAUG = EnumHelper.addCreatureType("WATER_DRAUG", EntityDraug.class, 70, Material.WATER, false, false);
         EntitySpawnPlacementRegistry.setPlacementType(EntityDraug.class, SpawnPlacementType.IN_WATER);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 10);
         regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 10);

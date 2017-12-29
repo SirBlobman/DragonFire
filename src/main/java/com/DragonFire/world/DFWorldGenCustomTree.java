@@ -327,11 +327,14 @@ public class DFWorldGenCustomTree extends WorldGenAbstractTree {
         if(ibs.getBlock().isAir(ibs, world, bp) || ibs.getBlock().isLeaves(ibs, world, bp)) {
             setBlockAndNotifyAdequately(world, bp, LEAF);
             if(WOOD_TYPE == DFWoodType.PALM) {
-                double random = Math.random();
-                double chance = (random * 100.0D);
-                if(chance <= 5.0D) {
-                    BlockPos down = bp.offset(EnumFacing.DOWN);
-                    setBlockAndNotifyAdequately(world, down, DFBlocks.COCONUT.getDefaultState());
+                BlockPos down = bp.offset(EnumFacing.DOWN);
+                IBlockState downIbs = world.getBlockState(down);
+                if(downIbs.getBlock().isAir(downIbs, world, down)) {
+                    double random = Math.random();
+                    double chance = (random * 100.0D);
+                    if(chance <= 5.0D) {
+                        setBlockAndNotifyAdequately(world, down, DFBlocks.COCONUT.getDefaultState());
+                    }
                 }
             }
         }
