@@ -80,6 +80,6 @@ public class GuiNetherBrickFurnace extends GuiContainer {
         super.drawGuiContainerForegroundLayer(mx, my);
         FontRenderer font = fontRenderer;
         String label = I18n.format(tileEntity.getName());
-        font.drawString(label, LABEL_X, LABEL_Y, Color.LIGHT_GRAY.getRGB());
+        font.drawString(label, LABEL_X, LABEL_Y, Color.GRAY.getRGB());
     }
 }

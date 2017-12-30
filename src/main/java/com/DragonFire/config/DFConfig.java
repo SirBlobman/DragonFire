@@ -27,7 +27,7 @@ public class DFConfig {
             "minecraft:villager", "minecraft:zombie_pigman",
             "minecraft:vindication_illager", "minecraft:evocation_illager", "minecraft:illusion_illager",
             "minecraft:witch", "minecraft:enderman",
-            "dragonfire:mummy"
+            "dragonfire:mummy", "dragonfire:draug"
         }; return ss;
     }
 }

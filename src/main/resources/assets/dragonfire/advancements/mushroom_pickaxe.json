@@ -10,7 +10,7 @@
             "translate": "dragonfire.advancements.mushroom_pickaxe.description"
 
     },
-    "parent": "dragonfire/radiation",
+    "parent": "dragonfire/root",
     "criteria": {
         "dragon_egg": {
             "trigger": "minecraft:inventory_changed",

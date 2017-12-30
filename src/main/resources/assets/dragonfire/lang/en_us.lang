@@ -5,26 +5,23 @@ language.code=en_us
 
 <Advancement Titles>
 advancements.dragonfire.story.root.title=DragonFire
-advancements.dragonfire.kill_a_mummy.title=Mummy? Was that you?
+advancements.dragonfire.kill_a_mummy.title=Toilet Paper Slayer
 advancements.dragonfire.confusion.title=Too much to drink
-advancements.dragonfire.ender_archer.title=Now you see me, Now you don't
+advancements.dragonfire.ender_archer.title=Shoot the tall guy
 advancements.dragonfire.made_of_money.title=Made of Money
-advancements.dragonfire.radioactive.title=Radioactive?
 advancements.dragonfire.mushroom_pickaxe.title=Delicious Pickaxe
 advancements.dragonfire.ender_bow.title=Ender Archer
 advancements.dragonfire.nuke_tnt.title=This Means War
-advancements.dragonfire.dynamite.title=Portable Bomb
 
 <Advancement Descriptions>
 advancements.dragonfire.kill_a_mummy.description=Kill a mummy
 advancements.dragonfire.ender_archer.description=Shoot an Ender Pearl Arrow at an Enderman
 advancements.dragonfire.confusion.description=Drink enough beer to get a confusion debuff
 advancements.dragonfire.made_of_money.description=Wear a set of Emerald Armour
-advancements.dragonfire.radioactive.description=Break a Poisonous Mushroom
 advancements.dragonfire.mushroom_pickaxe.description=Find a Mushroom Pickaxe
 advancements.dragonfire.ender_bow.description=Find an Ender Bow in a chest
 advancements.dragonfire.nuke_tnt.description=Craft a block of Nuclear TNT
-advancements.dragonfire.dynamite.description=Throw some dynamite and watch explode
+
 
 <Records> 
 item.record.dragonfire.dog.desc=C418 - Dog
@@ -158,7 +155,7 @@ tile.player_pressure_plate.name=Player Detector Plate
 tile.nuclear_tnt.name=Nuclear TNT
 tile.nether_brick_furnace.name=Nether Brick Furnace
 tile.charcoal_block.name=Charcoal Block
-tile.radioactive_mushroom.name= Poisonous Mushroom
+tile.radioactive_mushroom.name= Sporeshroom
 
 <Tree Stuff>
 tile.leaves.cherry.name=Cherry Leaves
