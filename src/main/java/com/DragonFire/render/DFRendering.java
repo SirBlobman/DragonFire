@@ -2,6 +2,7 @@ package com.DragonFire.render;
 
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
+import com.DragonFire.block.item.LeavesItemBlock;
 import com.DragonFire.block.tree.*;
 import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
 import com.DragonFire.entity.custom.EntityCustomBoat;
@@ -13,6 +14,7 @@ import com.DragonFire.entity.projectile.EntityEnderArrow;
 import com.DragonFire.entity.projectile.EntityExplosiveArrow;
 import com.DragonFire.entity.projectile.EntityTikiSpear;
 import com.DragonFire.item.DFItems;
+import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.drink.QuickDrink;
 import com.DragonFire.item.tool.Dynamite;
 import com.DragonFire.render.entity.*;
@@ -21,10 +23,20 @@ import com.DragonFire.utility.BlockUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockLeaves;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
+import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -69,7 +81,7 @@ public final class DFRendering {
         reg(DFItems.COPPER_NUGGET, DFItems.COPPER_INGOT);
         
         //Other
-        reg(DFItems.RECORD_DOG, DFItems.CHERRY_BOAT);
+        reg(DFItems.RECORD_DOG, DFItems.CHERRY_BOAT, DFItems.PALM_BOAT, DFItems.COCONUT);
     }
     
     public static void special() {
@@ -91,16 +103,28 @@ public final class DFRendering {
         reg(DFItems.GLASS_FRAGMENT, 15, "glass_fragment/white");
         reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
         reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
-        
+
         reg(DFBlocks.LOG, 0, "block/tree/cherry_log");
         reg(DFBlocks.LEAVES, 0, "block/tree/cherry_leaves");
         reg(DFBlocks.SAPLING, 0, "block/tree/cherry_sapling");
         reg(DFBlocks.PLANKS, 0, "block/tree/cherry_planks");
         reg(DFBlocks.WOODEN_SLAB, 0, "block/tree/cherry_slab");
+        
         reg(DFBlocks.CHERRY_STAIRS, 0, "block/tree/cherry_wooden_stairs");
         reg(DFBlocks.ITEM_CHERRY_DOOR, 0, "block/tree/cherry_wood_door");
         reg(DFBlocks.CHERRY_FENCE, 0, "block/tree/cherry_fence");
         reg(DFBlocks.CHERRY_FENCE_GATE, 0, "block/tree/cherry_fence_gate");
+        
+        reg(DFBlocks.LOG, 1, "block/tree/palm_log");
+        reg(DFBlocks.LEAVES, 1, "block/tree/palm_leaves");
+        reg(DFBlocks.SAPLING, 1, "block/tree/palm_sapling");
+        reg(DFBlocks.PLANKS, 1, "block/tree/palm_planks");
+        reg(DFBlocks.WOODEN_SLAB, 1, "block/tree/palm_slab");
+        
+        reg(DFBlocks.PALM_STAIRS, 0, "block/tree/palm_wooden_stairs");
+        reg(DFBlocks.ITEM_PALM_DOOR, 0, "block/tree/palm_wood_door");
+        reg(DFBlocks.PALM_FENCE, 0, "block/tree/palm_fence");
+        reg(DFBlocks.PALM_FENCE_GATE, 0, "block/tree/palm_fence_gate");
     }
     
     public static void blocks() {
@@ -185,7 +209,59 @@ public final class DFRendering {
         ModelLoader.setCustomStateMapper(DFBlocks.SAPLING, BlockUtil.buildStateMap(BlockDFSapling.TYPE, "_sapling"));
         ModelLoader.setCustomStateMapper(DFBlocks.WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_slab"));
         ModelLoader.setCustomStateMapper(DFBlocks.DOUBLE_WOODEN_SLAB, BlockUtil.buildStateMap(BlockDFWoodSlab.TYPE, "_double_slab"));
+        
         ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
         ModelLoader.setCustomStateMapper(DFBlocks.CHERRY_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
+        
+        ModelLoader.setCustomStateMapper(DFBlocks.PALM_FENCE_GATE, BlockUtil.buildIgnoreMap(BlockDFWoodFenceGate.POWERED));
+        ModelLoader.setCustomStateMapper(DFBlocks.PALM_DOOR, BlockUtil.buildIgnoreMap(BlockDoor.POWERED));
+    }
+
+    public static void customColors() {
+        Minecraft mc = Minecraft.getMinecraft();
+        ItemColors ic = mc.getItemColors();
+        BlockColors bc = mc.getBlockColors();
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                if(tint == 1) {
+                    int color = PotionUtils.getColor(is);
+                    return color;
+                } else return -1;
+            }
+        }, DFItems.POTION_COOKIE);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                if(tint == 0) {
+                    Item i = is.getItem();
+                    if(i == DFItems.DYABLE_BACKPACK) {
+                        DyableBackpack db = (DyableBackpack) i;
+                        return db.getColor(is);
+                    } else return -1;
+                } else return -1;
+            }
+        }, DFItems.DYABLE_BACKPACK);
+        
+        ic.registerItemColorHandler(new IItemColor() {
+            @Override
+            public int colorMultiplier(ItemStack is, int tint) {
+                Item item = is.getItem();
+                if(item == DFBlocks.ITEM_LEAVES) {
+                    LeavesItemBlock leaves = (LeavesItemBlock) item;
+                    return leaves.getColor(is);
+                } else return -1;
+            }
+        }, DFBlocks.ITEM_LEAVES);
+        
+        bc.registerBlockColorHandler(new IBlockColor() {
+            @Override
+            public int colorMultiplier(IBlockState ibs, IBlockAccess world, BlockPos bp, int tint) {
+                int color = BiomeColorHelper.getFoliageColorAtPos(world, bp);
+                return color;
+            }
+        }, DFBlocks.LEAVES);
     }
 }

@@ -19,7 +19,7 @@ public class BlockDFPlanks extends Block {
     public BlockDFPlanks() {
         super(Material.WOOD);
         setRegistryName("planks");
-        setUnlocalizedName("dragonfire.planks");
+        setUnlocalizedName("planks");
         setDefaultState(blockState.getBaseState().withProperty(TYPE, DFWoodType.CHERRY));
         setCreativeTab(DFTabs.DRAGONFIRE);
     }

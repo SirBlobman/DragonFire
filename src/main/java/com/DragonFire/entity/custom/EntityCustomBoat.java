@@ -47,7 +47,8 @@ public class EntityCustomBoat extends EntityBoat {
     }
 
     public static enum Type {
-        CHERRY(DFWoodType.CHERRY.getMetadata(), "cherry");
+        CHERRY(DFWoodType.CHERRY.getMetadata(), "cherry"),
+        PALM(DFWoodType.PALM.getMetadata(), "palm");
 
         private final String name;
         private final int metadata;

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dragonfire:blocks/tree/log_top_palm",
+    "side": "dragonfire:blocks/tree/log_side_palm"
+  }
+}

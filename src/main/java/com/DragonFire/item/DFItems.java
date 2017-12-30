@@ -4,10 +4,7 @@ import com.DragonFire.entity.custom.EntityCustomBoat.Type;
 import com.DragonFire.item.armor.QuickArmor;
 import com.DragonFire.item.armor.RabbitBoots;
 import com.DragonFire.item.armor.backpack.DyableBackpack;
-import com.DragonFire.item.custom.GlassFragment;
-import com.DragonFire.item.custom.ItemCustomBoat;
-import com.DragonFire.item.custom.QuickItem;
-import com.DragonFire.item.custom.QuickRecord;
+import com.DragonFire.item.custom.*;
 import com.DragonFire.item.drink.Beer;
 import com.DragonFire.item.drink.SpoiledMilk;
 import com.DragonFire.item.food.DiamondApple;
@@ -103,7 +100,7 @@ public final class DFItems {
     public static final Item MUMMY_RAG = new QuickItem("mummy_rag");
     public static final Item WITHERED_BONE = new QuickItem("withered_bone");
     
-    //Ingots and Gems
+    //Nuggets, Ingots and Gems
     public static final Item COPPER_INGOT = new QuickItem("copper_ingot");
     public static final Item COPPER_NUGGET = new QuickItem("copper_nugget");
     
@@ -111,6 +108,8 @@ public final class DFItems {
     public static final GlassFragment GLASS_FRAGMENT = new GlassFragment();
     public static final ItemRecord RECORD_DOG = new QuickRecord("dog", DFSoundHandler.RECORD_DOG);
     public static final ItemCustomBoat CHERRY_BOAT = new ItemCustomBoat(Type.CHERRY);
+    public static final ItemCustomBoat PALM_BOAT = new ItemCustomBoat(Type.PALM);
+    public static final Item COCONUT = new ItemCoconut();
     
     public static final void register(IForgeRegistry<Item> ifr) {
         //Armor
@@ -150,6 +149,9 @@ public final class DFItems {
         ifr.registerAll(COPPER_INGOT, COPPER_NUGGET);
         
         //Other Stuff
-        ifr.registerAll(GLASS_FRAGMENT, RECORD_DOG, CHERRY_BOAT);
+        ifr.registerAll(
+            GLASS_FRAGMENT, RECORD_DOG, COCONUT,
+            CHERRY_BOAT, PALM_BOAT
+        );
     }
 }

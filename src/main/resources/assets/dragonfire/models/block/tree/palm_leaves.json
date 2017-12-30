@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "dragonfire:blocks/tree/leaves_palm"
+  }
+}
