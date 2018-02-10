@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dragonfire:items/tools/sandstone_axe"
+    "layer0": "dragonfire:items/tools/bunyan_axe"
   }
 }

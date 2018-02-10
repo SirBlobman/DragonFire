@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WCW ",
+    "WWW",
+    " W "
+  ],
+  "key": {
+     "C": {"item": "dragonfire:copper_ingot"},
+     "W": {"item": "minecraft:planks"}
+  },
+  "result": {
+    "item": "minecraft:shield",
+    "count": 1
+  }
+}
