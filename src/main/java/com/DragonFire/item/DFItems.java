@@ -7,10 +7,7 @@ import com.DragonFire.item.armor.backpack.DyableBackpack;
 import com.DragonFire.item.custom.*;
 import com.DragonFire.item.drink.Beer;
 import com.DragonFire.item.drink.SpoiledMilk;
-import com.DragonFire.item.food.DiamondApple;
-import com.DragonFire.item.food.PotionCookie;
-import com.DragonFire.item.food.QuickFood;
-import com.DragonFire.item.food.SugarCookie;
+import com.DragonFire.item.food.*;
 import com.DragonFire.item.tool.*;
 import com.DragonFire.sound.DFSoundHandler;
 
@@ -90,6 +87,7 @@ public final class DFItems {
     public static final QuickFood SEA_WEED = new QuickFood("sea_weed", 1, 0.1F, false);
     public static final QuickFood DRIED_SEA_WEED = new QuickFood("dried_sea_weed", 2, 0.2F, false);
     public static final QuickFood CHERRY = new QuickFood("cherry", 1, 0.1F, false);
+    public static final QuickFood MOSS = new ItemMoss();
     
     //Drink
     public static final Beer BEER = new Beer();
@@ -136,7 +134,7 @@ public final class DFItems {
             RAW_CALAMARI, RAW_BACON,
             COOKED_CALAMARI, COOKED_BACON, FRIED_EGG, 
             PINEAPPLE_SLICE, CHOCOLATE_BAR, CHEESE, SLIME_JELLY, SANDWICH, SUGAR_COOKIE,
-            APPLE_PIE, SEA_WEED, DRIED_SEA_WEED, CHERRY
+            APPLE_PIE, SEA_WEED, DRIED_SEA_WEED, CHERRY, MOSS
         );
         
         //Drinks

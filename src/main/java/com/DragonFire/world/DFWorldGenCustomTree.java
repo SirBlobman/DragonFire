@@ -1,10 +1,10 @@
 package com.DragonFire.world;
 
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.block.tree.BlockDFLeaves;
-import com.DragonFire.block.tree.BlockDFLog;
-import com.DragonFire.block.tree.BlockDFSapling;
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.BlockDFLeaves;
+import com.DragonFire.block.plant.BlockDFLog;
+import com.DragonFire.block.plant.BlockDFSapling;
+import com.DragonFire.block.plant.DFWoodType;
 
 import java.util.Random;
 

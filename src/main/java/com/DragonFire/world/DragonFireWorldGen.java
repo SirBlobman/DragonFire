@@ -38,12 +38,12 @@ public class DragonFireWorldGen implements IWorldGenerator {
     }
 
     private void generateOverworldOres(Random rand, int cx, int cz, World world, IChunkGenerator icg, IChunkProvider icp) {
-        generateOre(DFBlocks.COPPER_ORE, world, rand, cx * 16, cz * 16, 16, 64, 4 + rand.nextInt(4), 6, Blocks.STONE);
+        generateOre(DFBlocks.COPPER_ORE, world, rand, cx * 16, cz * 16, 16, 64, 4 + rand.nextInt(4), 23, Blocks.STONE);
         generateSunkenTreasure(world, rand, cx * 16, cz * 16, 30, 50, 1);
     }
 
     private void generateNetherOres(Random rand, int cx, int cz, World world, IChunkGenerator icg, IChunkProvider icp) {
-        generateOre(DFBlocks.NETHER_GOLD_ORE, world, rand, cx * 16, cz * 16, 16, 64, 4 + rand.nextInt(4), 6, Blocks.NETHERRACK);
+        generateOre(DFBlocks.NETHER_GOLD_ORE, world, rand, cx * 16, cz * 16, 16, 64, 4 + rand.nextInt(4), 23, Blocks.NETHERRACK);
     }
 
     private void generateOre(Block b, World world, Random rand, int x, int z, int miny, int maxy, int size, int chances, Block replace) {

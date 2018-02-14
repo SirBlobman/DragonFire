@@ -1,4 +1,4 @@
-package com.DragonFire.block.tree;
+package com.DragonFire.block.plant;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.util.IStringSerializable;

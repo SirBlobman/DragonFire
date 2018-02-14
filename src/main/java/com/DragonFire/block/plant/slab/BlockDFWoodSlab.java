@@ -1,7 +1,7 @@
-package com.DragonFire.block.tree.slab;
+package com.DragonFire.block.plant.slab;
 
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.DFWoodType;
 import com.DragonFire.creative.DFTabs;
 
 import java.util.Random;

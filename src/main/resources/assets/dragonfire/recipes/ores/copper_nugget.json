@@ -1,0 +1,15 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "copper_ingot",
+  "pattern": ["C"],
+  "key": {
+    "C": {
+      "type": "forge:ore_dict",
+      "ore": "ingotCopper"
+    }
+  },
+  "result": {
+    "item": "dragonfire:copper_nugget",
+    "count": 9
+  }
+}

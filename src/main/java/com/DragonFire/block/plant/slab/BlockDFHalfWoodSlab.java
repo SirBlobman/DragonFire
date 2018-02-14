@@ -1,4 +1,4 @@
-package com.DragonFire.block.tree.slab;
+package com.DragonFire.block.plant.slab;
 
 public class BlockDFHalfWoodSlab extends BlockDFWoodSlab {
     @Override

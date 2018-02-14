@@ -17,6 +17,9 @@ hs_err_pid*
 *.gradle
 *.xml
 
+#Windows
+*.ini
+
 # IntelliJ Ignore
 /.idea/
 /out/

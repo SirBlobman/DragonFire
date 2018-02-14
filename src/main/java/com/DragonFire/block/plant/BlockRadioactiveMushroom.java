@@ -1,4 +1,4 @@
-package com.DragonFire.block.custom;
+package com.DragonFire.block.plant;
 
 import com.DragonFire.creative.DFTabs;
 

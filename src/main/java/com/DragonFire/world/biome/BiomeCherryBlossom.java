@@ -1,6 +1,6 @@
 package com.DragonFire.world.biome;
 
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.DFWoodType;
 import com.DragonFire.utility.Util;
 import com.DragonFire.world.DFWorldGenCustomTree;
 

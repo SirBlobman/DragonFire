@@ -3,8 +3,8 @@ package com.DragonFire.render;
 import com.DragonFire.DragonFire;
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.block.item.LeavesItemBlock;
-import com.DragonFire.block.tree.*;
-import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
+import com.DragonFire.block.plant.*;
+import com.DragonFire.block.plant.slab.BlockDFWoodSlab;
 import com.DragonFire.entity.custom.EntityCustomBoat;
 import com.DragonFire.entity.living.EntityDraug;
 import com.DragonFire.entity.living.EntityJungleSpider;
@@ -103,6 +103,9 @@ public final class DFRendering {
         reg(DFItems.GLASS_FRAGMENT, 15, "glass_fragment/white");
         reg(DFItems.GLASS_FRAGMENT, 16, "glass_fragment/obsidian");
         reg(DFItems.GLASS_FRAGMENT, 17, "glass_fragment/clear");
+        
+        reg(DFItems.MOSS, 0, "moss");
+        reg(DFItems.MOSS, 1, "food/wet_moss");
 
         reg(DFBlocks.LOG, 0, "block/tree/cherry_log");
         reg(DFBlocks.LEAVES, 0, "block/tree/cherry_leaves");

@@ -1,6 +1,6 @@
 package com.DragonFire.block.item;
 
-import com.DragonFire.block.tree.BlockDFLeaves;
+import com.DragonFire.block.plant.BlockDFLeaves;
 import com.DragonFire.utility.Util;
 import com.DragonFire.world.biome.BiomeCherryBlossom;
 

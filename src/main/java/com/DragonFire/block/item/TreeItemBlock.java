@@ -1,6 +1,6 @@
 package com.DragonFire.block.item;
 
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.DFWoodType;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemMultiTexture;

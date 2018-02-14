@@ -1,8 +1,8 @@
 package com.DragonFire.item.custom;
 
 import com.DragonFire.block.DFBlocks;
-import com.DragonFire.block.tree.BlockDFLeaves;
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.BlockDFLeaves;
+import com.DragonFire.block.plant.DFWoodType;
 import com.DragonFire.creative.DFTabs;
 
 import net.minecraft.block.Block;

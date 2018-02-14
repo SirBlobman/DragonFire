@@ -1,6 +1,6 @@
 package com.DragonFire.entity.custom;
 
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.DFWoodType;
 import com.DragonFire.item.DFItems;
 
 import net.minecraft.entity.item.EntityBoat;

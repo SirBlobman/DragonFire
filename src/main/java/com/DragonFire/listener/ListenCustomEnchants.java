@@ -1,10 +1,7 @@
 package com.DragonFire.listener;
 
 import com.DragonFire.DragonFire;
-import com.DragonFire.enchantment.DFEnchants;
-import com.DragonFire.enchantment.EnchantmentBaneOfHumanoids;
-import com.DragonFire.enchantment.EnchantmentExtinguish;
-import com.DragonFire.enchantment.EnchantmentRiptide;
+import com.DragonFire.enchantment.*;
 import com.DragonFire.event.PlayerMoveEvent;
 import com.DragonFire.utility.ItemUtil;
 import com.DragonFire.utility.Util;
@@ -24,6 +21,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -107,6 +105,31 @@ public class ListenCustomEnchants {
                         float damage = e.getAmount();
                         float newDamage = EnchantmentRiptide.getDamageWithEnchant(hit, level, damage);
                         e.setAmount(newDamage);
+                    }
+                }
+            }
+        }
+    }
+    
+    @SubscribeEvent(priority=EventPriority.LOWEST)
+    public void entityDeath(LivingDeathEvent e) {
+        EntityLivingBase killed = e.getEntityLiving();
+        DamageSource ds = e.getSource();
+        if(ds.getImmediateSource() != null) {
+            Entity killer = ds.getImmediateSource();
+            if(killer instanceof EntityLivingBase) {
+                EntityLivingBase elb = (EntityLivingBase) killer;
+                ItemStack is = elb.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND);
+                if(is != null && !is.isEmpty()) {
+                    Map<Enchantment, Integer> enchants = EnchantmentHelper.getEnchantments(is);
+                    if(enchants.containsKey(DFEnchants.EXPLOSIVE)) {
+                        int level = enchants.get(DFEnchants.EXPLOSIVE);
+                        EnchantmentExplosive.onEntityDeath(killed, level);
+                    }
+                    
+                    if(enchants.containsKey(DFEnchants.LIFE_STEAL)) {
+                        int level = enchants.get(DFEnchants.LIFE_STEAL);
+                        EnchantmentLifeSteal.onEntityDeath(killed, elb, level);
                     }
                 }
             }

@@ -1,6 +1,6 @@
 package com.DragonFire.block.item;
 
-import com.DragonFire.block.tree.DFWoodType;
+import com.DragonFire.block.plant.DFWoodType;
 import com.DragonFire.creative.DFTabs;
 
 import net.minecraft.block.BlockSlab;

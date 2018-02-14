@@ -1,4 +1,4 @@
-package com.DragonFire.block.tree;
+package com.DragonFire.block.plant;
 
 import com.DragonFire.block.DFBlocks;
 import com.DragonFire.item.DFItems;

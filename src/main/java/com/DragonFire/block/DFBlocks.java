@@ -3,11 +3,11 @@ package com.DragonFire.block;
 import com.DragonFire.block.custom.*;
 import com.DragonFire.block.item.*;
 import com.DragonFire.block.ore.QuickOre;
+import com.DragonFire.block.plant.*;
+import com.DragonFire.block.plant.slab.BlockDFDoubleWoodSlab;
+import com.DragonFire.block.plant.slab.BlockDFHalfWoodSlab;
+import com.DragonFire.block.plant.slab.BlockDFWoodSlab;
 import com.DragonFire.block.tile.BlockNetherBrickFurnace;
-import com.DragonFire.block.tree.*;
-import com.DragonFire.block.tree.slab.BlockDFDoubleWoodSlab;
-import com.DragonFire.block.tree.slab.BlockDFHalfWoodSlab;
-import com.DragonFire.block.tree.slab.BlockDFWoodSlab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;

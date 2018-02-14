@@ -31,6 +31,7 @@ import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public final class DFEntities {
+    public static final EnumCreatureType WATER_DRAUG = EnumHelper.addCreatureType("WATER_DRAUG", EntityDraug.class, 50, Material.WATER, false, false);
     public static void entities() {
         reg("ender_arrow", EntityEnderArrow.class);
         reg("tiki_spear", EntityTikiSpear.class);
@@ -55,11 +56,10 @@ public final class DFEntities {
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.WASTELAND), 10);
         regSpawn(EntityMummy.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.DRY), 10);
         
-        EnumCreatureType WATER_DRAUG = EnumHelper.addCreatureType("WATER_DRAUG", EntityDraug.class, 70, Material.WATER, false, false);
         EntitySpawnPlacementRegistry.setPlacementType(EntityDraug.class, SpawnPlacementType.IN_WATER);
-        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 10);
-        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 10);
-        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WATER), 10);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.OCEAN), 5);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WET), 5);
+        regSpawn(EntityDraug.class, WATER_DRAUG, BiomeDictionary.getBiomes(Type.WATER), 5);
         
         EntitySpawnPlacementRegistry.setPlacementType(EntityJungleSpider.class, SpawnPlacementType.ON_GROUND);
         regSpawn(EntityJungleSpider.class, EnumCreatureType.MONSTER, BiomeDictionary.getBiomes(Type.JUNGLE), 10);
@@ -87,7 +87,7 @@ public final class DFEntities {
     
     private static void regSpawn(Class<? extends EntityLiving> clazz, EnumCreatureType type, Set<Biome> bb, int weight) {
         for(Biome biome : bb) {
-            EntityRegistry.addSpawn(clazz, weight, 1, 2, type, biome);
+            if(biome != null) EntityRegistry.addSpawn(clazz, weight, 1, 2, type, biome);
         }
     }
 }
